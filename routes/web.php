@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+
+
+/*****************************************************后台管理*************************************************/
+Route::get('/backend/index',"Backend\\IndexController@index");//首页
