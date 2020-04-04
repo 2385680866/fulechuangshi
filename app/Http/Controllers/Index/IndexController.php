@@ -11,12 +11,11 @@ class IndexController extends Controller
     //首页
     public function index()
     {       
-        // //获取分类信息
-        // $cateInfo = CategoryModel::where(['is_show'=>1])->get();
-        // dd($cateInfo);
-        // return view("/index/index",[
-        //     'cateInfo'=>$cateInfo
-        // ]);
+        //获取分类信息
+        $cateInfo = CategoryModel::where(['parend_id'=>0])->get();
+        return view("/index/index",[
+            'cateInfo'=>$cateInfo
+        ]);
         return view("/index/index");
     }
     //搜索页面

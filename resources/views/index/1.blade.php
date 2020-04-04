@@ -12,10 +12,3 @@ Route::get('/index/author',"Index\\AuthorController@index")->middleware("check.l
 Route::get('/backend/login',"Backend\\LoginController@login");//后台登录
 
 //阅读
-Route::get('/backend/read/index',"Backend\\IndexController@index");//首页
-Route::get('/backend/read/create',"Backend\\IndexController@create");//添加页
-Route::get('/backend/read/store',"Backend\\IndexController@store");//添加执行
-Route::get('/backend/read/edit',"Backend\\IndexController@edit");//修改页
-Route::get('/backend/read/update',"Backend\\IndexController@update");//修改执行
-Route::get('/backend/read/show',"Backend\\IndexController@show");//详情
-Route::get('/backend/read/destroy',"Backend\\IndexController@destroy");//删除

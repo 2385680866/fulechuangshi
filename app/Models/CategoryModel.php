@@ -12,7 +12,7 @@ class CategoryModel extends Model
     //绑定表名
     protected $table='category';
     //关闭时间戳
-    public $timestamps=false;
+    // public $timestamps=false;
 
     //黑名单
     protected $guarded=[];

@@ -1,0 +1,163 @@
+@charset "utf-8";.rank_hd{height:53px;padding-left:20px}.rank_hd
+h1{font:700 20px/53px "Microsoft Yahei"}.rank_hd h1
+span{margin-left:45px;font:400 14px/53px "Microsoft Yahei"}.rank_mainbox a:hover{position:relative;left:1px;top:1px}.rank_mainbox{border:1px
+solid #ccc}.rank_mainbox_sk{border:1px
+solid #ccc}.rank_mainbox
+.topbox{height:52px;background:url(../images/chart.gif) 0 0 repeat-x;margin-bottom:13px}.rank_mainbox .topbox
+h1{line-height:52px;background:url(../images/point.gif) left center no-repeat;margin-left:15px;padding-left:15px;float:left}.rank_mainbox .topbox
+span{font:12px/52px "microsoft yahei";margin-left:20px}.rank_mainbox
+.chartbox{width:998px}.rank_mainbox .chartbox
+.left_index{width:203px;border:1px
+solid #ccc;border-left:none;float:left}.rank_mainbox .chartbox .left_index
+.oclicktop{background:url(../images/chart.gif) 0 -89px repeat-x;height:33px;padding-left:28px;line-height:33px}.rank_mainbox .chartbox .left_index .oclicktop
+span{float:left}.rank_mainbox .chartbox .left_index .oclicktop
+.open{width:16px;height:16px;background:url(../images/chart.gif) 0 -247px no-repeat;display:block;float:left;margin-left:5px;margin-top:9px}.rank_mainbox .chartbox .left_index .oclicktop a:hover{top:0;left:0}.rank_mainbox .chartbox .left_index
+ul{background:#fafafa;padding-top:5px;padding-bottom:5px}.rank_mainbox .chartbox .left_index ul
+li{padding-left:40px;font:12px/29px "宋体";color:#373737}.rank_mainbox .chartbox .left_index .oclicktop .open:hover{background:url(../images/chart.gif) 0 -266px no-repeat}.rank_mainbox .chartbox .left_index .oclicktop
+.aclose{width:16px;height:16px;background:url(../images/chart.gif) 0 -287px no-repeat;display:block;float:left;margin-left:5px;margin-top:9px;cursor:pointer}.rank_mainbox .chartbox .left_index .oclicktop .aclose:hover{background:url(../images/chart.gif) 0 -307px no-repeat}.rank_mainbox .chartbox
+.right_index{width:773px;_width:771px;float:right;*margin-bottom:10px}.rank_mainbox .chartbox .right_index
+.chart_box{width:246px;_width:242px;border:1px
+solid #ccc;float:left;margin-left:10px;margin-bottom:10px;height:370px;*height:380px;position:relative}.rank_mainbox .chartbox .right_index
+.chart_box_right{border-right:none;height:370px;*height:380px;position:relative}.rank_mainbox .chartbox .right_index .chart_box
+.tabswish{width:126px;height:28px;margin-top:9px;float:right}.rank_mainbox .chartbox .right_index .chart_box .tabswish
+.tabs{width:40px;height:26px;border:1px
+solid #ccc;float:left;background:url(../images/chart.gif) 0 -156px repeat-x}.rank_mainbox .chartbox .right_index .chart_box .tabswish
+.choice{border-bottom:1px solid #FFF;background:url(../images/chart.gif) 0 -122px repeat-x}.rank_mainbox .chartbox .right_index .chart_box .tabswish .tabs
+a{text-align:center;display:block;width:40px;height:26px;line-height:26px}.rank_mainbox .chartbox .right_index .chart_box
+ul{padding-left:10px;padding-right:10px;margin-top:5px}.rank_mainbox .chartbox .right_index .chart_box ul
+li{line-height:26px;color:#888}.rank_mainbox .chartbox .right_index .chart_box ul li
+a{color:#888;height:26px;line-height:26px}.rank_mainbox .chartbox .right_index .chart_box ul li
+b{font-weight:normal;line-height:26px}.rank_mainbox .chartbox .right_index .chart_box ul
+.underline{border-bottom:1px dotted #ccc;padding-bottom:3px}.rank_mainbox .chartbox .right_index .chart_box ul
+.lastline{width:226px;position:absolute;bottom:0}.rank_mainbox .chartbox .right_index .chart_box ul
+.picbox{height:110px;margin-top:5px;position:relative}.picbox
+span{position:absolute;right:0;background:#fff}.rank_mainbox .chartbox .right_index .chart_box ul .picbox
+.left{float:left;width:70px;margin-right:8px}.rank_mainbox .chartbox .right_index .chart_box ul .picbox
+.right{float:left;width:140px;line-height:20px}.rank_mainbox .chartbox .right_index .chart_box ul .picbox .right
+a.novelname{color:#333;font-size:14px;font-weight:bold}.rank_mainbox .chartbox .right_index .chart_box ul .picbox .right
+a.green{color:#0b7531}.rank_mainbox .chartbox .right_index .chart_box ul li
+.list01{display:block;width:16px;height:16px;float:left;background:url(../images/chart.gif) 0 -324px no-repeat;margin-right:7px;margin-top:5px}.rank_mainbox .chartbox .right_index .chart_box ul li
+.list02{display:block;width:16px;height:16px;float:left;background:url(../images/chart.gif) 0 -186px no-repeat;margin-right:7px;margin-top:5px}.rank_mainbox .chartbox .right_index .chart_box ul li
+.list03{display:block;width:16px;height:16px;float:left;background:url(../images/chart.gif) 0 -204px no-repeat;margin-right:7px;margin-top:5px}.rank_mainbox .chartbox .right_index .chart_box ul li
+.list{display:block;width:14px;height:14px;float:left;background:#f4f4f4;margin-right:9px;margin-top:6px;text-align:center;line-height:14px;color:#565656}.rank_mainbox .chartbox .right_index .chart_box ul li
+.name{float:left}.rank_mainbox .chartbox .right_index .chart_box ul li .name
+a.grey{color:#0b7531}.rank_mainbox .chartbox .right_index .chart_box ul li
+.right2{float:right}.rank_mainbox .chartbox .right_index
+a.red2{color:#9b0404}.rank_mainbox .chartbox .right_index
+.alltable{border:1px
+solid #ccc;border-right:none;margin-bottom:30px}.rank_mainbox .chartbox .right_index .alltable
+.tablename{padding-left:22px;margin-left:10px;background:url(../images/book.gif) left center no-repeat;float:left}.rank_mainbox .chartbox .right_index .alltable
+.tabsbox{width:285px;height:28px;margin-top:9px;float:right}.rank_mainbox .chartbox .right_index .alltable .tabsbox
+.tab{width:93px;height:26px;border:1px
+solid #ccc;float:right;background:url(../images/chart.gif) 0 -156px repeat-x}.rank_mainbox .chartbox .right_index .alltable .tabsbox
+.choice{border-bottom:1px solid #FFF;background:url(../images/chart.gif) 0 -122px repeat-x}.rank_mainbox .chartbox .right_index .alltable .tabsbox
+a{text-align:center;display:block;width:93px;height:26px;line-height:26px}.rank_mainbox .chartbox .right_index .alltable
+.tabsswish{margin-left:15px;margin-right:15px;margin-bottom:10px}.smalltab{text-align:center;height:45px;line-height:45px;float:right}.rank_mainbox .chartbox .right_index .alltable .tabsswish
+.tbs{height:45px}.smalltableft{height:21px;margin-top:10px;float:left}.smalltabright{width:480px;float:right;text-align:center;height:45px;line-height:45px}.rank_mainbox .chartbox .right_index .alltable .tabsswish
+.tb01{width:40px;float:left}.rank_mainbox .chartbox .right_index .alltable .tabsswish .choice
+a{color:#900}.rank_mainbox .chartbox .right_index .alltable .tabsswish
+.tbspan{float:left}.rank_mainbox .chartbox .right_index .alltable .tabsswish
+.tablebox{width:740px}@-moz-document url-prefix(){.tablebox{padding-top:50px}}.rank_mainbox .chartbox .right_index .alltable .tabsswish
+table{line-height:32px;text-align:center;margin-bottom:10px}.rank_mainbox .chartbox .right_index .alltable .tabsswish table
+b{color:#ff1700}.rank_mainbox .chartbox .right_index .alltable .tabsswish table
+a.big{font-size:14px}.rank_mainbox .chartbox .right_index .alltable .tabsswish table
+span{color:#999}.rank_mainbox .chartbox .right_index .alltable .tabsswish table
+a.grey{color:#666}.rank_mainbox .chartbox .right_index .alltable .tabsswish table
+a.red2{color:#9b0404}.rank_mainbox .chartbox .right_index .alltable .tabsswish table tr
+td{height:32px}.tabsswish table tr td
+img{margin:0
+0 -3px 10px}.rank_mainbox .chartbox .right_index .alltable .tabsswish table
+.topline{border:1px
+solid #f1f1f1;background:#fafafa;line-height:34px;height:34px}.rank_mainbox .chartbox .right_index .alltable .tabsswish table
+.odd{background:#f2f2f2}.chartbox
+.oldbox{width:942px;margin-left:55px;margin-bottom:25px}.chartbox .oldbox
+.chart_box{width:268px;border:1px
+solid #ccc;float:left;margin-right:44px;margin-bottom:25px}.chartbox .oldbox .chart_box
+.tophead{padding-left:15px}.chartbox .oldbox .chart_box
+ul{margin:1px;margin-bottom:5px}.chartbox .oldbox .chart_box ul
+li{border-bottom:1px solid #ccc;margin-left:16px;margin-right:16px;height:26px;line-height:26px}.chartbox .oldbox .chart_box ul
+.top{background:#f2f2f2;margin-top:5px;border-bottom:none}.chartbox .oldbox .chart_box ul li
+b{font-weight:normal}.chartbox .oldbox .chart_box ul li
+.name{float:left;padding-left:10px;width:160px}.chartbox .oldbox .chart_box ul li
+span{padding-left:10px}.chartbox .oldbox .chart_box ul li
+.right2{float:left}.pagectrl{padding:20px
+0;margin-left:auto;margin-right:auto;border-top:none}.bookListPage{width:784px;padding:20px
+0 0 35px;display:inline-block;line-height:28px}.tophead{background:url(../images/chart.gif) 0 -52px repeat-x;height:37px;font:14px/37px "microsoft yahei"}.tophead
+.t_point{background:url(../images/red_ico.gif) left center no-repeat;margin-left:10px;padding-left:15px;float:left}.rank_mainbox .chartbox:after{content:".";display:block;height:0;clear:both;visibility:hidden}.rank_mainbox
+.chartbox{display:inline-block}/*\*/* html .rank_mainbox
+.chartbox{height:1%}.rank_mainbox
+.chartbox{display:block}/**/ .rank_mainbox .chartbox .right_index .alltable:after{content:".";display:block;height:0;clear:both;visibility:hidden}.rank_mainbox .chartbox .right_index
+.alltable{display:inline-block}/*\*/* html .rank_mainbox .chartbox .right_index
+.alltable{height:1%}.rank_mainbox .chartbox .right_index
+.alltable{display:block}/**/ .rank_mainbox .chartbox .right_index .chart_box ul li:after{content:".";display:block;height:0;clear:both;visibility:hidden}.rank_mainbox .chartbox .right_index .chart_box ul
+li{display:inline-block}/*\*/* html .rank_mainbox .chartbox .right_index .chart_box ul
+li{height:1%}.rank_mainbox .chartbox .right_index .chart_box ul
+li{display:block}/**/ .rank_mainbox .chartbox .right_index .alltable .tabsswish:after{content:".";display:block;height:0;clear:both;visibility:hidden}.rank_mainbox .chartbox .right_index .alltable
+.tabsswish{display:inline-block}/*\*/* html .rank_mainbox .chartbox .right_index .alltable
+.tabsswish{height:1%}.rank_mainbox .chartbox .right_index .alltable
+.tabsswish{display:block;margin-top:15px}/**/ .rank_mainbox_sk
+ul{margin-left:24px;margin-right:24px;margin-top:10px}.rank_mainbox_sk
+.topbox{height:52px;background:url(../images/chart.gif) 0 0 repeat-x;margin-bottom:13px}.rank_mainbox_sk .topbox
+h1{line-height:52px;background:url(../images/point.gif) left center no-repeat;margin-left:15px;padding-left:15px;float:left}.rank_mainbox_sk .topbox
+span{font:12px/52px "microsoft yahei";margin-left:20px}.rank_mainbox_sk
+li{border-bottom:1px dotted #ccc;line-height:29px}.rank_mainbox_sk
+.fenlei{position:relative;width:950px;height:60px;border-bottom:none;z-index:1}.rank_mainbox_sk
+.fenzhan{margin-bottom:8px}.fenzhan
+img{border:1px
+solid #CCC}.fenzhan
+img.act{border:1px
+solid #900}.rank_mainbox_sk .fenlei
+.top{height:29px;position:absolute;top:0;left:0;z-index:100}.rank_mainbox_sk
+span{float:left;padding-left:5px}.rank_mainbox_sk
+a.active{font-weight:bold;color:#900}.rank_mainbox_sk
+a.alpha{padding-left:5px;padding-right:5px;height:15px;border:1px
+solid #ccc;line-height:15px;margin-top:7px;margin-right:12px}.rank_mainbox_sk
+a.alphaAct{background:#ccc;color:#900}.rank_mainbox_sk
+a{float:left;padding-left:12px;padding-right:12px;display:block;font-weight:normal;color:#333}.rank_mainbox_sk
+a.showl{color:#900;text-decoration:underline}.rank_mainbox_sk
+.hidelist{float:left}.rank_mainbox_sk .fenlei .top
+a.active{height:28px;_line-height:28px;border:1px
+solid #ccc;border-bottom:1px solid #fff}.rank_mainbox_sk .fenlei
+.smallbox{position:absolute;border:1px
+solid #ccc;width:912px;height:29px;bottom:0;left:0;padding-left:18px;padding-right:18px}.rank_mainbox_sk
+.lastline{border-bottom:none;margin-bottom:5px}.allbooklist{margin-top:10px}.allbooklist
+.leftlist{width:783px;border:1px
+solid #ccc;float:left}.allbooklist
+.rightbox{width:205px;float:right}.allbooklist
+.topbox{height:36px;background:url(../images/chart.gif) 0 0 repeat-x;margin-bottom:4px;line-height:36px;border-bottom:1px solid #ccc}.allbooklist .leftlist
+.left{float:left;padding-left:15px;font-weight:bold}.allbooklist .leftlist
+em.org{color:#F90;font:700 italic 12px/27px Comic Sans MS;margin-left:5px}.allbooklist .leftlist
+.right{float:right;padding-right:15px}.allbooklist
+table{line-height:27px;width:100%;text-align:center}.allbooklist table
+span{color:#666}.leftlist
+a.grey{color:#999;float:left}.leftlist
+a.green{float:left;margin-right:8px;font-size:14px}.allbooklist
+a.grey2{color:#666}.allbooklist
+a.grey3{float:left;width:100px;display:block;color:#333;-o-text-overflow:ellipsis;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.allbooklist
+a.green{color:#360}.allbooklist a.green:hover{color:#900}.allbooklist
+a.red{float:right;color:#900;font-weight:normal}.allbooklist table
+.underline{border-bottom:1px dotted #ccc;line-height:35px;height:35px;font-weight:bold}.allbooklist
+.tab{position:relative;width:205px;height:38px}.allbooklist .tab
+h1{position:absolute;text-align:center;width:101px;height:36px;font:12px/36px "Microsoft Yahei";border:1px
+solid #ccc}.allbooklist .tab
+.tableft{left:0}.allbooklist .tab
+.tabright{right:0}.allbooklist .tab
+h1.choice{z-index:2;border:1px
+solid #ccc;border-bottom:none;background:url(../images/allbook.gif) left;font-weight:700}.allbooklist
+.shuku_swishlist{border:1px
+solid #ccc;border-top:none}.allbooklist .shuku_swishlist
+ul{padding:12px
+12px 5px 12px;line-height:28px}.allbooklist .shuku_swishlist ul
+li{border-bottom:1px solid #ccc}.allbooklist .shuku_swishlist ul
+.none{border-bottom:none;height:28px}.rank_mainbox_sk ul li:after{content:".";display:block;height:0;clear:both;visibility:hidden}.rank_mainbox_sk ul
+li{display:inline-block}/*\*/* html .rank_mainbox_sk ul
+li{height:1%}.rank_mainbox_sk ul
+li{display:block}/**/ .rank_mainbox_sk:after{content:".";display:block;height:0;clear:both;visibility:hidden}.rank_mainbox_sk{display:inline-block}/*\*/* html
+.rank_mainbox_sk{height:1%}.rank_mainbox_sk{display:block}/**/ .allbooklist:after{content:".";display:block;height:0;clear:both;visibility:hidden}.allbooklist{display:inline-block}/*\*/* html
+.allbooklist{height:1%}.allbooklist{display:block}/**/.rank_search{float:right;background:url("../images/index_sousuo.png") no-repeat scroll 0 0 transparent;height:28px;margin-top:12px;position:relative;width:310px;z-index:2}.rank_search
+i{cursor:pointer;float:left;height:24px;line-height:25px;margin-left:1px;margin-top:2px;width:38px;text-align:center}i.rank_search_hover{background:url("../images/up_gray.gif") no-repeat scroll 88% 50% #FFF;border-left:1px solid #CCC;border-right:1px solid #CCC;border-top:1px solid #CCC;margin-top:1px;padding-right:5px}.rank_s{border:0
+none;height:22px;left:70px;line-height:22px;position:absolute;top:3px;width:145px}.rank_searchbtn{cursor:pointer;text-align:center;background:url("../images/sprite.png") no-repeat -261px -54px;color:#FFF;height:28px;line-height:28px;position:absolute;right:15px;width:60px}.index_sub_serach{text-align:center;position:absolute;width:43px;height:96px;border:1px
+solid #ccc;border-top:none;background:#fff;top:26px;left:1px;display:none;z-index:40}.index_sub_serach
+a{float:none;padding:0;display:block;height:24px;line-height:24px}.index_sub_serach a:hover{background:#ccc}.rank_publicTab{float:right;text-align:center;height:45px;line-height:45px}.booksInput{float:left;width:26px;height:20px;margin-left:3px;text-align:center;border:1px
+solid #CCC}.allBookTitle{position:relative;border:1px
+solid #ccc;background:#fafafa url(../images/boxtopbg.png) top repeat-x}

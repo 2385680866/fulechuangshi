@@ -1,0 +1,13 @@
+;(function($){var _util=CS.util,_dialog=CS.dialog;var _nodes={},_searchUrl='',_defaultInputValue="书名",_searchTypeHoverCss='';function init(searchUrl,searchTypeHoverCss){_searchUrl=searchUrl;if(searchTypeHoverCss){_searchTypeHoverCss=searchTypeHoverCss;}
+_nodes={'searchInput':$('#searchInput'),'searchTypeBox':$('#searchTypeBox'),'searchType':$('#searchType'),'searchTypeDropdown':$('#searchTypeDropdown'),'searchBtn':$('#searchBtn')};_bindEvent();}
+function _bindEvent(){var $showSearchTypeDropdownBtn=_nodes.searchTypeBox.length>0?_nodes.searchTypeBox:_nodes.searchType;$showSearchTypeDropdownBtn.hover(_showSearchTypeDropdown,_hideSearchTypeDropdown);_nodes.searchTypeDropdown.hover(_showSearchTypeDropdown,_hideSearchTypeDropdown);_nodes.searchTypeDropdown.find('a').on('click',function(){_nodes.searchType.html($(this).html()).attr('type',$(this).attr('type'));_nodes.searchTypeDropdown.hide();});_nodes.searchBtn.on('click',_openSearchPage);_nodes.searchInput.on('keyup',function(event){if(event.keyCode===13){return _openSearchPage();}});var defaultInputValue=_nodes.searchInput.attr("def");if(defaultInputValue){_nodes.searchInput.on('focus',function(){var $this=$(this);if($this.val()===defaultInputValue){$this.val('');}}).on('blur',function(){var $this=$(this);if($this.val()===''){$this.val(defaultInputValue);}});}}
+function _showSearchTypeDropdown(){if(_searchTypeHoverCss&&!_nodes.searchType.hasClass(_searchTypeHoverCss)){_nodes.searchType.addClass(_searchTypeHoverCss);}
+_nodes.searchTypeDropdown.show();}
+function _hideSearchTypeDropdown(){if(_searchTypeHoverCss){_nodes.searchType.removeClass(_searchTypeHoverCss);}
+_nodes.searchTypeDropdown.hide();}
+function _openSearchPage(){var search_type=_nodes.searchType.attr('type'),search_value=$.trim(_nodes.searchInput.val());if(search_value.length===0||search_value===_util.sim2tra(_defaultInputValue)){_dialog.alert("请输入搜索内容");return false;}
+var ref=_searchUrl.replace('p1',search_type).replace('p2',search_value);window.open(ref);return false;}
+CS.util.initNameSpace("CS.searchInput");CS.searchInput={"init":init};})(jQuery);;(function($){var _util=CS.util;var _nodes={},_fixedRight=0;function init(){_nodes.$fixedRight=$('#fixedRight');_fixedRight=_nodes.$fixedRight.offset();_bindEvent();}
+function _bindEvent(){$(window).scroll(function(){_util.throttle(_scrollHandler);});$("#fixedRight_closeBtn").click(function(){_nodes.$fixedRight.hide();});}
+function _scrollHandler(){var offsetTop=_fixedRight.top+$(window).scrollTop()+"px";_nodes.$fixedRight.animate({top:offsetTop},{duration:500,queue:false});}
+_util.initNameSpace("CS");CS.qqReadAd={'init':init};})(jQuery);

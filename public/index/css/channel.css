@@ -1,0 +1,21 @@
+@charset "utf-8";.codeWrap{width:110px;height:150px;border:1px
+solid #ccc;background:#fff}.codeWrap
+.code_hd{height:20px}.codeWrap .code_hd
+a.code_close{display:block;width:8px;height:10px;margin-top:6px;float:right;background:url(../images/close.png) no-repeat;padding-right:5px}.codeWrap
+.code_bd{}.codeWrap
+.code_pic{display:block;margin:0;padding:0;text-align:center;overflow:hidden;height:80px}.codeWrap
+.code_txt{padding:0;margin:0;color:#626262;line-height:18px;text-align:center;font:12px/15px 'microsoft yahei';padding:7px
+0 10px}.fixedLeft{position:absolute;top:200px;left:50%;margin-left:-630px}.fixedRight{position:absolute;top:200px;right:50%;margin-right:-630px}.banner_index
+img{display:block;margin:0
+auto}.index_sub_serach{text-align:center;position:absolute;width:43px;height:96px;border:1px
+solid #ccc;border-top:none;background:#fff;top:26px;left:1px;z-index:40;display:none}.index_sub_serach
+a{display:block;height:24px;line-height:24px}.index_sub_serach a:hover{background:#ccc}.inner_link{background:#f9f9f9;border:1px
+solid #eee;padding:6px
+0}.inner_link
+div{float:left}.cs_hotwrap{line-height:2.2;padding-left:10px;color:#999}.cs_hotwrap
+li{overflow:hidden;*zoom:1}.cs_hotwrap li
+span{float:left}.class_detail{float:left;width:900px}.cs_hotwrap
+a{display:inline-block;margin-right:10px;color:#999}.cs_hotwrap a:hover{color:#900}.tab_subtab,.tab_subtab2{height:32px;position:relative;margin-bottom:5px}.tab_subtab h3, .tab_subtab2
+h3{font-weight:400;text-align:center;position:absolute;width:68px;height:32px;line-height:32px;cursor:pointer}.tab_subtab
+h3{background:url(../images/gray_h1_normal.png) no-repeat}h3.subtab_cur{color:#900;font-weight:700;line-height:35px;background:url(../images/gray_h1_hover.png) no-repeat}.week_h1,.renqi_h1{left:0}.month_h1{left:68px}.allin_h1{left:136px}.tab_subtab2
+h3{width:102px;background:url(../images/gray_h1_long_normal.png) no-repeat}h3.recommed_h1{right:-1px}h3.subtab_cur2{line-height:35px;color:#900;font-weight:700;line-height:35px;background:url(../images/gray_h1_long_hover.png) no-repeat}.month_list,.allin_list{display:none}

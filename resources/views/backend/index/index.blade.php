@@ -15,10 +15,10 @@
     <meta http-equiv="refresh" content="0;ie.html" />
     <![endif]-->
 
-    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
-    <link href="css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico"> <link href="/backend/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="/backend/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="/backend/css/animate.css" rel="stylesheet">
+    <link href="/backend/css/style.css?v=4.1.0" rel="stylesheet">
 </head>
 
 <body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
@@ -51,88 +51,6 @@
                             <i class="fa fa-home"></i>
                             <span class="nav-label">主页</span>
                         </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa fa-bar-chart-o"></i>
-                            <span class="nav-label">统计图表</span>
-                            <span class="fa arrow"></span>
-                        </a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a class="J_menuItem" href="graph_echarts.html">百度ECharts</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="graph_flot.html">Flot</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="graph_morris.html">Morris.js</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="graph_rickshaw.html">Rickshaw</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="graph_peity.html">Peity</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="graph_sparkline.html">Sparkline</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="graph_metrics.html">图表组合</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="line dk"></li>
-                    <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
-                        <span class="ng-scope">分类</span>
-                    </li>
-                    <li>
-                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">信箱 </span><span class="label label-warning pull-right">16</span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="mailbox.html">收件箱</a>
-                            </li>
-                            <li><a class="J_menuItem" href="mail_detail.html">查看邮件</a>
-                            </li>
-                            <li><a class="J_menuItem" href="mail_compose.html">写信</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">表单</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="form_basic.html">基本表单</a>
-                            </li>
-                            <li><a class="J_menuItem" href="form_validate.html">表单验证</a>
-                            </li>
-                            <li><a class="J_menuItem" href="form_advanced.html">高级插件</a>
-                            </li>
-                            <li><a class="J_menuItem" href="form_wizard.html">表单向导</a>
-                            </li>
-                            <li>
-                                <a href="#">文件上传 <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="form_webuploader.html">百度WebUploader</a>
-                                    </li>
-                                    <li><a class="J_menuItem" href="form_file_upload.html">DropzoneJS</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">编辑器 <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="form_editors.html">富文本编辑器</a>
-                                    </li>
-                                    <li><a class="J_menuItem" href="form_simditor.html">simditor</a>
-                                    </li>
-                                    <li><a class="J_menuItem" href="form_markdown.html">MarkDown编辑器</a>
-                                    </li>
-                                    <li><a class="J_menuItem" href="code_editor.html">代码编辑器</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a class="J_menuItem" href="layerdate.html">日期选择器layerDate</a>
-                            </li>
-                        </ul>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">页面</span><span class="fa arrow"></span></a>
@@ -220,6 +138,162 @@
                             <li><a class="J_menuItem" href="500.html">500页面</a>
                             </li>
                             <li><a class="J_menuItem" href="empty_page.html">空白页</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="line dk"></li>
+                    <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                        <span class="ng-scope">分类</span>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">图书管理</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="form_basic.html">图书添加</a>
+                            </li>
+                            <li><a class="J_menuItem" href="form_validate.html">图书列表</a>
+                            </li>
+                            <li><a class="J_menuItem" href="form_advanced.html">图书修改</a>
+                            </li>
+                            <li><a class="J_menuItem" href="form_wizard.html">表单向导</a>
+                            </li>
+                            <li>
+                                <a href="#">文件上传 <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li><a class="J_menuItem" href="form_webuploader.html">百度WebUploader</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="form_file_upload.html">DropzoneJS</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">编辑器 <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li><a class="J_menuItem" href="form_editors.html">富文本编辑器</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="form_simditor.html">simditor</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="form_markdown.html">MarkDown编辑器</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="code_editor.html">代码编辑器</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="J_menuItem" href="layerdate.html">日期选择器layerDate</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">图书管理</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="form_basic.html">基本表单</a>
+                            </li>
+                            <li><a class="J_menuItem" href="form_validate.html">表单验证</a>
+                            </li>
+                            <li><a class="J_menuItem" href="form_advanced.html">高级插件</a>
+                            </li>
+                            <li><a class="J_menuItem" href="form_wizard.html">表单向导</a>
+                            </li>
+                            <li>
+                                <a href="#">文件上传 <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li><a class="J_menuItem" href="form_webuploader.html">百度WebUploader</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="form_file_upload.html">DropzoneJS</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">编辑器 <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li><a class="J_menuItem" href="form_editors.html">富文本编辑器</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="form_simditor.html">simditor</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="form_markdown.html">MarkDown编辑器</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="code_editor.html">代码编辑器</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="J_menuItem" href="layerdate.html">日期选择器layerDate</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">分类管理</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="{{url('/category/create')}}">分类添加</a>
+                            </li>
+                            <li><a class="J_menuItem" href="{{url('/category/index')}}">分类列表</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">作者管理</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="{{url('/author/create')}}">作者添加</a>
+                            </li>
+                            <li><a class="J_menuItem" href="{{url('/author/index')}}">作者列表</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">连接管理</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="{{url('/link/create')}}">连接添加</a>
+                            </li>
+                            <li><a class="J_menuItem" href="{{url('/link/index')}}">连接列表</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">标签管理</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="{{url('/label/create')}}">标签添加</a>
+                            </li>
+                            <li><a class="J_menuItem" href="{{url('/label/index')}}">标签列表</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa fa-bar-chart-o"></i>
+                            <span class="nav-label">统计图表</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a class="J_menuItem" href="graph_echarts.html">百度ECharts</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="graph_flot.html">Flot</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="graph_morris.html">Morris.js</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="graph_rickshaw.html">Rickshaw</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="graph_peity.html">Peity</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="graph_sparkline.html">Sparkline</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="graph_metrics.html">图表组合</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">信箱 </span><span class="label label-warning pull-right">16</span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="mailbox.html">收件箱</a>
+                            </li>
+                            <li><a class="J_menuItem" href="mail_detail.html">查看邮件</a>
+                            </li>
+                            <li><a class="J_menuItem" href="mail_compose.html">写信</a>
                             </li>
                         </ul>
                     </li>
@@ -366,7 +440,7 @@
                                 <li class="m-t-xs">
                                     <div class="dropdown-messages-box">
                                         <a href="profile.html" class="pull-left">
-                                            <img alt="image" class="img-circle" src="img/a7.jpg">
+                                            <img alt="image" class="img-circle" src="{{asset('/backend/img/a7.jpg')}}">
                                         </a>
                                         <div class="media-body">
                                             <small class="pull-right">46小时前</small>
@@ -380,7 +454,7 @@
                                 <li>
                                     <div class="dropdown-messages-box">
                                         <a href="profile.html" class="pull-left">
-                                            <img alt="image" class="img-circle" src="img/a4.jpg">
+                                            <img alt="image" class="img-circle" src="{{asset('/backend/img/a4.jpg')}}">
                                         </a>
                                         <div class="media-body ">
                                             <small class="pull-right text-navy">25小时前</small>
@@ -444,18 +518,18 @@
     </div>
 
     <!-- 全局js -->
-    <script src="js/jquery.min.js?v=2.1.4"></script>
-    <script src="js/bootstrap.min.js?v=3.3.6"></script>
-    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-    <script src="js/plugins/layer/layer.min.js"></script>
+    <script src="/backend/js/jquery.min.js?v=2.1.4"></script>
+    <script src="/backend/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="/backend/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="/backend/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="/backend/js/plugins/layer/layer.min.js"></script>
 
     <!-- 自定义js -->
-    <script src="js/hAdmin.js?v=4.1.0"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+    <script src="/backend/js/hAdmin.js?v=4.1.0"></script>
+    <script type="text/javascript" src="/backend/js/index.js"></script>
 
     <!-- 第三方插件 -->
-    <script src="js/plugins/pace/pace.min.js"></script>
+    <!-- <script src="{{asset('/backend//backend/js/plugins/pace/pace.min.js')}}"></script> -->
 <div style="text-align:center;">
 <p>来源:<a href="http://www.mycodes.net/" target="_blank">源码之家</a></p>
 </div>
