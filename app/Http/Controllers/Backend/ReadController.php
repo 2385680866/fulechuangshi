@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\ReadModel;
 use App\Models\AuthorModel;
-class AuthorController extends Controller
+use App\Models\CategoryModel;
+class ReadController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +16,11 @@ class AuthorController extends Controller
      */
     public function index()
     {
-        $authorInfo = AuthorModel::get();
-        return view("/backend/author/index",[
-            "authorInfo"=>$authorInfo
-        ]);
+        $readInfo = ReadModel::join("author","read.author_id","=","author.author_id")
+        ->join("category","read.cate_id","=","category.cate_id")
+        ->get();
+
+        return view("/backend/read/index",['readInfo'=>$readInfo]);
     }
 
     /**
@@ -27,7 +30,12 @@ class AuthorController extends Controller
      */
     public function create()
     {
-        return view("/backend/author/create");
+        $cateInfo = CategoryModel::get();
+        $authorInfo = AuthorModel::get();
+        return view("/backend/read/create",[
+            'cateInfo'=>$cateInfo,
+            'authorInfo'=>$authorInfo
+        ]);
     }
 
     /**
@@ -39,12 +47,9 @@ class AuthorController extends Controller
     public function store(Request $request)
     {
         $data = $request->except("_token");
-        if(empty($data['author_name'])){
-            dd("作者名称不能为空");
-        }
-        $res = AuthorModel::create($data);
+        $res = ReadModel::create($data);
         if($res){
-            return redirect("/author/index");
+            return redirect("/read/index");
         }
     }
 
@@ -56,7 +61,7 @@ class AuthorController extends Controller
      */
     public function show($id)
     {
-        return view("/backend/author/show");
+        return view("/backend/label/show");
     }
 
     /**
@@ -67,7 +72,7 @@ class AuthorController extends Controller
      */
     public function edit($id)
     {
-        return view("/backend/author/edit");
+        return view("/backend/read/edit");
     }
 
     /**

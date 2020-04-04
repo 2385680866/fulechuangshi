@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> - 基本表单</title>
+    <title>作者添加</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
 
@@ -21,64 +21,22 @@
             <div class="col-sm-12">
                 <div class="ibox float-e-margins">
                     <div class="ibox-content">
-                        <form method="post" class="form-horizontal" action="/backend/category/store">
+                        <form method="post" class="form-horizontal" action="{{url('/author/store')}}">
                             @csrf
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">作者名称</label>
                                 <div class="col-sm-10">
                                     <div class="input-group m-b"><span class="input-group-addon">@</span>
-                                        <input type="text" name="cate_name" placeholder="分类名称" class="form-control">
+                                        <input type="text" name="author_name" placeholder="作者名称" class="form-control">
                                     </div>
                                 </div>
                             </div> 
                             <div class="hr-line-dashed"></div>
                             <div class="form-group">
-                                <label class="col-sm-2 control-label">父类ID</label>
-                                <div class="col-sm-10">
-                                    <select class="form-control m-b" name="parend_id">
-                                        <option value="0">顶级分类</option>
-                                        @foreach($cateInfo as $key=>$value)
-                                        <option value="{{$value['cate_id']}}">{{$value['cate_name']}}</option>
-                                        @endforeach
-                                    </select>                              
-                                </div>
-                            </div>  
-                            <div class="hr-line-dashed"></div>
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label">导航栏展示
-                                </label>
-                                <div class="col-sm-10">  
-                                    <div class="radio i-checks">
-                                        <label>
-                                            <input type="radio" value="1" name="nav_is_show" checked=""> <i></i>是</label>
-                                    </div>
-                                    <div class="radio i-checks">
-                                        <label>
-                                            <input type="radio" value="0" name="nav_is_show"> <i></i>否</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="hr-line-dashed"></div>
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label">是否显示
-                                </label>
-                                <div class="col-sm-10">                   
-                                    <div class="radio i-checks">
-                                        <label>
-                                            <input type="radio" value="1" name="is_show" checked=""> <i></i>是</label>
-                                    </div>
-                                    <div class="radio i-checks">
-                                        <label>
-                                            <input type="radio" value="0" name="is_show"> <i></i>否</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="hr-line-dashed"></div>
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label">分类图片</label>
+                                <label class="col-sm-2 control-label">作者头像</label>
                                 <div class="col-sm-10">
                                     <div class="input-group m-b">
-                                        <input type="file" name="cate_img">
+                                        <input type="file" name="author_img">
                                     </div>
                                 </div>
                             </div> 

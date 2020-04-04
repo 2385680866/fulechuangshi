@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>标签列表</title>
+    <title>阅读列表</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="shortcut icon" href="favicon.ico"> <link href="/backend/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
@@ -42,25 +42,35 @@
                             <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="8">
                                 <thead>
                                 <tr>
-                                    <th>标签ID</th>
-                                    <th>标签名称</th>
-                                    <th>是否展示</th>
+                                    <th data-toggle="true">阅读ID</th>
+                                    <th>阅读名称</th>
                                     <th>添加时间</th>
                                     <th>修改时间</th>
+                                    <th data-hide="all">分类名称</th>
+                                    <th data-hide="all">作者名称</th>
+                                    <th data-hide="all">首页轮播图</th>
+                                    <th data-hide="all">是否首页轮播图</th>
+                                    <th data-hide="all">阅读图片</th>
+                                    <th data-hide="all">是否显示</th>
                                     <th>操作</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($labelInfo as $key=>$value)
+                                @foreach($readInfo as $key=>$value)
                                 <tr>
-                                    <td>{{$value['label_id']}}</td>
-                                    <td>{{$value['label_name']}}</td>
-                                    <td>@if($value['is_show']==1)是@else否@endif</td>
+                                    <td>{{$value['read_id']}}</td>
+                                    <td>{{$value['read_name']}}</td>
                                     <td>{{$value['created_at']}}</td>
                                     <td>{{$value['updated_at']}}</td>
+                                    <td>{{$value['cate_name']}}</td>
+                                    <td>{{$value['author_name']}}</td>
+                                    <td>{{$value['home_img']}}</td>
+                                    <td>@if($value['is_show_home']==1)是@else否@endif</td>
+                                    <td>{{$value['read_img']}}</td>
+                                    <td>@if($value['is_show']==1)是@else否@endif</td>
                                     <td>
-                                        <a href="{{url('/label/edit')}}/{{$value['label_id']}}"><i class="fa fa-check text-navy"></i>编辑</a>
-                                        <a href="{{url('/label/destroy')}}/{{$value['label_id']}}"><i class="fa fa-check text-navy"></i>删除</a>
+                                        <a href="{{url('/category/edit')}}/{{$value['cate_id']}}"><i class="fa fa-check text-navy"></i>编辑</a>
+                                        <a href="{{url('/category/destroy')}}/{{$value['cate_id']}}"><i class="fa fa-check text-navy"></i>删除</a>
                                     </td>
                                 </tr>
                                 @endforeach

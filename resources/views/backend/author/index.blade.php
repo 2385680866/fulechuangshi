@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分类列表</title>
+    <title>作者列表</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="shortcut icon" href="favicon.ico"> <link href="/backend/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
@@ -42,29 +42,25 @@
                             <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="8">
                                 <thead>
                                 <tr>
-                                    <th data-toggle="true">分类名称</th>
-                                    <th>是否显示</th>
-                                    <th>是否在导航栏显示</th>
-                                    <th data-hide="all">分类ID</th>
-                                    <th data-hide="all">分类图片</th>
-                                    <th data-hide="all">添加时间</th>
-                                    <th data-hide="all">修改时间</th>
+                                    <th data-toggle="true">作者ID</th>
+                                    <th>作者名称</th>
+                                    <th>添加时间</th>
+                                    <th>修改时间</th>
+                                    <th data-hide="all">作者头像</th>
                                     <th>操作</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($cateInfo as $key=>$value)
+                                @foreach($authorInfo as $key=>$value)
                                 <tr>
-                                    <td>{{$value['cate_name']}}</td>
-                                    <td>@if($value['is_show']==1)是@else否@endif</td>
-                                    <td>@if($value['nav_is_show']==1)是@else否@endif</td>
-                                    <td>{{$value['cate_id']}}</td>
-                                    <td><span class="pie"><img src="{{$value['cate_img']}}" alt=""></span></td>
+                                    <td>{{$value['author_id']}}</td>
+                                    <td>{{$value['author_name']}}</td>
                                     <td>{{$value['created_at']}}</td>
                                     <td>{{$value['updated_at']}}</td>
+                                    <td><span class="pie"><img src="{{$value['author_img']}}" alt=""></span></td>
                                     <td>
-                                        <a href="{{url('/category/edit')}}/{{$value['cate_id']}}"><i class="fa fa-check text-navy"></i>编辑</a>
-                                        <a href="{{url('/category/destroy')}}/{{$value['cate_id']}}"><i class="fa fa-check text-navy"></i>删除</a>
+                                        <a href="{{url('/author/edit')}}/{{$value['author_id']}}"><i class="fa fa-check text-navy"></i>编辑</a>
+                                        <a href="{{url('/author/destroy')}}/{{$value['author_id']}}"><i class="fa fa-check text-navy"></i>删除</a>
                                     </td>
                                 </tr>
                                 @endforeach

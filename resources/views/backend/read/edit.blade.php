@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>阅读添加</title>
+    <title>阅读编辑</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
 
@@ -21,76 +21,67 @@
             <div class="col-sm-12">
                 <div class="ibox float-e-margins">
                     <div class="ibox-content">
-                        <form method="post" class="form-horizontal" action="{{url('/read/store')}}">
+                        <form method="post" class="form-horizontal" action="{{url('/category/update')}}/{{$info['cate_id']}}">
                             @csrf
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label">阅读名称</label>
-                                <div class="col-sm-10">
-                                    <div class="input-group m-b"><span class="input-group-addon">@</span>
-                                        <input type="text" name="read_name" placeholder="阅读名称" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">分类名称</label>
                                 <div class="col-sm-10">
-                                    <select class="form-control m-b" name="cate_id">
+                                    <div class="input-group m-b"><span class="input-group-addon">@</span>
+                                        <input type="text" name="cate_name" value="{{$info['cate_name']}}" placeholder="分类名称" class="form-control">
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">父类ID</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control m-b" name="parend_id">
                                         <option value="0">顶级分类</option>
                                         @foreach($cateInfo as $key=>$value)
                                         <option value="{{$value['cate_id']}}">{{$value['cate_name']}}</option>
                                         @endforeach
-                                    </select>
+                                    </select>                              
                                 </div>
-                            </div>
+                            </div>  
                             <div class="hr-line-dashed"></div>
                             <div class="form-group">
-                                <label class="col-sm-2 control-label">作者</label>
-                                <div class="col-sm-10">
-                                    <select class="form-control m-b" name="author_id">
-                                        @foreach($authorInfo as $key=>$value)
-                                        <option value="{{$value['author_id']}}">{{$value['author_name']}}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="hr-line-dashed"></div>
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label">首页轮播图</label>
-                                <div class="col-sm-10">
+                                <label class="col-sm-2 control-label">导航栏展示
+                                </label>
+                                <div class="col-sm-10">  
                                     <div class="radio i-checks">
-                                        <label><input type="radio" value="1" name="is_show_home" checked=""> <i></i>是</label>
+                                        <label>
+                                            <input type="radio" value="1" name="nav_is_show" checked=""> <i></i>是</label>
                                     </div>
                                     <div class="radio i-checks">
-                                        <label><input type="radio" value="0" name="is_show_home"> <i></i>否</label>
-                                    </div>
-                                    <div class="radio i-checks" style="padding-left:20px;">
-                                        <input type="file" name="home_img">
+                                        <label>
+                                            <input type="radio" value="0" name="nav_is_show"> <i></i>否</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
                             <div class="form-group">
-                                <label class="col-sm-2 control-label">轮播图</label>
-                                <div class="col-sm-10">
+                                <label class="col-sm-2 control-label">是否显示
+                                </label>
+                                <div class="col-sm-10">                   
                                     <div class="radio i-checks">
-                                        <label><input type="radio" value="1" name="is_show"> <i></i>是</label>
+                                        <label>
+                                            <input type="radio" value="1" name="is_show" checked=""> <i></i>是</label>
                                     </div>
                                     <div class="radio i-checks">
-                                        <label><input type="radio" value="0" name="is_show" checked=""> <i></i>否</label>
-                                    </div>
-                                    <div class="radio i-checks" style="padding-left:20px;">
-                                        <input type="file" name="read_img">
+                                        <label>
+                                            <input type="radio" value="0" name="is_show"> <i></i>否</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
                             <div class="form-group">
-                                <label class="col-sm-2 control-label">阅读内容</label>
+                                <label class="col-sm-2 control-label">分类图片</label>
                                 <div class="col-sm-10">
-                                    <textarea name="read_content" data-provide="markdown" rows="5"></textarea>
+                                    <div class="input-group m-b">
+                                        <input type="file" name="cate_img">
+                                    </div>
                                 </div>
-                            </div>
+                            </div> 
                             <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <div class="col-sm-4 col-sm-offset-2">
@@ -107,8 +98,10 @@
     <!-- 全局js -->
     <script src="/backend/js/jquery.min.js?v=2.1.4"></script>
     <script src="/backend/js/bootstrap.min.js?v=3.3.6"></script>
+
     <!-- 自定义js -->
     <script src="/backend/js/content.js?v=1.0.0"></script>
+
     <!-- iCheck -->
     <script src="/backend/js/plugins/iCheck/icheck.min.js"></script>
     <script>
@@ -122,20 +115,20 @@
         $(document).on("blur","input[name='cate_name']",function(){
             var _this =$(this);
             var cate_name = _this.val();
+            var cate_id = {{$info['cate_id']}};
             if(cate_name==''){
                 alert("分类名称不能为空");
                 return false;
             }
             $.ajax({
                 url:"/category/cateName",
-                data:{cate_name:cate_name},
+                data:{cate_name:cate_name,cate_id:cate_id},
                 success:function(res){
                     if(res!=0){
                         alert("分类名称已存在");
                         return false;
                     }
                 }
-
             })
         });
     </script>

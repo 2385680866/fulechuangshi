@@ -30,13 +30,13 @@ Route::get('/backend/login',"Backend\\LoginController@login");//后台登录
 
 Route::get('/admin',"Backend\\IndexController@index");//首页
 // //图书管理
-Route::get('/backend/read/index',"Backend\\IndexController@index");//首页
-Route::get('/backend/read/create',"Backend\\IndexController@create");//添加页
-Route::get('/backend/read/store',"Backend\\IndexController@store");//添加执行
-Route::get('/backend/read/edit',"Backend\\IndexController@edit");//修改页
-Route::get('/backend/read/update',"Backend\\IndexController@update");//修改执行
-Route::get('/backend/read/show',"Backend\\IndexController@show");//详情
-Route::get('/backend/read/destroy',"Backend\\IndexController@destroy");//删除
+Route::get('/read/index',"Backend\ReadController@index");//首页
+Route::get('/read/create',"Backend\\ReadController@create");//添加页
+Route::post('/read/store',"Backend\\ReadController@store");//添加执行
+Route::get('/read/edit/{id}',"Backend\\ReadController@edit");//修改页
+Route::post('/read/update/{id}',"Backend\\ReadController@update");//修改执行
+Route::get('/read/show',"Backend\\ReadController@show");//详情
+Route::get('/read/destroy/{id}',"Backend\\ReadController@destroy");//删除
 //分类管理
 Route::get('/category/index',"Backend\\CategoryController@index");//首页
 Route::get('/category/create',"Backend\\CategoryController@create");//添加页

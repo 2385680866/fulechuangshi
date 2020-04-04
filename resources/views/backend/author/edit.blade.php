@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分类编辑</title>
+    <title>作者编辑</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
 

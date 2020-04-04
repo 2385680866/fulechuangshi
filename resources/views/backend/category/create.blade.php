@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> - 基本表单</title>
+    <title>分类添加</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
 

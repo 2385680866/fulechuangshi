@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit">
 
-    <title> hAdmin- 主页</title>
+    <title>后台首页</title>
 
     <meta name="keywords" content="">
     <meta name="description" content="">
@@ -149,38 +149,10 @@
                     <li>
                         <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">图书管理</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="form_basic.html">图书添加</a>
+                            <li><a class="J_menuItem" href="{{url('/read/create')}}">图书添加</a>
                             </li>
-                            <li><a class="J_menuItem" href="form_validate.html">图书列表</a>
-                            </li>
-                            <li><a class="J_menuItem" href="form_advanced.html">图书修改</a>
-                            </li>
-                            <li><a class="J_menuItem" href="form_wizard.html">表单向导</a>
-                            </li>
-                            <li>
-                                <a href="#">文件上传 <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="form_webuploader.html">百度WebUploader</a>
-                                    </li>
-                                    <li><a class="J_menuItem" href="form_file_upload.html">DropzoneJS</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">编辑器 <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="form_editors.html">富文本编辑器</a>
-                                    </li>
-                                    <li><a class="J_menuItem" href="form_simditor.html">simditor</a>
-                                    </li>
-                                    <li><a class="J_menuItem" href="form_markdown.html">MarkDown编辑器</a>
-                                    </li>
-                                    <li><a class="J_menuItem" href="code_editor.html">代码编辑器</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a class="J_menuItem" href="layerdate.html">日期选择器layerDate</a>
-                            </li>
+                            <li><a class="J_menuItem" href="{{url('/read/index')}}">图书列表</a>
+                            </li>    
                         </ul>
                     </li>
                     <li>
