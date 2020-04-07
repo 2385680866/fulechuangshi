@@ -17,12 +17,14 @@
 
 /*****************************************************前台管理*************************************************/
 Route::get('/',"Index\\IndexController@index");//首页
+Route::get('/quit',"Index\\LoginController@quit");//退出
 
 Route::get('/login',"Index\\LoginController@login");//登录页
 Route::post('/login',"Index\\LoginController@loginDo");//登录
 
 Route::get('/reg',"Index\\LoginController@reg");//注册页
-Route::post('/reg',"Index\\LoginController@regDo");//注册
+Route::post('/reg',"Index\\LoginController@regDo");//注册qrcode
+Route::get('/qrcode',"Index\\LoginController@qrcode");//生成二维码图片
 
 Route::get('/getCode',"Index\\LoginController@getCode");//获取验证码
 
@@ -31,7 +33,9 @@ Route::get('/index/library',"Index\\IndexController@index");//原书库
 Route::get('/index/search',"Index\\SearchController@index");//搜索
 Route::get('/index/cate/{id}',"Index\\CategoryController@index");//分类详情
 Route::get('/index/bang',"Index\\BangController@index");//排行榜
-Route::get('/index/author',"Index\\AuthorController@index")->middleware("check.login");//作者专区
+
+Route::get('/index/author',"Index\\AuthorController@index")->middleware("check.author");//作者专区
+Route::get('/index/authorapply',"Index\\AuthorController@apply")->middleware("check.login");//作者申请
 Route::get('/index/cateindex',"Index\\CategoryController@cateindex");//顶级分类详情
 
 

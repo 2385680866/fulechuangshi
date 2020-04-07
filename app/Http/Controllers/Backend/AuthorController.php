@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\AuthorModel;
+use App\Models\UsersModel;
 class AuthorController extends Controller
 {
     /**
@@ -39,16 +40,27 @@ class AuthorController extends Controller
     public function store(Request $request)
     {
         $data = $request->except("_token");
+        
         if(empty($data['author_name'])){
             dd("作者名称不能为空");
         }
         if ($request->hasFile('author_img')) {
             $data['author_img'] = $this->upload("author_img","/images/author");
         }
-        $res = AuthorModel::create($data);
-        if($res){
-            return redirect("/author/index");
+        $usersInfo = UsersModel::where(["username"=>$data['author_name']])->first();
+        if(!empty($usersInfo)){
+            UsersModel::where(["username"=>$usersInfo['username']])->update(["status"=>1]);
+            $res = AuthorModel::create($data);
+            if($res){
+                return redirect("/index/author");
+            }
+        }else{
+            $res = AuthorModel::create($data);
+            if($res){
+                return redirect("/author/index");
+            }
         }
+        
     }
     //图片上传
     public function upload($fileName,$nameFile){

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta property="wb:webmaster" content="bde65bab61e33f62"/>
     <meta property="qc:admins" content="151626767763051673016375"/>
-    <title>创世小说首页</title>
+    <title>首页</title>
     <link rel="shortcut icon" type="image/x-icon" href="http://img1.chuangshi.qq.com/chuangshi/p1/ico/c_mini_logo.ico"/>
     <link rel="Bookmark" type="image/x-icon" href="http://img1.chuangshi.qq.com/chuangshi/p1/ico/c_mini_logo.ico"/>
     <link rel="stylesheet" type="text/css" href="/index/css/base.css" />
@@ -15,156 +15,47 @@
     <script type="text/javascript" src="/index/js/aq_common.js"></script>
 </head>
 <body>
-<!-- 3G站提示 -->
-    <div id="top3GBanner" class="top3G" style="display:none;">
-    <div id="top3g_inner">
-        <a id="click3g" href="http://3g.chuangshi.qq.com"></a>
-        <a id="close_3g" href="javascript:"></a>
-        <img id="top3g_img" width="1000" height="300" src="">
-    </div>
-    </div>
-    <!-- 顶部导航 -->
-    <div id="topNav" class="top_nav" style="background-color:#575757;">
-        <div class="top_nav_center cf">
-            <div class="toolbar">
-                <a attr="inner:toggleSiteListBtn;" class="qqSite" href="http://book.qq.com" target="_blank">QQ阅读</a>
-                <span class="navline">|</span>
-                <a attr="click:addFavorite;" class="favorite" href="javascript:">一键收藏</a>
-                <div attr="inner:siteListDropdown;" class="navDownLoad">
-                    <a class="downStar" href="http://www.qq.com/" onclick="pgvSendClick({hottag:'ISD.SHOW.INDEX.LINK01'});" target="_blank">腾讯网首页</a>
-                    <a class="downStar" href="https://yuedu.reader.qq.com/common/common/down/dist/index.html?actid=11822" target="_blank">客户端下载</a>
-                    <!-- <a class="downAn" href="http://book.qq.com/act/reader/index.html" target="_blank">安卓端下载</a> -->
-                </div>
+<!-- 顶部导航 -->
+<div id="topNav" class="top_nav" style="background-color:#575757;">
+    <div class="top_nav_center cf">
+        <div class="toolbar">
+            <a attr="inner:toggleSiteListBtn;" class="qqSite" href="http://book.qq.com" target="_blank">QQ阅读</a>
+            <span class="navline">|</span>
+            <a attr="click:addFavorite;" class="favorite" href="javascript:">一键收藏</a>
+            <div attr="inner:siteListDropdown;" class="navDownLoad">
+                <a class="downStar" href="http://www.qq.com/" onclick="pgvSendClick({hottag:'ISD.SHOW.INDEX.LINK01'});" target="_blank">腾讯网首页</a>
+                <a class="downStar" href="https://yuedu.reader.qq.com/common/common/down/dist/index.html?actid=11822" target="_blank">客户端下载</a>
             </div>
-            @if(session("login"))
-            <div class="loginbar">
-                <span class="login_after">
-                    <a class="login user" href="http://account.book.qq.com"> 欢迎您，<i><%=userInfo.Nickname ? userInfo.Nickname : ''%></i></a>
-                    <a class="exit" attr="click:ywlogout;" href="javascript:;">退出</a>
-                    <span class="navline">|</span>
-                </span>
-                <a attr="inner:toggleBookshelfBtn;" class="myreader" href="http://account.book.qq.com/userfavorite/index.html">我的书架</a>
-                <a attr="inner:toggleUserCenterBtn;" class="user_center" href="http://account.book.qq.com">个人中心</a>
-                <a class="pay " href="http://account.book.qq.com/public/recharge.html" target="_blank">充值</a>
-                <span class="navline">|</span>
-                <a attr="inner:toggleChannelBtn;" class="more_nav" href="javascript:">导航</a>
-            </div>
-            @else
-            <div class="loginbar">
-                <span class="login_before">
-                    <a attr="click:openLoginPopup;" class="login current btnpoplogin" href="{{url('/login')}}">登录</a>
-                    <a class="reg" target="_blank" href="{{url('/reg')}}">注册</a>
-                    <span class="navline">|</span>
-                </span>
-                <a attr="inner:toggleRecentReadBtn;" class="myreader" href="javascript:">最近阅读</a>
-                <a attr="inner:toggleUserCenterBtn;" class="user_center" href="http://account.book.qq.com">个人中心</a>
-                <a class="pay " href="http://account.book.qq.com/public/recharge.html" target="_blank">充值</a>
-                <span class="navline">|</span>
-                <a attr="inner:toggleChannelBtn;" class="more_nav" href="javascript:">导航</a>
-            </div>
-            @endif
         </div>
-    </div>
-    <!-- 顶部导航模板 -->
-    <textarea id="topNavBarTpl" style="display:none;">
-        <div class="top_nav_center cf">
-            <div class="toolbar">
-                <a attr="inner:toggleSiteListBtn;" class="qqSite" href="http://book.qq.com" target="_blank">QQ阅读</a>
+        @if(session("users"))
+        <div class="loginbar">
+            <span class="login_after">
+                <a class="login user" href="http://account.book.qq.com"> 欢迎，<i>{{session('users.username')}}</i></a>
+                <a class="exit" attr="click:ywlogout;" href="{{url('/quit')}}">退出</a>
                 <span class="navline">|</span>
-                <a attr="click:addFavorite;" class="favorite" href="javascript:">一键收藏</a>
-                <div attr="inner:siteListDropdown;" class="navDownLoad">
-                    <a class="downStar" href="http://www.qq.com/" onclick="pgvSendClick({hottag:'ISD.SHOW.INDEX.LINK01'});" target="_blank">腾讯网首页</a>
-                    <a class="downStar" href="https://yuedu.reader.qq.com/common/common/down/dist/index.html?actid=11822" target="_blank">客户端下载</a>
-                    <!-- <a class="downAn" href="http://book.qq.com/act/reader/index.html" target="_blank">安卓端下载</a> -->
-                </div>
-            </div>
-            <div class="loginbar">
-                <%if isLogin%>
-                <span class="login_after">
-                    <a class="login user" href="http://account.book.qq.com"> 欢迎您，<i><%=userInfo.Nickname ? userInfo.Nickname : ''%></i></a>
-                    <a class="exit" attr="click:ywlogout;" href="javascript:;">退出</a>
-                    <span class="navline">|</span>
-                </span>
-                <a attr="inner:toggleBookshelfBtn;" class="myreader" href="http://account.book.qq.com/userfavorite/index.html">我的书架</a>
-                <%else%>
-                <span class="login_before">
-                    <a attr="click:openLoginPopup;" class="login current btnpoplogin" href="javascript:;">登录/注册</a>
-                    <!-- <a class="reg" target="_blank" href="http://zc.qq.com/chs/index.html?from=pt">注册</a> -->
-                    <span class="navline">|</span>
-                </span>
-                <a attr="inner:toggleRecentReadBtn;" class="myreader" href="javascript:">最近阅读</a>
-                <%/if%>
-                <a attr="inner:toggleUserCenterBtn;" class="user_center" href="http://account.book.qq.com">个人中心</a>
-                <a class="pay " href="http://account.book.qq.com/public/recharge.html" target="_blank">充值</a>
-                <span class="navline">|</span>
-                <a attr="inner:toggleChannelBtn;" class="more_nav" href="javascript:">导航</a>
-                <!-- 书架下拉菜单 -->
-                <div attr="inner:bookshelfDropdown;" class="bookrack">
-                    <%if isLogin%>
-                    <p><span class="ccc">藏书：</span>
-                        <span><%=userInfo.collectBookNum ? userInfo.collectBookNum : 0%></span>本
-                    </p>
-                <div class="nav_hover_list cf">
-                    <a href="http://account.book.qq.com/userfavorite/index.html?bookshelf_show=2">最近阅读</a>
-                    <span class="booktags">
-                        <%if userInfo.bookshelfList && userInfo.bookshelfList.length%>
-                        <%each userInfo.bookshelfList as bookshelf i%>
-                        <a href="http://account.book.qq.com/userfavorite/index.html?Favoriteid=<%=bookshelf.groupId%>">
-                            <%=bookshelf.groupName%>
-                        </a>
-                        <%/each%>
-                        <%/if%>
-                    </span>
-                </div>
-                <%else%>
-                <div class="nav_hover_list cf">
-                    <span class="booktags">
-                        <%if userInfo.recentReadList && userInfo.recentReadList.length%>
-                        <%each userInfo.recentReadList as book i%>
-                        <a href="<%=book.bookUrl%>">
-                            <%=book.bookName%>
-                        </a>
-                        <%/each%>
-                        <%else%>
-                        没有阅读作品
-                        <%/if%>
-                    </span>
-                </div>
-                <%/if%>
-            </div>
-            <!-- 用户中心下拉菜单  -->
-            <div attr="inner:userCenterDropdown;" class="user_menu">
-                <div class="nav_hover_list cf">
-                    <a href="http://account.book.qq.com/userfavorite/index.html">我的书架</a>
-                    <a href="http://account.book.qq.com/usercenter/index.html">账户设置</a>
-                    <a class="a_nobg" href="http://account.book.qq.com/usermoney/index.html">账务中心</a>
-                    <a class="a_nobg" href="https://write.qq.com/?siteid=3">作家专区</a>
-                </div>
-            </div>
-            <!-- 导航下拉菜单 -->
-            <div attr="inner:channelDropdown;" class="more_box">
-                <div class="nav_hover_list cf">
-                    <a href="http://chuangshi.qq.com/bk/huan/" title="玄幻·奇幻">玄幻·奇幻</a>
-                    <a href="http://chuangshi.qq.com/bk/xia/" title="武侠·仙侠">武侠·仙侠</a>
-                    <a href="http://chuangshi.qq.com/bk/chun/" title="都市·现实">都市·现实</a>
-                    <a href="http://chuangshi.qq.com/bk/shi/" title="历史·军事">历史·军事</a>
-                    <a href="http://chuangshi.qq.com/bk/you/" title="游戏·体育">游戏·体育</a>
-                    <a href="http://chuangshi.qq.com/bk/ke/" title="科技·悬疑">科技·悬疑</a>
-                    <a href="http://chuangshi.qq.com/bk/ecy/" style="width:37px;" title="轻小说">轻小说</a>
-                    <a style="width:1px; margin-left:-6px;">·</a>
-                    <a href="http://chuangshi.qq.com/bk/duan/" style="width:37px;" title="短篇">短篇</a>
-                    <a href="http://chuangshi.qq.com" title="女生·言情">女生·言情</a>
-                    <a href="http://chuangshi.qq.com/bk/" title="书库" style="width:37px;">书库</a>
-                    <a style="width:1px; margin-left:-6px;">·</a>
-                    <a href="http://book.qq.com/cdkey" title="兑奖" style="width:37px;" target="_blank">兑奖</a>
-                </div>
-            </div>
-            <%if isLogin%>
-                <div id="pointy_msg"></div>
-                <div id="topnav_msg"><a class="red" href="http://account.book.qq.com/usermessage/index.html">有新短消息</a></div>
-            <%/if%>
+            </span>
+            <a attr="inner:toggleUserCenterBtn;" class="user_center" href="http://account.book.qq.com">个人中心</a>
+            <a class="pay " href="http://account.book.qq.com/public/recharge.html" target="_blank">充值</a>
+            <span class="navline">|</span>
+            <a attr="inner:toggleChannelBtn;" class="more_nav" href="javascript:">导航</a>
         </div>
-    </textarea>
+        @else
+        <div class="loginbar">
+            <span class="login_before">
+                <a attr="click:openLoginPopup;" class="login current btnpoplogin" href="{{url('/login')}}">登录</a>
+                <a class="reg" target="_blank" href="{{url('/reg')}}">注册</a>
+                <span class="navline">|</span>
+            </span>
+            <a attr="inner:toggleRecentReadBtn;" class="myreader" href="javascript:">最近阅读</a>
+            <a attr="inner:toggleUserCenterBtn;" class="user_center" href="http://account.book.qq.com">个人中心</a>
+            <a class="pay " href="http://account.book.qq.com/public/recharge.html" target="_blank">充值</a>
+            <span class="navline">|</span>
+            <a attr="inner:toggleChannelBtn;" class="more_nav" href="javascript:">导航</a>
+        </div>
+        @endif
+    </div>
+</div>
+
 <div class="wrap">
     <link rel="stylesheet" type="text/css" href="/index/css/index.css" />
     <!-- logo -->
@@ -199,9 +90,6 @@
                 <a href="{{url('/index/library')}}" title="原创书库">原创书库</a>&nbsp;|
                 @foreach($cateInfo as $key=>$value)
                 <a href="{{url('/index/cate')}}/{{$value['cate_id']}}" title="{{$value['cate_name']}}">{{$value['cate_name']}}</a>&nbsp;|
-                    <!-- @if($key%2==0)
-                        <a href="{{url('/index/cate')}}/{{$value['cate_id']}}" title="{{$value['cate_name']}}">{{$value['cate_name']}}@else·{{$value['cate_name']}}</a>&nbsp;|
-                    @endif -->
                 @endforeach
                 <!-- <a href="http://chuangshi.qq.com/bk/xia/" title="武侠·仙侠">武侠·仙侠</a>&nbsp;|&nbsp; -->
             </p>
@@ -280,25 +168,34 @@
                     <ul>
                     @foreach($homeInfo as $key=>$value)
                         <li style="display: list-item;">
-                            <a alt="{{$value['read_name']}}" title="{{$value['read_name']}}" href="http://chuangshi.qq.com/bk/ds/830083.html" target="_blank">
+                            <a alt="{{$value['read_name']}}" title="{{$value['read_name']}}" href="{{url('/detail')}}/{{$value['read_id']}}" target="_blank">
                                 <img width="566" height="209" text="{{$value['read_text']}}" alt="{{$value['read_name']}}" title="{{$value['read_name']}}" src="{{$value['home_img']}}" />
                             </a>
                         </li>
-                        <!-- <li style=""><a alt="复兴之路" title="复兴之路" href="http://chuangshi.qq.com/bk/qc/707172.html" target="_blank"><img width="566" height="209" text="日出日落，天道永恒。" alt="复兴之路" title="复兴之路" src="/index/picture/600e15ba898e0940f3f473473e4d8058.jpg" /></a></li>
-                        <li style=""><a alt="上海繁华" title="上海繁华" href="http://chuangshi.qq.com/bk/qc/22351118.html" target="_blank"><img width="566" height="209" text="漫天繁华，明天又会是谁的精彩？" alt="上海繁华" title="上海繁华" src="/index/picture/feb8dbfd9998903c83cbdc6594f01152.jpg" /></a></li>
-                        <li style=""><a alt="朝阳警事" title="朝阳警事" href="http://chuangshi.qq.com/bk/ds/20558260.html" target="_blank"><img width="566" height="209" text="社区民警，扎根基层，依靠群众之眼屡破奇案。" alt="朝阳警事" title="朝阳警事" src="/index/picture/b7a1012fa87de986a1fd1865fb4a5c5d.jpg" /></a></li>
-                        <li style=""><a alt="大国重工" title="大国重工" href="http://chuangshi.qq.com/bk/ds/14151636.html" target="_blank"><img width="566" height="209" text="一个泱泱大国，不能没有自己的重型装备工业。" alt="大国重工" title="大国重工" src="/index/picture/aac389ac2eb78713aa44fa0a27485403.jpg" /></a></li> -->
+                        <!-- 
+                        <li style="">
+                            <a alt="复兴之路" title="复兴之路" href="http://chuangshi.qq.com/bk/qc/707172.html" target="_blank">
+                                <img width="566" height="209" text="日出日落，天道永恒。" alt="复兴之路" title="复兴之路" src="/index/picture/600e15ba898e0940f3f473473e4d8058.jpg" />
+                            </a>
+                        </li>-->
+                        
                     @endforeach
                     </ul>
                 </div>
                 <!--描述-->
                 <div class="txt">
                     <ul>
-                        <li style="bottom: 86px; display: list-item;"><a title="相声大师" target="_blank" href="http://chuangshi.qq.com/bk/ds/830083.html">相声大师 [都市] 唐四方著 2020-04-02</a><p>这是一部写相声行几十年兴衰变迁的小说。</p><b></b></li>
-                        <li style="bottom: 86px; "><a title="复兴之路" target="_blank" href="http://chuangshi.qq.com/bk/qc/707172.html">复兴之路 [现实] wanglong著 2020-04-01</a><p>日出日落，天道永恒。</p><b></b></li>
-                        <li style="bottom: 86px; "><a title="上海繁华" target="_blank" href="http://chuangshi.qq.com/bk/qc/22351118.html">上海繁华 [现实] 大地风车著 2020-03-31</a><p>漫天繁华，明天又会是谁的精彩？</p><b></b></li>
-                        <li style="bottom: 86px; "><a title="朝阳警事" target="_blank" href="http://chuangshi.qq.com/bk/ds/20558260.html">朝阳警事 [都市] 卓牧闲著 2020-03-30</a><p>社区民警，扎根基层，依靠群众之眼屡破奇案。</p><b></b></li>
-                        <li style="bottom: 86px; "><a title="大国重工" target="_blank" href="http://chuangshi.qq.com/bk/ds/14151636.html">大国重工 [都市] 齐橙著 2020-03-29</a><p>一个泱泱大国，不能没有自己的重型装备工业。</p><b></b></li>
+                        @foreach($homeInfo as $key=>$value)
+                        <li style="bottom: 86px; display: list-item;">
+                            <a title="{{$value['read_name']}}" target="_blank" href="{{url('/detail')}}/{{$value['read_id']}}">{{$value['read_name']}} [都市] {{$value['author_nickname']}}著 2020-04-02</a>
+                            <p>{{$value['read_desc']}}</p>
+                            <b></b>
+                        </li>
+                        @endforeach
+                        <!-- <li style="bottom: 86px; ">
+                            <a title="复兴之路" target="_blank" href="http://chuangshi.qq.com/bk/qc/707172.html">复兴之路 [现实] wanglong著 2020-04-01</a>
+                            <p>日出日落，天道永恒。</p><b></b>
+                        </li> -->
                     </ul>
                 </div>
                 <!--小图-->
@@ -386,7 +283,7 @@
     <div class="jptjWrap cf">
         <!--精品推荐-->
         <div class="jpRecBook fl">
-            <span class="tit" title="精品推荐"><img src="jptj.png" alt=""></span>
+            <span class="tit" title="精品推荐"><img src="/index/images/jptj.png" alt=""></span>
             <div id="zsgun">
                 <a href="javascript:;" class="prenext zspre"></a>
                 <a href="javascript:;" class="prenext zsnext"></a>
@@ -399,11 +296,11 @@
                                 </a>
                                 <div class="recInfo">
                                     <a href="http://chuangshi.qq.com/bk/ds/29442711.html" target="_blank" title="{{$value['read_name']}}">{{$value['read_name']}}</a>
-                                    <p class="index_authorlink" >{{$value['author_name']}}&nbsp;著</p><p>{{$value['read_desc']}}</p>
+                                    <p class="index_authorlink" >{{$value['author_nickname']}}&nbsp;著</p><p>{{$value['read_desc']}}</p>
                                 </div>
                             </li>
                         @endforeach
-                        <!-- 
+                        <!--
                             <li class="recAct" >
                                 <a href="http://chuangshi.qq.com/bk/ds/28476424.html" target="_blank" title="我成为了外星王子" class="imgBox">
                                     <img src="/index/picture/t5_28476424.jpg" width="78" height="98"/>
