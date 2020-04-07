@@ -36,7 +36,7 @@ Route::get('/index/cateindex',"Index\\CategoryController@cateindex");//顶级分
 
 
 /*****************************************************后台管理*************************************************/
-Route::get('/admin',"Backend\\IndexController@index");//首页
+Route::get('/admin',"Backend\\IndexController@index")->middleware("check.admin");//首页
 
 Route::get('/admin/login',"Backend\\LoginController@login");//后台登录页
 Route::post('/admin/login',"Backend\\LoginController@loginDo");//后台登录
