@@ -12,7 +12,7 @@
     <link href="/backend/css/plugins/iCheck/custom.css" rel="stylesheet">
     <link href="/backend/css/animate.css" rel="stylesheet">
     <link href="/backend/css/style.css?v=4.1.0" rel="stylesheet">
-    <style>.i-checks{float:left;}</style>
+    <style>.i-checks{float:left;} img{width:217px;height:45px;float:left;}</style>
 </head>
 
 <body class="gray-bg">
@@ -21,67 +21,125 @@
             <div class="col-sm-12">
                 <div class="ibox float-e-margins">
                     <div class="ibox-content">
-                        <form method="post" class="form-horizontal" action="{{url('/category/update')}}/{{$info['cate_id']}}">
+                        <form method="post" class="form-horizontal" action="{{url('/read/update')}}/{{$readInfo['read_id']}}" enctype="multipart/form-data">
                             @csrf
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">阅读名称</label>
+                                <div class="col-sm-10">
+                                    <div class="input-group m-b"><span class="input-group-addon">@</span>
+                                        <input type="text" name="read_name" value="{{$readInfo['read_name']}}" placeholder="阅读名称" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">分类名称</label>
                                 <div class="col-sm-10">
-                                    <div class="input-group m-b"><span class="input-group-addon">@</span>
-                                        <input type="text" name="cate_name" value="{{$info['cate_name']}}" placeholder="分类名称" class="form-control">
-                                    </div>
-                                </div>
-                            </div> 
-                            <div class="hr-line-dashed"></div>
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label">父类ID</label>
-                                <div class="col-sm-10">
-                                    <select class="form-control m-b" name="parend_id">
-                                        <option value="0">顶级分类</option>
+                                    <select class="form-control m-b" name="cate_id">
                                         @foreach($cateInfo as $key=>$value)
-                                        <option value="{{$value['cate_id']}}">{{$value['cate_name']}}</option>
+                                            @if($readInfo['cate_id']==$value['cate_id'])
+                                                @if($value['parend_id']==0)
+                                                    <option value="{{$value['cate_id']}}" selected>{{$value['cate_name']}}</option>
+                                                @else
+                                                    <option value="{{$value['cate_id']}}" selected>----{{$value['cate_name']}}</option>
+                                                @endif
+                                            @else
+                                                @if($value['parend_id']==0)
+                                                    <option value="{{$value['cate_id']}}" selected>{{$value['cate_name']}}</option>
+                                                @else
+                                                    <option value="{{$value['cate_id']}}" selected>----{{$value['cate_name']}}</option>
+                                                @endif
+                                            @endif
                                         @endforeach
-                                    </select>                              
-                                </div>
-                            </div>  
-                            <div class="hr-line-dashed"></div>
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label">导航栏展示
-                                </label>
-                                <div class="col-sm-10">  
-                                    <div class="radio i-checks">
-                                        <label>
-                                            <input type="radio" value="1" name="nav_is_show" checked=""> <i></i>是</label>
-                                    </div>
-                                    <div class="radio i-checks">
-                                        <label>
-                                            <input type="radio" value="0" name="nav_is_show"> <i></i>否</label>
-                                    </div>
+                                    </select>
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
                             <div class="form-group">
-                                <label class="col-sm-2 control-label">是否显示
-                                </label>
-                                <div class="col-sm-10">                   
-                                    <div class="radio i-checks">
-                                        <label>
-                                            <input type="radio" value="1" name="is_show" checked=""> <i></i>是</label>
-                                    </div>
-                                    <div class="radio i-checks">
-                                        <label>
-                                            <input type="radio" value="0" name="is_show"> <i></i>否</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="hr-line-dashed"></div>
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label">分类图片</label>
+                                <label class="col-sm-2 control-label">作者</label>
                                 <div class="col-sm-10">
-                                    <div class="input-group m-b">
-                                        <input type="file" name="cate_img">
+                                    <select class="form-control m-b" name="author_id">
+                                        @foreach($authorInfo as $key=>$value)
+                                            @if($readInfo['author_id']==$value['author_id'])
+                                                <option value="{{$value['author_id']}}" selected>{{$value['author_name']}}</option>
+                                            @else
+                                                <option value="{{$value['author_id']}}">{{$value['author_name']}}</option>
+                                            @endif
+                                        
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">首页轮播图</label>
+                                <div class="col-sm-10">
+                                    @if($readInfo['is_show_home']==1)
+                                    <div class="radio i-checks">
+                                        <label><input type="radio" value="1" name="is_show_home" checked=""> <i></i>是</label>
+                                    </div>
+                                    <div class="radio i-checks">
+                                        <label><input type="radio" value="0" name="is_show_home"> <i></i>否</label>
+                                    </div>
+                                    @else
+                                    <div class="radio i-checks">
+                                        <label><input type="radio" value="1" name="is_show_home"> <i></i>是</label>
+                                    </div>
+                                    <div class="radio i-checks">
+                                        <label><input type="radio" value="0" name="is_show_home" checked=""> <i></i>否</label>
+                                    </div>
+                                    @endif
+                                    <div class="radio i-checks" style="padding-left:20px;">
+                                        <!-- <img src="{{$readInfo['home_img']}}" style="float:left;"> -->
+                                        <input type="file" name="home_img" >
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">轮播图</label>
+                                <div class="col-sm-10">
+                                @if($readInfo['is_show']==1)
+                                    <div class="radio i-checks"><label><input type="radio" value="1" name="is_show"  checked=""> <i></i>是</label></div>
+                                    <div class="radio i-checks"><label><input type="radio" value="0" name="is_show"> <i></i>否</label></div>
+                                    @else
+                                    <div class="radio i-checks"><label><input type="radio" value="1" name="is_show"> <i></i>是</label></div>
+                                    <div class="radio i-checks"><label><input type="radio" value="0" name="is_show" checked=""> <i></i>否</label></div>
+                                    @endif
+                                    <div class="radio i-checks" style="padding-left:20px;">
+                                        <!-- <img src="{{$readInfo['read_img']}}"> -->
+                                        <input type="file" name="read_img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">作品标签</label>
+                                <div class="col-sm-10">
+                                    @foreach($labelInfo as $key=>$value)
+                                        @if(in_array($value['label_id'],$readInfo['label_id']))
+
+                                        <div class="checkbox i-checks"><label><input type="checkbox" value="{{$value['label_id']}}" name="label_id[]" checked> <i></i>{{$value['label_name']}}</label></div>
+                                        @else
+                                        <div class="checkbox i-checks"><label><input type="checkbox" value="{{$value['label_id']}}" name="label_id[]"> <i></i>{{$value['label_name']}}</label></div>
+                                        @endif
+                                    @endforeach
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">阅读详情</label>
+                                <div class="col-sm-10">
+                                    <textarea name="read_desc" data-provide="markdown" rows="5">{{$readInfo['read_desc']}}</textarea>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">阅读内容</label>
+                                <div class="col-sm-10">
+                                    <textarea name="read_content" data-provide="markdown" rows="5">{{$readInfo['read_content']}}</textarea>
+                                </div>
+                            </div>
                             <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <div class="col-sm-4 col-sm-offset-2">
@@ -98,10 +156,8 @@
     <!-- 全局js -->
     <script src="/backend/js/jquery.min.js?v=2.1.4"></script>
     <script src="/backend/js/bootstrap.min.js?v=3.3.6"></script>
-
     <!-- 自定义js -->
     <script src="/backend/js/content.js?v=1.0.0"></script>
-
     <!-- iCheck -->
     <script src="/backend/js/plugins/iCheck/icheck.min.js"></script>
     <script>
@@ -112,23 +168,24 @@
             });
         });
         //唯一性验证
-        $(document).on("blur","input[name='cate_name']",function(){
+        $(document).on("blur","input[name='read_name']",function(){
             var _this =$(this);
-            var cate_name = _this.val();
-            var cate_id = {{$info['cate_id']}};
-            if(cate_name==''){
-                alert("分类名称不能为空");
+            var read_name = _this.val();
+            var read_id = {{$readInfo['read_id']}};
+            if(read_name==''){
+                alert("阅读名称不能为空");
                 return false;
             }
             $.ajax({
-                url:"/category/cateName",
-                data:{cate_name:cate_name,cate_id:cate_id},
+                url:"/read/readName",
+                data:{read_name:read_name,read_id:read_id},
                 success:function(res){
                     if(res!=0){
-                        alert("分类名称已存在");
+                        alert("阅读名称已存在");
                         return false;
                     }
                 }
+
             })
         });
     </script>

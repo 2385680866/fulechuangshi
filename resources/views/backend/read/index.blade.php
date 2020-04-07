@@ -48,10 +48,12 @@
                                     <th>修改时间</th>
                                     <th data-hide="all">分类名称</th>
                                     <th data-hide="all">作者名称</th>
-                                    <th data-hide="all">首页轮播图</th>
-                                    <th data-hide="all">是否首页轮播图</th>
+                                    <th data-hide="all">作品标签</th>
+                                    <!-- <th data-hide="all">首页轮播图</th> -->
+                                    <!-- <th data-hide="all">是否首页轮播图</th> -->
                                     <th data-hide="all">阅读图片</th>
                                     <th data-hide="all">是否显示</th>
+                                    <th data-hide="all">是否精品</th>
                                     <th>操作</th>
                                 </tr>
                                 </thead>
@@ -64,13 +66,15 @@
                                     <td>{{$value['updated_at']}}</td>
                                     <td>{{$value['cate_name']}}</td>
                                     <td>{{$value['author_name']}}</td>
-                                    <td>{{$value['home_img']}}</td>
-                                    <td>@if($value['is_show_home']==1)是@else否@endif</td>
-                                    <td>{{$value['read_img']}}</td>
+                                    <td>{{$value['label_name']}}</td>
+                                    <!-- <td><img src="{{$value['home_img']}}" alt="{{$value['read_name']}}"></td> -->
+                                    <!-- <td>@if($value['is_show_home']==1)是@else否@endif</td> -->
+                                    <td><img src="/{{$value['read_img']}}" alt="{{$value['read_name']}}"></td>
                                     <td>@if($value['is_show']==1)是@else否@endif</td>
+                                    <td>@if($value['is_boutique']==1)是@else否@endif</td>
                                     <td>
-                                        <a href="{{url('/category/edit')}}/{{$value['cate_id']}}"><i class="fa fa-check text-navy"></i>编辑</a>
-                                        <a href="{{url('/category/destroy')}}/{{$value['cate_id']}}"><i class="fa fa-check text-navy"></i>删除</a>
+                                        <a href="{{url('/read/edit')}}/{{$value['read_id']}}"><i class="fa fa-check text-navy"></i>编辑</a>
+                                        <a href="{{url('/read/destroy')}}/{{$value['read_id']}}"><i class="fa fa-check text-navy"></i>删除</a>
                                     </td>
                                 </tr>
                                 @endforeach

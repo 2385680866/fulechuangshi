@@ -15,9 +15,25 @@ class CategoryController extends Controller
     public function index()
     {
         $cateInfo = CategoryModel::get();
+        // $cateInfo = $this->getTree($cateInfo);
         return view("/backend/category/index",['cateInfo'=>$cateInfo]);
     }
-
+    public function getTree($cateInfo,$parend_id=0,$level=0)
+    {
+        
+        static $list = [];
+        foreach ($cateInfo as $key => $value) {
+            if( $value['parend_id'] == $parend_id )
+            {
+                $value['level'] = $level;
+                $list[]=$value;
+                unset($cateInfo[$key]);
+               $this->getTree( $cateInfo, $value['cate_id'],$level+1);
+            }
+        }
+        return $list;
+    }
+    
     /**
      * Show the form for creating a new resource.
      *
@@ -39,13 +55,24 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $data = $request->except("_token");
-        $data['cate_img'] = "/images/category/".$data['cate_img'];
+
+        if ($request->hasFile('cate_img')) {
+            $data['cate_img'] = $this->upload("cate_img","/images/category");
+        }
         $res = CategoryModel::create($data);
         if($res){
             return redirect("/category/index");
         }
     }
-
+    public function upload($fileName,$nameFile){
+        if (request()->file($fileName)->isValid()) {
+            $photo = request()->file($fileName);
+            $code = rand(111111,999999);
+            $img = $code.".jpg";
+            $store_result = $photo->storeAs($nameFile,$img);
+        }
+            return $store_result;
+    }
     /**
      * Show the form for editing the specified resource.
      *
@@ -74,7 +101,9 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
         $data = $request->except("_token");
-        $data['cate_img'] = "/images/category/".$data['cate_img'];
+        if ($request->hasFile('cate_img')) {
+            $data['cate_img'] = $this->upload("cate_img","/images/category");
+        }
         $res = CategoryModel::where(['cate_id'=>$id])->update($data);
         if($res){
             return redirect("/category/index");

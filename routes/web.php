@@ -17,6 +17,15 @@
 
 /*****************************************************前台管理*************************************************/
 Route::get('/',"Index\\IndexController@index");//首页
+
+Route::get('/login',"Index\\LoginController@login");//登录页
+Route::post('/login',"Index\\LoginController@loginDo");//登录
+
+Route::get('/reg',"Index\\LoginController@reg");//注册页
+Route::post('/reg',"Index\\LoginController@regDo");//注册
+
+Route::get('/getCode',"Index\\LoginController@getCode");//获取验证码
+
 Route::get('/index/detail/{id}',"Index\\IndexController@detail");//详情页
 Route::get('/index/library',"Index\\IndexController@index");//原书库
 Route::get('/index/search',"Index\\SearchController@index");//搜索
@@ -24,11 +33,17 @@ Route::get('/index/cate/{id}',"Index\\CategoryController@index");//分类详情
 Route::get('/index/bang',"Index\\BangController@index");//排行榜
 Route::get('/index/author',"Index\\AuthorController@index")->middleware("check.login");//作者专区
 Route::get('/index/cateindex',"Index\\CategoryController@cateindex");//顶级分类详情
-Route::get('/backend/login',"Backend\\LoginController@login");//后台登录
+
 
 /*****************************************************后台管理*************************************************/
-
 Route::get('/admin',"Backend\\IndexController@index");//首页
+
+Route::get('/admin/login',"Backend\\LoginController@login");//后台登录页
+Route::post('/admin/login',"Backend\\LoginController@loginDo");//后台登录
+
+Route::get('/admin/reg',"Backend\\LoginController@reg");//后台注册页
+Route::post('/admin/reg',"Backend\\LoginController@regDo");//后台注册
+
 // //图书管理
 Route::get('/read/index',"Backend\ReadController@index");//首页
 Route::get('/read/create',"Backend\\ReadController@create");//添加页
@@ -37,6 +52,7 @@ Route::get('/read/edit/{id}',"Backend\\ReadController@edit");//修改页
 Route::post('/read/update/{id}',"Backend\\ReadController@update");//修改执行
 Route::get('/read/show',"Backend\\ReadController@show");//详情
 Route::get('/read/destroy/{id}',"Backend\\ReadController@destroy");//删除
+Route::get('/read/readName',"Backend\\ReadController@readName");//唯一验证
 //分类管理
 Route::get('/category/index',"Backend\\CategoryController@index");//首页
 Route::get('/category/create',"Backend\\CategoryController@create");//添加页

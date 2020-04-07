@@ -21,7 +21,7 @@
             <div class="col-sm-12">
                 <div class="ibox float-e-margins">
                     <div class="ibox-content">
-                        <form method="post" class="form-horizontal" action="{{url('/read/store')}}">
+                        <form method="post" class="form-horizontal" action="{{url('/read/store')}}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">阅读名称</label>
@@ -36,9 +36,12 @@
                                 <label class="col-sm-2 control-label">分类名称</label>
                                 <div class="col-sm-10">
                                     <select class="form-control m-b" name="cate_id">
-                                        <option value="0">顶级分类</option>
                                         @foreach($cateInfo as $key=>$value)
-                                        <option value="{{$value['cate_id']}}">{{$value['cate_name']}}</option>
+                                            @if($value['parend_id']==0)
+                                                <option value="{{$value['cate_id']}}">{{$value['cate_name']}}</option>
+                                            @else
+                                                <option value="{{$value['cate_id']}}">----{{$value['cate_name']}}</option>
+                                            @endif
                                         @endforeach
                                     </select>
                                 </div>
@@ -86,6 +89,37 @@
                             </div>
                             <div class="hr-line-dashed"></div>
                             <div class="form-group">
+                                <label class="col-sm-2 control-label">是否精品</label>
+                                <div class="col-sm-10">
+                                    <div class="radio i-checks">
+                                        <label><input type="radio" value="1" name="is_jingpin" checked=""> <i></i>是</label>
+                                    </div>
+                                    <div class="radio i-checks">
+                                        <label><input type="radio" value="0" name="is_jingpin"> <i></i>否</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">作品标签</label>
+                                <div class="col-sm-10">
+                                    @foreach($labelInfo as $key=>$value)
+                                    <div class="checkbox i-checks">
+                                        <label><input type="checkbox" value="{{$value['label_id']}}" name="label_id[]"> <i></i>{{$value['label_name']}}</label>
+                                    </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">阅读介绍</label>
+                                <div class="col-sm-10">
+                                    <textarea name="read_desc" data-provide="markdown" rows="5"></textarea>
+                                </div>
+                            </div>
+                      
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
                                 <label class="col-sm-2 control-label">阅读内容</label>
                                 <div class="col-sm-10">
                                     <textarea name="read_content" data-provide="markdown" rows="5"></textarea>
@@ -119,19 +153,19 @@
             });
         });
         //唯一性验证
-        $(document).on("blur","input[name='cate_name']",function(){
+        $(document).on("blur","input[name='read_name']",function(){
             var _this =$(this);
-            var cate_name = _this.val();
-            if(cate_name==''){
-                alert("分类名称不能为空");
+            var read_name = _this.val();
+            if(read_name==''){
+                alert("阅读名称不能为空");
                 return false;
             }
             $.ajax({
-                url:"/category/cateName",
-                data:{cate_name:cate_name},
+                url:"/read/readName",
+                data:{read_name:read_name},
                 success:function(res){
                     if(res!=0){
-                        alert("分类名称已存在");
+                        alert("阅读名称已存在");
                         return false;
                     }
                 }

@@ -63,12 +63,13 @@
                                     <td>@if($value['parend_id']==0)顶级分类@else{{$value['parend_id']}}@endif</td>
                                     <td>@if($value['is_show']==1)是@else否@endif</td>
                                     <td>@if($value['nav_is_show']==1)是@else否@endif</td>
-                                    <td><span class="pie"><img src="{{$value['cate_img']}}" alt=""></span></td>
+                                    <td><span class="pie"><img src="/{{$value['cate_img']}}" alt=""></span></td>
                                     <td>
                                         <a href="{{url('/category/edit')}}/{{$value['cate_id']}}"><i class="fa fa-check text-navy"></i>编辑</a>
                                         <a href="{{url('/category/destroy')}}/{{$value['cate_id']}}"><i class="fa fa-check text-navy"></i>删除</a>
                                     </td>
                                 </tr>
+
                                 @endforeach
                                 </tbody>
                                 <tfoot>

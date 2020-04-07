@@ -21,7 +21,7 @@
             <div class="col-sm-12">
                 <div class="ibox float-e-margins">
                     <div class="ibox-content">
-                        <form method="post" class="form-horizontal" action="/backend/category/store">
+                        <form method="post" class="form-horizontal" action="/backend/category/store"  enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">分类名称</label>

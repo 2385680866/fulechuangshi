@@ -21,7 +21,7 @@
             <div class="col-sm-12">
                 <div class="ibox float-e-margins">
                     <div class="ibox-content">
-                        <form method="post" class="form-horizontal" action="{{url('/author/store')}}">
+                        <form method="post" class="form-horizontal" action="{{url('/author/store')}}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">作者名称</label>

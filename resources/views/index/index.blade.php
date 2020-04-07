@@ -6,10 +6,8 @@
     <!-- IE使用它支持的最高模式 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta property="wb:webmaster" content="bde65bab61e33f62"/>
-    <meta name="description" content="创世中文网网络各界小说高手,每日更新小说连载,小说排行榜更是提供全网最收欢迎的小说下载,当下最好看的小说,如言情小说.穿越小说.玄幻小说等.找最好看的免费小说就来创世中文网."/>
-    <meta name="keywords" content="小说,小说排行榜,免费小说下载,好看的小说"/>
     <meta property="qc:admins" content="151626767763051673016375"/>
-    <title>小说_小说排行榜_免费小说下载网_好看的小说网络尽在创世中文网</title>
+    <title>创世小说首页</title>
     <link rel="shortcut icon" type="image/x-icon" href="http://img1.chuangshi.qq.com/chuangshi/p1/ico/c_mini_logo.ico"/>
     <link rel="Bookmark" type="image/x-icon" href="http://img1.chuangshi.qq.com/chuangshi/p1/ico/c_mini_logo.ico"/>
     <link rel="stylesheet" type="text/css" href="/index/css/base.css" />
@@ -26,7 +24,47 @@
     </div>
     </div>
     <!-- 顶部导航 -->
-    <div id="topNav" class="top_nav" style="background-color:#575757;"></div>
+    <div id="topNav" class="top_nav" style="background-color:#575757;">
+        <div class="top_nav_center cf">
+            <div class="toolbar">
+                <a attr="inner:toggleSiteListBtn;" class="qqSite" href="http://book.qq.com" target="_blank">QQ阅读</a>
+                <span class="navline">|</span>
+                <a attr="click:addFavorite;" class="favorite" href="javascript:">一键收藏</a>
+                <div attr="inner:siteListDropdown;" class="navDownLoad">
+                    <a class="downStar" href="http://www.qq.com/" onclick="pgvSendClick({hottag:'ISD.SHOW.INDEX.LINK01'});" target="_blank">腾讯网首页</a>
+                    <a class="downStar" href="https://yuedu.reader.qq.com/common/common/down/dist/index.html?actid=11822" target="_blank">客户端下载</a>
+                    <!-- <a class="downAn" href="http://book.qq.com/act/reader/index.html" target="_blank">安卓端下载</a> -->
+                </div>
+            </div>
+            @if(session("login"))
+            <div class="loginbar">
+                <span class="login_after">
+                    <a class="login user" href="http://account.book.qq.com"> 欢迎您，<i><%=userInfo.Nickname ? userInfo.Nickname : ''%></i></a>
+                    <a class="exit" attr="click:ywlogout;" href="javascript:;">退出</a>
+                    <span class="navline">|</span>
+                </span>
+                <a attr="inner:toggleBookshelfBtn;" class="myreader" href="http://account.book.qq.com/userfavorite/index.html">我的书架</a>
+                <a attr="inner:toggleUserCenterBtn;" class="user_center" href="http://account.book.qq.com">个人中心</a>
+                <a class="pay " href="http://account.book.qq.com/public/recharge.html" target="_blank">充值</a>
+                <span class="navline">|</span>
+                <a attr="inner:toggleChannelBtn;" class="more_nav" href="javascript:">导航</a>
+            </div>
+            @else
+            <div class="loginbar">
+                <span class="login_before">
+                    <a attr="click:openLoginPopup;" class="login current btnpoplogin" href="{{url('/login')}}">登录</a>
+                    <a class="reg" target="_blank" href="{{url('/reg')}}">注册</a>
+                    <span class="navline">|</span>
+                </span>
+                <a attr="inner:toggleRecentReadBtn;" class="myreader" href="javascript:">最近阅读</a>
+                <a attr="inner:toggleUserCenterBtn;" class="user_center" href="http://account.book.qq.com">个人中心</a>
+                <a class="pay " href="http://account.book.qq.com/public/recharge.html" target="_blank">充值</a>
+                <span class="navline">|</span>
+                <a attr="inner:toggleChannelBtn;" class="more_nav" href="javascript:">导航</a>
+            </div>
+            @endif
+        </div>
+    </div>
     <!-- 顶部导航模板 -->
     <textarea id="topNavBarTpl" style="display:none;">
         <div class="top_nav_center cf">
@@ -122,18 +160,19 @@
                 </div>
             </div>
             <%if isLogin%>
-            <div id="pointy_msg"></div>
-            <div id="topnav_msg"><a class="red" href="http://account.book.qq.com/usermessage/index.html">有新短消息</a></div>
+                <div id="pointy_msg"></div>
+                <div id="topnav_msg"><a class="red" href="http://account.book.qq.com/usermessage/index.html">有新短消息</a></div>
             <%/if%>
         </div>
-    </div>
-</textarea>
+    </textarea>
 <div class="wrap">
     <link rel="stylesheet" type="text/css" href="/index/css/index.css" />
     <!-- logo -->
     <div class="index_logo cf">
         <a class="main_logo" href="http://chuangshi.qq.com" title="创世中文网"></a>
-        <a href="https://acts.book.qq.com/2020/7023087/index.html" target="_blank" class=""><img src="/index/picture/694538f23912f5fbf46b75ed62132dfa.jpg" class="main_banner" alt="" title="" height="90" width="724"></a>
+        <a href="https://acts.book.qq.com/2020/7023087/index.html" target="_blank" class="">
+            <img src="/index/picture/694538f23912f5fbf46b75ed62132dfa.jpg" class="main_banner" alt="" title="" height="90" width="724">
+        </a>
     </div>
     <div class="index_mainnav">
         <div class="index_mainnav_hd cf">
@@ -159,11 +198,10 @@
             <p>
                 <a href="{{url('/index/library')}}" title="原创书库">原创书库</a>&nbsp;|
                 @foreach($cateInfo as $key=>$value)
-                    @if($key%2==0)
-                        <a href="{{url('/index/cate')}}/{{$value['cate_id']}}" title="{{$value['cate_name']}}">{{$value['cate_name']}}</a>&nbsp;|
-                    @else
-                        <a href="{{url('/index/cate')}}/{{$value['cate_id']}}" title="{{$value['cate_name']}}">{{$value['cate_name']}}</a>&nbsp;|
-                    @endif
+                <a href="{{url('/index/cate')}}/{{$value['cate_id']}}" title="{{$value['cate_name']}}">{{$value['cate_name']}}</a>&nbsp;|
+                    <!-- @if($key%2==0)
+                        <a href="{{url('/index/cate')}}/{{$value['cate_id']}}" title="{{$value['cate_name']}}">{{$value['cate_name']}}@else·{{$value['cate_name']}}</a>&nbsp;|
+                    @endif -->
                 @endforeach
                 <!-- <a href="http://chuangshi.qq.com/bk/xia/" title="武侠·仙侠">武侠·仙侠</a>&nbsp;|&nbsp; -->
             </p>
@@ -240,11 +278,17 @@
             <div class="mF_games_tb mF_games_tb_myFocus" style="height: 295px;" id="myFocus" imagesliderbythumb="1155802">
                 <div class="pic" style="width: 566px; height: 209px; overflow: hidden;">
                     <ul>
-                        <li style="display: list-item;"><a alt="相声大师" title="相声大师" href="http://chuangshi.qq.com/bk/ds/830083.html" target="_blank"><img width="566" height="209" text="这是一部写相声行几十年兴衰变迁的小说。" alt="相声大师" title="相声大师" src="/index/picture/52d0b782a766b0eaaa835abbb24bcfc5.jpg" /></a></li>
-                        <li style=""><a alt="复兴之路" title="复兴之路" href="http://chuangshi.qq.com/bk/qc/707172.html" target="_blank"><img width="566" height="209" text="日出日落，天道永恒。" alt="复兴之路" title="复兴之路" src="/index/picture/600e15ba898e0940f3f473473e4d8058.jpg" /></a></li>
+                    @foreach($homeInfo as $key=>$value)
+                        <li style="display: list-item;">
+                            <a alt="{{$value['read_name']}}" title="{{$value['read_name']}}" href="http://chuangshi.qq.com/bk/ds/830083.html" target="_blank">
+                                <img width="566" height="209" text="{{$value['read_text']}}" alt="{{$value['read_name']}}" title="{{$value['read_name']}}" src="{{$value['home_img']}}" />
+                            </a>
+                        </li>
+                        <!-- <li style=""><a alt="复兴之路" title="复兴之路" href="http://chuangshi.qq.com/bk/qc/707172.html" target="_blank"><img width="566" height="209" text="日出日落，天道永恒。" alt="复兴之路" title="复兴之路" src="/index/picture/600e15ba898e0940f3f473473e4d8058.jpg" /></a></li>
                         <li style=""><a alt="上海繁华" title="上海繁华" href="http://chuangshi.qq.com/bk/qc/22351118.html" target="_blank"><img width="566" height="209" text="漫天繁华，明天又会是谁的精彩？" alt="上海繁华" title="上海繁华" src="/index/picture/feb8dbfd9998903c83cbdc6594f01152.jpg" /></a></li>
                         <li style=""><a alt="朝阳警事" title="朝阳警事" href="http://chuangshi.qq.com/bk/ds/20558260.html" target="_blank"><img width="566" height="209" text="社区民警，扎根基层，依靠群众之眼屡破奇案。" alt="朝阳警事" title="朝阳警事" src="/index/picture/b7a1012fa87de986a1fd1865fb4a5c5d.jpg" /></a></li>
-                        <li style=""><a alt="大国重工" title="大国重工" href="http://chuangshi.qq.com/bk/ds/14151636.html" target="_blank"><img width="566" height="209" text="一个泱泱大国，不能没有自己的重型装备工业。" alt="大国重工" title="大国重工" src="/index/picture/aac389ac2eb78713aa44fa0a27485403.jpg" /></a></li>
+                        <li style=""><a alt="大国重工" title="大国重工" href="http://chuangshi.qq.com/bk/ds/14151636.html" target="_blank"><img width="566" height="209" text="一个泱泱大国，不能没有自己的重型装备工业。" alt="大国重工" title="大国重工" src="/index/picture/aac389ac2eb78713aa44fa0a27485403.jpg" /></a></li> -->
+                    @endforeach
                     </ul>
                 </div>
                 <!--描述-->
@@ -260,12 +304,15 @@
                 <!--小图-->
                 <div style="width: 526px; height: 86px; left: 20px;" class="thumb">
                     <ul style="width: 525px; left: 0px;">
-                        <li class="current" style="width:105px;"><a><img width="91" height="60" src="/index/picture/52d0b782a766b0eaaa835abbb24bcfc5.jpg" alt="相声大师" title="相声大师"></a><b></b></li>
-                        <li  style="width:105px;"><a><img width="91" height="60" src="/index/picture/600e15ba898e0940f3f473473e4d8058.jpg" alt="复兴之路" title="复兴之路"></a><b></b></li>
-                        <li  style="width:105px;"><a><img width="91" height="60" src="/index/picture/feb8dbfd9998903c83cbdc6594f01152.jpg" alt="上海繁华" title="上海繁华"></a><b></b></li>
-                        <li  style="width:105px;"><a><img width="91" height="60" src="/index/picture/b7a1012fa87de986a1fd1865fb4a5c5d.jpg" alt="朝阳警事" title="朝阳警事"></a><b></b></li>
-                        <li  style="width:105px;"><a><img width="91" height="60" src="/index/picture/aac389ac2eb78713aa44fa0a27485403.jpg" alt="大国重工" title="大国重工"></a><b></b></li>
-                    </ul>
+                        @foreach($homeInfo as $key=>$value)
+                            <li class="current" style="width:105px;">
+                                <a>
+                                    <img width="91" height="60" src="{{$value['home_img']}}" alt="{{$value['read_name']}}" title="{{$value['read_name']}}">
+                                </a>
+                                <b></b>
+                            </li>
+                        @endforeach
+                   </ul>
                 </div>
                 <div class="prev_focus"><a href="javascript:;" class="gray2">‹</a></div>
                 <div class="next_focus"><a href="javascript:;" class="gray2">›</a></div>
@@ -339,33 +386,33 @@
     <div class="jptjWrap cf">
         <!--精品推荐-->
         <div class="jpRecBook fl">
-            <span class="tit" title="精品推荐"></span>
+            <span class="tit" title="精品推荐"><img src="jptj.png" alt=""></span>
             <div id="zsgun">
                 <a href="javascript:;" class="prenext zspre"></a>
                 <a href="javascript:;" class="prenext zsnext"></a>
                 <div id="gundiv" class="container2">
                     <ul>
-                        <li class="recAct" >
-                            <a href="http://chuangshi.qq.com/bk/ds/29442711.html" target="_blank" title="重生王者的逆袭" class="imgBox">
-                                <img src="/index/picture/t5_29442711.jpg" width="78" height="98"/>
-                            </a>
-                            <div class="recInfo">
-                                <a href="http://chuangshi.qq.com/bk/ds/29442711.html" target="_blank" title="重生王者的逆袭">重生王者的逆袭</a>
-                                <p class="index_authorlink" >爱幻想的小李&nbsp;著</p>
-                                <p>重生在一个大学生的身体上</p>
-                            </div>
-                        </li>
-                        <li  ><a href="http://chuangshi.qq.com/bk/ds/28476424.html" target="_blank" title="我成为了外星王子" class="imgBox"><img src="/index/picture/t5_28476424.jpg" width="78" height="98"/></a><div class="recInfo"><a href="http://chuangshi.qq.com/bk/ds/28476424.html" target="_blank" title="我成为了外星王子">我成为了外星王子</a><p class="index_authorlink" >西普御猫&nbsp;著</p><p>我成了王子殿下？</p></div></li>
-                        <li  ><a href="http://chuangshi.qq.com/bk/xh/27094519.html" target="_blank" title="败家亏成神级宗主" class="imgBox"><img src="/index/picture/t5_27094519.jpg" width="78" height="98"/></a><div class="recInfo"><a href="http://chuangshi.qq.com/bk/xh/27094519.html" target="_blank" title="败家亏成神级宗主">败家亏成神级宗主</a><p class="index_authorlink" >抄能致富&nbsp;著</p><p>怎么想降低宗门评分，这么难啊！</p></div></li>
-                        <li  ><a href="http://chuangshi.qq.com/bk/ls/28012793.html" target="_blank" title="三国牛魔王" class="imgBox"><img src="/index/picture/t5_28012793.jpg" width="78" height="98"/></a><div class="recInfo"><a href="http://chuangshi.qq.com/bk/ls/28012793.html" target="_blank" title="三国牛魔王">三国牛魔王</a><p class="index_authorlink" >木木三大少&nbsp;著</p><p>自己来做大魔王！</p></div></li>
-                        <li  ><a href="http://chuangshi.qq.com/bk/yx/26014618.html" target="_blank" title="超神长阶" class="imgBox"><img src="/index/picture/t5_26014618.jpg" width="78" height="98"/></a><div class="recInfo"><a href="http://chuangshi.qq.com/bk/yx/26014618.html" target="_blank" title="超神长阶">超神长阶</a><p class="index_authorlink" >湛不存&nbsp;著</p><p>游戏开服三百年前</p></div></li>
-                        <li  ><a href="http://chuangshi.qq.com/bk/xh/29319923.html" target="_blank" title="我在异界开店了" class="imgBox"><img src="/index/picture/t5_29319923.jpg" width="78" height="98"/></a><div class="recInfo"><a href="http://chuangshi.qq.com/bk/xh/29319923.html" target="_blank" title="我在异界开店了">我在异界开店了</a><p class="index_authorlink" >一曲风月闲&nbsp;著</p><p>体验不同世界</p></div></li>
-                        <li  ><a href="http://chuangshi.qq.com/bk/xx/28174366.html" target="_blank" title="我有一本仙魔录" class="imgBox"><img src="/index/picture/t5_28174366.jpg" width="78" height="98"/></a><div class="recInfo"><a href="http://chuangshi.qq.com/bk/xx/28174366.html" target="_blank" title="我有一本仙魔录">我有一本仙魔录</a><p class="index_authorlink" >百里小乌啦&nbsp;著</p><p>浩劫来临之际，应劫而生</p></div></li>
-                        <li  ><a href="http://chuangshi.qq.com/bk/ds/29502083.html" target="_blank" title="我真的不想上网课" class="imgBox"><img src="/index/picture/t5_29502083.jpg" width="78" height="98"/></a><div class="recInfo"><a href="http://chuangshi.qq.com/bk/ds/29502083.html" target="_blank" title="我真的不想上网课">我真的不想上网课</a><p class="index_authorlink" >胡丢丢&nbsp;著</p><p>网课老师是神仙</p></div></li>
-                        <li  ><a href="http://chuangshi.qq.com/bk/xh/27685388.html" target="_blank" title="万古最强剑" class="imgBox"><img src="/index/picture/t5_27685388.jpg" width="78" height="98"/></a><div class="recInfo"><a href="http://chuangshi.qq.com/bk/xh/27685388.html" target="_blank" title="万古最强剑">万古最强剑</a><p class="index_authorlink" >我真是战神&nbsp;著</p><p>修炼时意外穿越</p></div></li>
-                        <li  ><a href="http://chuangshi.qq.com/bk/ds/27650338.html" target="_blank" title="都市之最强仙尊奶爸" class="imgBox"><img src="/index/picture/t5_27650338.jpg" width="78" height="98"/></a><div class="recInfo"><a href="http://chuangshi.qq.com/bk/ds/27650338.html" target="_blank" title="都市之最强仙尊奶爸">都市之最强仙尊奶爸</a><p class="index_authorlink" >鸾一&nbsp;著</p><p>十万年，林凡找到了回家的路</p></div></li>
-                        <li  ><a href="http://chuangshi.qq.com/bk/kh/29232044.html" target="_blank" title="诸天影视大冒险" class="imgBox"><img src="/index/picture/t5_29232044.jpg" width="78" height="98"/></a><div class="recInfo"><a href="http://chuangshi.qq.com/bk/kh/29232044.html" target="_blank" title="诸天影视大冒险">诸天影视大冒险</a><p class="index_authorlink" >独断天涯&nbsp;著</p><p>尽管下单，我帮你搞定</p></div></li>
-                        <li  ><a href="http://chuangshi.qq.com/bk/xx/26147116.html" target="_blank" title="修仙小学" class="imgBox"><img src="/index/picture/t5_26147116.jpg" width="78" height="98"/></a><div class="recInfo"><a href="http://chuangshi.qq.com/bk/xx/26147116.html" target="_blank" title="修仙小学">修仙小学</a><p class="index_authorlink" >小猪fly&nbsp;著</p><p>大王的王，宇宙第一的一</p></div></li>
+                        @foreach($jpInfo as $key=>$value)
+                            <li>
+                                <a href="http://chuangshi.qq.com/bk/ds/29442711.html" target="_blank" title="{{$value['read_name']}}" class="imgBox">
+                                    <img src="{{$value['read_img']}}" width="78" height="98"/>
+                                </a>
+                                <div class="recInfo">
+                                    <a href="http://chuangshi.qq.com/bk/ds/29442711.html" target="_blank" title="{{$value['read_name']}}">{{$value['read_name']}}</a>
+                                    <p class="index_authorlink" >{{$value['author_name']}}&nbsp;著</p><p>{{$value['read_desc']}}</p>
+                                </div>
+                            </li>
+                        @endforeach
+                        <!-- 
+                            <li class="recAct" >
+                                <a href="http://chuangshi.qq.com/bk/ds/28476424.html" target="_blank" title="我成为了外星王子" class="imgBox">
+                                    <img src="/index/picture/t5_28476424.jpg" width="78" height="98"/>
+                                </a>
+                                <div class="recInfo">
+                                    <a href="http://chuangshi.qq.com/bk/ds/28476424.html" target="_blank" title="我成为了外星王子">我成为了外星王子</a>
+                                    <p class="index_authorlink" >西普御猫&nbsp;著</p><p>我成了王子殿下？</p>
+                                </div>
+                            </li> -->
                     </ul>
                 </div>
                 <a id="jingpinRecommendLeftBtn" href="javascript:;" class="hScrollPane_leftarrow"></a>

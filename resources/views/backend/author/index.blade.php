@@ -57,7 +57,7 @@
                                     <td>{{$value['author_name']}}</td>
                                     <td>{{$value['created_at']}}</td>
                                     <td>{{$value['updated_at']}}</td>
-                                    <td><span class="pie"><img src="{{$value['author_img']}}" alt=""></span></td>
+                                    <td><span class="pie"><img src="/{{$value['author_img']}}" alt=""></span></td>
                                     <td>
                                         <a href="{{url('/author/edit')}}/{{$value['author_id']}}"><i class="fa fa-check text-navy"></i>编辑</a>
                                         <a href="{{url('/author/destroy')}}/{{$value['author_id']}}"><i class="fa fa-check text-navy"></i>删除</a>

@@ -42,12 +42,24 @@ class AuthorController extends Controller
         if(empty($data['author_name'])){
             dd("作者名称不能为空");
         }
+        if ($request->hasFile('author_img')) {
+            $data['author_img'] = $this->upload("author_img","/images/author");
+        }
         $res = AuthorModel::create($data);
         if($res){
             return redirect("/author/index");
         }
     }
-
+    //图片上传
+    public function upload($fileName,$nameFile){
+        if (request()->file($fileName)->isValid()) {
+            $photo = request()->file($fileName);
+            $code = rand(111111,999999);
+            $img = $code.".jpg";
+            $store_result = $photo->storeAs($nameFile,$img);
+        }
+            return $store_result;
+    }
     /**
      * Display the specified resource.
      *
@@ -79,7 +91,17 @@ class AuthorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->except("_token");
+        if(empty($data['author_name'])){
+            dd("作者名称不能为空");
+        }
+        if ($request->hasFile('author_img')) {
+            $data['author_img'] = $this->upload("author_img","/images/author");
+        }
+        $res = AuthorModel::where(["author_id"=>$id])->update($data);
+        if($res){
+            return redirect("/author/index");
+        }
     }
 
     /**

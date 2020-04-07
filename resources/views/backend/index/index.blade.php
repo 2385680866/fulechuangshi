@@ -5,9 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit">
-
     <title>后台首页</title>
-
     <meta name="keywords" content="">
     <meta name="description" content="">
 
@@ -15,7 +13,8 @@
     <meta http-equiv="refresh" content="0;ie.html" />
     <![endif]-->
 
-    <link rel="shortcut icon" href="favicon.ico"> <link href="/backend/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico"> 
+    <link href="/backend/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
     <link href="/backend/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
     <link href="/backend/css/animate.css" rel="stylesheet">
     <link href="/backend/css/style.css?v=4.1.0" rel="stylesheet">
