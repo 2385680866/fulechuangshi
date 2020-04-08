@@ -52,7 +52,7 @@
                                 <div class="col-sm-10">
                                     <select class="form-control m-b" name="author_id">
                                         @foreach($authorInfo as $key=>$value)
-                                        <option value="{{$value['author_id']}}">{{$value['author_name']}}</option>
+                                        <option value="{{$value['author_id']}}">{{$value['author_nickname']}}</option>
                                         @endforeach
                                     </select>
                                 </div>

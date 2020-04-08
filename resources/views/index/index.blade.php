@@ -95,7 +95,7 @@
             </p>
             <span>
                 <a href="http://acts.book.qq.com/cssp/theme1.html" target="_blank" title="作家福利" rel="external nofollow">作家福利</a>&nbsp;|
-                <a href="{{url('/index/author')}}" title="作家专区" rel="external nofollow">作家专区</a>
+                <a href="{{url('/author')}}" title="作家专区" rel="external nofollow">作家专区</a>
             </span>
         </div>
     </div>
@@ -187,7 +187,7 @@
                     <ul>
                         @foreach($homeInfo as $key=>$value)
                         <li style="bottom: 86px; display: list-item;">
-                            <a title="{{$value['read_name']}}" target="_blank" href="{{url('/detail')}}/{{$value['read_id']}}">{{$value['read_name']}} [都市] {{$value['author_nickname']}}著 2020-04-02</a>
+                            <a title="{{$value['read_name']}}" target="_blank" href="{{url('/detail')}}/{{$value['read_id']}}">{{$value['read_name']}} [都市] {{$value['author_nickname']}}著{{$value['created_at']}}</a>
                             <p>{{$value['read_desc']}}</p>
                             <b></b>
                         </li>

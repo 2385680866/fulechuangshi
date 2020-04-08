@@ -64,50 +64,7 @@
             @endif
         </div>
     </div>
-    <!-- 顶部导航模板 -->
-    <textarea id="topNavBarTpl" style="display:none;">
-    <div class="top_nav_center cf">
-    <div class="toolbar">
-    <a attr="inner:toggleSiteListBtn;" class="qqSite" href="http://book.qq.com" target="_blank">QQ阅读</a>
-    <span class="navline">|</span>
-    <a attr="click:addFavorite;" class="favorite" href="javascript:">一键收藏</a>
-    <div attr="inner:siteListDropdown;" class="navDownLoad">
-    <a class="downStar" href="http://www.qq.com/" onclick="pgvSendClick({hottag:'ISD.SHOW.INDEX.LINK01'});" target="_blank">腾讯网首页</a><a class="downStar" href="https://yuedu.reader.qq.com/common/common/down/dist/index.html?actid=11822" target="_blank">客户端下载</a><!-- <a class="downAn" href="http://book.qq.com/act/reader/index.html" target="_blank">安卓端下载</a> --></div></div><div class="loginbar"><%if isLogin%><span class="login_after"><a class="login user" href="http://account.book.qq.com">                        欢迎您，<i><%=userInfo.Nickname ? userInfo.Nickname : ''%></i></a><a class="exit" attr="click:ywlogout;" href="javascript:;">退出</a><span class="navline">|</span></span><a attr="inner:toggleBookshelfBtn;" class="myreader" href="http://account.book.qq.com/userfavorite/index.html">我的书架</a><%else%><span class="login_before"><a attr="click:openLoginPopup;" class="login current btnpoplogin" href="javascript:;">登录/注册</a><!-- <a class="reg" target="_blank" href="http://zc.qq.com/chs/index.html?from=pt">注册</a> --><span class="navline">|</span></span><a attr="inner:toggleRecentReadBtn;" class="myreader" href="javascript:">最近阅读</a><%/if%><a attr="inner:toggleUserCenterBtn;" class="user_center" href="http://account.book.qq.com">个人中心</a><a class="pay " href="http://account.book.qq.com/public/recharge.html" target="_blank">充值</a><span class="navline">|</span><a attr="inner:toggleChannelBtn;" class="more_nav" href="javascript:">导航</a><!-- 书架下拉菜单 --><div attr="inner:bookshelfDropdown;" class="bookrack"><%if isLogin%><p><span class="ccc">藏书：</span><span><%=userInfo.collectBookNum ? userInfo.collectBookNum : 0%></span>本
-                    </p><div class="nav_hover_list cf"><a href="http://account.book.qq.com/userfavorite/index.html?bookshelf_show=2">最近阅读</a><span class="booktags"><%if userInfo.bookshelfList && userInfo.bookshelfList.length%><%each userInfo.bookshelfList as bookshelf i%><a href="http://account.book.qq.com/userfavorite/index.html?Favoriteid=<%=bookshelf.groupId%>"><%=bookshelf.groupName%></a><%/each%><%/if%></span></div><%else%><div class="nav_hover_list cf"><span class="booktags"><%if userInfo.recentReadList && userInfo.recentReadList.length%><%each userInfo.recentReadList as book i%><a href="<%=book.bookUrl%>"><%=book.bookName%></a><%/each%><%else%>                                    没有阅读作品
-                                <%/if%></span></div><%/if%></div><!-- 用户中心下拉菜单  -->
-                                <div attr="inner:userCenterDropdown;" class="user_menu">
-                                <div class="nav_hover_list cf">
-                                <a href="http://account.book.qq.com/userfavorite/index.html">我的书架</a>
-                                <a href="http://account.book.qq.com/usercenter/index.html">账户设置</a>
-                                <a class="a_nobg" href="http://account.book.qq.com/usermoney/index.html">账务中心</a>
-                                <a class="a_nobg" href="https://write.qq.com/?siteid=3">作家专区</a>
-                                </div>
-                                </div>
-                                <!-- 导航下拉菜单 -->
-                                <div attr="inner:channelDropdown;" class="more_box">
-                                <div class="nav_hover_list cf">
-                                <a href="http://chuangshi.qq.com/bk/huan/" title="玄幻·奇幻">玄幻·奇幻</a>
-                                <a href="http://chuangshi.qq.com/bk/xia/" title="武侠·仙侠">武侠·仙侠</a>
-                                <a href="http://chuangshi.qq.com/bk/chun/" title="都市·现实">都市·现实</a>
-                                <a href="http://chuangshi.qq.com/bk/shi/" title="历史·军事">历史·军事</a>
-                                <a href="http://chuangshi.qq.com/bk/you/" title="游戏·体育">游戏·体育</a>
-                                <a href="http://chuangshi.qq.com/bk/ke/" title="科技·悬疑">科技·悬疑</a>
-                                <a href="http://chuangshi.qq.com/bk/ecy/" style="width:37px;" title="轻小说">轻小说</a>
-                                <a style="width:1px; margin-left:-6px;">·</a>
-                                <a href="http://chuangshi.qq.com/bk/duan/" style="width:37px;" title="短篇">短篇</a>
-                                <a href="http://chuangshi.qq.com" title="女生·言情">女生·言情</a>
-                                <a href="http://chuangshi.qq.com/bk/" title="书库" style="width:37px;">书库</a>
-                                <a style="width:1px; margin-left:-6px;">·</a>
-                                <a href="http://book.qq.com/cdkey" title="兑奖" style="width:37px;" target="_blank">兑奖</a>
-                                </div>
-                                </div>
-                                <%if isLogin%>
-                                <div id="pointy_msg"></div>
-                                <div id="topnav_msg"><a class="red" href="http://account.book.qq.com/usermessage/index.html">有新短消息</a></div>
-                                <%/if%>
-                                </div>
-                                </div>
-                                </textarea>
+
     <div class="wrap">
         <div class="mainnav">
             <a href="{{url('/')}}" title="首页">首页</a>&nbsp;
@@ -121,7 +78,7 @@
                 · <a class="red" href="{{url('/index/cate')}}/{{$value['cate_id']}}" title="{{$value['cate_name']}}">{{$value['cate_name']}}</a>
                 @endif
             @endforeach
-            <a rel="nofollow" href="{{url('/index/author')}}" title="作家专区">作家专区</a>&nbsp;
+            &nbsp;<a rel="nofollow" href="{{url('/author')}}" title="作家专区">作家专区</a>
         </div>
         <div class="topbanner">
             <a href="http://www.oneplusbbs.com/thread-3905634-1-1.html" target="_blank" class="">
@@ -156,9 +113,9 @@
                             <li>
                                 <div class='imgbox'>
                                     <a target='_blank' href="{{url('/index/detail')}}/{{$value['read_id']}}">
-                                        <img src="{{$value['read_img']}}" width='251' height='313'>
+                                        <img src="/{{$value['read_img']}}" width='251' height='313'>
                                     </a>
-                                    <p>{{$value['read_text']}}<a class='red2' target='_blank' href="http://chuangshi.qq.com/bk/xx/27337639.html">[阅读]</a>
+                                    <p>{{$value['read_text']}}<a class='red2' target='_blank' href="{{url('/index/detail')}}/{{$value['read_id']}}">[阅读]</a>
                                     </p>
                                 </div>
                             </li>

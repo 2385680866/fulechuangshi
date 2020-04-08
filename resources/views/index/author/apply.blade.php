@@ -24,9 +24,9 @@
     <div class="middle-box text-center loginscreen  animated fadeInDown">
         <div>
             <h3>欢迎申请作者</h3>
-            <form class="m-t" role="form" action="{{url('author/store')}}" method="post" enctype="multipart/form-data">
+            <form class="m-t" role="form" action="{{url('author/doapply')}}" method="post" enctype="multipart/form-data">
                 @csrf
-                <div class="form-group" ><span class="span">登录账号</span><input type="text" class="form-control" name="author_name" placeholder="登录账号" required=""></div>
+                <div class="form-group" ><span class="span">登录账号</span><input type="text" value="{{session('users.username')}}" class="form-control" name="author_name" placeholder="登录账号" required=""></div>
                 <div class="form-group"><span class="span">头像</span><input type="file" class="form-control" name="author_img"></div>
                 <div class="form-group"><span class="span">笔名</span><input type="text" class="form-control" name="author_nickname" placeholder="笔名" required=""></div>
                 <div class="form-group"><span class="span">邮箱</span><input type="email" class="form-control" name="author_email" placeholder="邮箱" required=""></div>

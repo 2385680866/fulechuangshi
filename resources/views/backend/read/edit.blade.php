@@ -31,46 +31,39 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">分类名称</label>
                                 <div class="col-sm-10">
                                     <select class="form-control m-b" name="cate_id">
                                         @foreach($cateInfo as $key=>$value)
                                             @if($readInfo['cate_id']==$value['cate_id'])
-                                                @if($value['parend_id']==0)
                                                     <option value="{{$value['cate_id']}}" selected>{{$value['cate_name']}}</option>
-                                                @else
-                                                    <option value="{{$value['cate_id']}}" selected>----{{$value['cate_name']}}</option>
-                                                @endif
                                             @else
                                                 @if($value['parend_id']==0)
-                                                    <option value="{{$value['cate_id']}}" selected>{{$value['cate_name']}}</option>
+                                                    <option value="{{$value['cate_id']}}" >{{$value['cate_name']}}</option>
                                                 @else
-                                                    <option value="{{$value['cate_id']}}" selected>----{{$value['cate_name']}}</option>
+                                                    <option value="{{$value['cate_id']}}" >----{{$value['cate_name']}}</option>
                                                 @endif
                                             @endif
                                         @endforeach
                                     </select>
                                 </div>
                             </div>
-                            <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">作者</label>
                                 <div class="col-sm-10">
                                     <select class="form-control m-b" name="author_id">
                                         @foreach($authorInfo as $key=>$value)
                                             @if($readInfo['author_id']==$value['author_id'])
-                                                <option value="{{$value['author_id']}}" selected>{{$value['author_name']}}</option>
+                                                <option value="{{$value['author_id']}}" selected>{{$value['author_nickname']}}</option>
                                             @else
-                                                <option value="{{$value['author_id']}}">{{$value['author_name']}}</option>
+                                                <option value="{{$value['author_id']}}">{{$value['author_nickname']}}</option>
                                             @endif
                                         
                                         @endforeach
                                     </select>
                                 </div>
                             </div>
-                            <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">首页轮播图</label>
                                 <div class="col-sm-10">
@@ -95,7 +88,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">轮播图</label>
                                 <div class="col-sm-10">
@@ -112,7 +104,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">作品标签</label>
                                 <div class="col-sm-10">
@@ -126,14 +117,12 @@
                                     @endforeach
                                 </div>
                             </div>
-                            <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">阅读详情</label>
                                 <div class="col-sm-10">
                                     <textarea name="read_desc" data-provide="markdown" rows="5">{{$readInfo['read_desc']}}</textarea>
                                 </div>
                             </div>
-                            <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">阅读内容</label>
                                 <div class="col-sm-10">

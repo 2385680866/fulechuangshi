@@ -27,7 +27,7 @@
                                 <label class="col-sm-2 control-label">分类名称</label>
                                 <div class="col-sm-10">
                                     <div class="input-group m-b"><span class="input-group-addon">@</span>
-                                        <input type="text" name="cate_name" value="{{$info['cate_name']}}" placeholder="分类名称" class="form-control">
+                                        <input type="text" name="author_nikename" value="{{$info['cate_name']}}" placeholder="分类名称" class="form-control">
                                     </div>
                                 </div>
                             </div> 

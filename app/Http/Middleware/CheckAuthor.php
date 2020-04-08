@@ -22,10 +22,9 @@ class CheckAuthor
             if($authorInfo['status'] == 1){
                 return $next($request);
             }else{
-                return redirect("/index/authorapply");
+                return redirect("/author/apply");
             } 
         }else{
-            dd(2345);
             return redirect("/login");
         }
         

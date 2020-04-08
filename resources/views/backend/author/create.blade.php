@@ -24,10 +24,28 @@
                         <form method="post" class="form-horizontal" action="{{url('/author/store')}}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <label class="col-sm-2 control-label">作者名称</label>
+                                <label class="col-sm-2 control-label">作家账号</label>
                                 <div class="col-sm-10">
                                     <div class="input-group m-b"><span class="input-group-addon">@</span>
                                         <input type="text" name="author_name" placeholder="作者名称" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">作家笔名</label>
+                                <div class="col-sm-10">
+                                    <div class="input-group m-b"><span class="input-group-addon">@</span>
+                                        <input type="text" name="author_nickname" placeholder="作家笔名" class="form-control">
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">作家邮箱</label>
+                                <div class="col-sm-10">
+                                    <div class="input-group m-b"><span class="input-group-addon">@</span>
+                                        <input type="email" name="author_email" placeholder="作家邮箱" class="form-control">
                                     </div>
                                 </div>
                             </div> 
@@ -37,6 +55,15 @@
                                 <div class="col-sm-10">
                                     <div class="input-group m-b">
                                         <input type="file" name="author_img">
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">作家身份证</label>
+                                <div class="col-sm-10">
+                                    <div class="input-group m-b"><span class="input-group-addon">@</span>
+                                        <input type="text" name="author_card" placeholder="作家身份证" class="form-control">
                                     </div>
                                 </div>
                             </div> 
@@ -69,11 +96,26 @@
                 radioClass: 'iradio_square-green',
             });
         });
+        //唯一性验证
+        $(document).on("blur","input[name='author_nickname']",function(){
+            var _this =$(this);
+            var author_nickname = _this.val();
+            if(author_nickname==''){
+                alert("笔名不能为空");
+                return false;
+            }
+            $.ajax({
+                url:"/author/authorName",
+                data:{author_nickname:author_nickname},
+                success:function(res){
+                    if(res!=0){
+                        alert("笔名已存在");
+                        return false;
+                    }
+                }
+            })
+        });
     </script>
-
-    
-    
-
 </body>
 
 </html>

@@ -42,22 +42,26 @@
                             <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="8">
                                 <thead>
                                 <tr>
-                                    <th data-toggle="true">作者ID</th>
-                                    <th>作者名称</th>
+                                    <th data-toggle="true">作家名称</th>
+                                    <th>作家笔名</th>
+                                    <th>作家邮箱</th>
+                                    <th data-hide="all">作者ID</th>
+                                    <th data-hide="all">作者头像</th>
                                     <th>添加时间</th>
                                     <th>修改时间</th>
-                                    <th data-hide="all">作者头像</th>
                                     <th>操作</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($authorInfo as $key=>$value)
                                 <tr>
-                                    <td>{{$value['author_id']}}</td>
                                     <td>{{$value['author_name']}}</td>
+                                    <td>{{$value['author_nickname']}}</td>
+                                    <td>{{$value['author_email']}}</td>
+                                    <td>{{$value['author_id']}}</td>
+                                    <td><span class="pie"><img src="/{{$value['author_img']}}" alt=""></span></td>
                                     <td>{{$value['created_at']}}</td>
                                     <td>{{$value['updated_at']}}</td>
-                                    <td><span class="pie"><img src="/{{$value['author_img']}}" alt=""></span></td>
                                     <td>
                                         <a href="{{url('/author/edit')}}/{{$value['author_id']}}"><i class="fa fa-check text-navy"></i>编辑</a>
                                         <a href="{{url('/author/destroy')}}/{{$value['author_id']}}"><i class="fa fa-check text-navy"></i>删除</a>

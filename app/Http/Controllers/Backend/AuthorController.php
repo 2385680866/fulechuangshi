@@ -40,27 +40,16 @@ class AuthorController extends Controller
     public function store(Request $request)
     {
         $data = $request->except("_token");
-        
-        if(empty($data['author_name'])){
+        if(empty($data['author_nickname'])){
             dd("作者名称不能为空");
         }
         if ($request->hasFile('author_img')) {
             $data['author_img'] = $this->upload("author_img","/images/author");
         }
-        $usersInfo = UsersModel::where(["username"=>$data['author_name']])->first();
-        if(!empty($usersInfo)){
-            UsersModel::where(["username"=>$usersInfo['username']])->update(["status"=>1]);
-            $res = AuthorModel::create($data);
-            if($res){
-                return redirect("/index/author");
-            }
-        }else{
-            $res = AuthorModel::create($data);
-            if($res){
-                return redirect("/author/index");
-            }
+        $res = AuthorModel::create($data);
+        if($res){
+            return redirect("/author/index");
         }
-        
     }
     //图片上传
     public function upload($fileName,$nameFile){
@@ -91,7 +80,8 @@ class AuthorController extends Controller
      */
     public function edit($id)
     {
-        return view("/backend/author/edit");
+        $info = AuthorModel::where(["author_id"=>$id])->first();
+        return view("/backend/author/edit",['info'=>$info]);
     }
 
     /**
@@ -104,7 +94,7 @@ class AuthorController extends Controller
     public function update(Request $request, $id)
     {
         $data = $request->except("_token");
-        if(empty($data['author_name'])){
+        if(empty($data['author_nickname'])){
             dd("作者名称不能为空");
         }
         if ($request->hasFile('author_img')) {
@@ -124,6 +114,26 @@ class AuthorController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $res = AuthorModel::destroy($id);
+        if($res){
+            return redirect("/author/index");
+        }
+    }
+    //唯一性验证
+    public function authorName(Request $request)
+    {
+        $author_id=$request->author_id;
+        $author_nickname=$request->author_nickname;
+        if(empty($cate_id)){
+            $where=['author_nickname'=>$author_nickname];
+        }else{
+            $where=[['author_nickname',"=",$author_nickname],["author_id","<>",$author_id]];
+        }
+        $count = AuthorModel::where($where)->count();
+        if($count>=1){
+            return 1;
+        }else{
+            return 0;
+        }
     }
 }

@@ -10,7 +10,7 @@ class LoginController extends Controller
 {
     //登录页
     public function login(){
-        $filename = $this->qrcode();
+        // $filename = $this->qrcode();
         return view("/index/login/login",["path"=>"/index/picture/code02.png"]);
     }
     //登录
@@ -104,7 +104,6 @@ class LoginController extends Controller
         $filename = $uid . ".png";
         $url = "http://".$_SERVER["HTTP_HOST"]."?uid=".$uid;
         $obj->png($url,$filename);
-
         return $filename;
     }
     //退出

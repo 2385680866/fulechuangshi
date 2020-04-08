@@ -15,6 +15,7 @@ class CheckLogin
      */
     public function handle($request, Closure $next)
     {
+        //判断用户有没有登录
         if($request->session()->has("users")){
             return $next($request);
         }else{

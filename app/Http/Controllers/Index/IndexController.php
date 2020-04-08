@@ -6,15 +6,16 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\CategoryModel;
 use App\Models\ReadModel;
+use App\Models\LabelModel;
+use Illuminate\Support\Facades\Redis;
 class IndexController extends Controller
 {
     //首页
     public function index()
-    {      
+    {   //获取登录用户名信息
         $users = session("users"); 
-        // dd($users);
-        //获取分类导航数据
-        $cateInfo = CategoryModel::where(['parend_id'=>0,"nav_is_show"=>1])->limit(15)->get();
+        //获取分类导航数据 
+        $cateInfo = CategoryModel::where(['parend_id'=>0,"nav_is_show"=>1])->limit(15)->get()->toArray();
         //首页轮播图
         $homeInfo = ReadModel::join("author","read.author_id","=","author.author_id")
                 ->where(['is_show_home'=>1])->orderBy("search_volume","desc")->limit(6)->get();
@@ -29,17 +30,31 @@ class IndexController extends Controller
 
         return view("/index/index/index");
     }
-    //搜索页面
+    //详情页
     public function detail($id)
     {
-        $readFind = ReadModel::join("category","read.cate_id","=","category.cate_id")
-                    ->where(['read_id'=>$id])->first();
-        //获取上一级信息
-        $readcate = $this->toplevel($readFind);
-        $readcate['level2']= $readFind['read_name'];
+        //分类导航栏数据
+        $cateInfo = CategoryModel::where(['nav_is_show'=>1])->limit(15)->get();
+
+        $info = ReadModel::join("author","read.author_id","=","author.author_id")
+                ->join("category","read.cate_id","=","category.cate_id")
+                ->where(['read_id'=>$id])
+                ->select('read.*','category.cate_name','category.parend_id','author.author_nickname')
+                ->first();
+        $top= CategoryModel::where(["cate_id"=>$info['parend_id']])->first();
+        $info['top']=$top['cate_name'];
+        $info['top_id']=$top['cate_id'];
+        $label_id = explode(",",$info['label_id']);
+        $labelInfo = LabelModel::whereIn("label_id",$label_id)->get();
+        $labelName="";
+        foreach ($labelInfo as $key => $value) {
+            $labelName .= $value['label_name']." 、";
+        }
+        $labelName = rtrim($labelName," 、");
         return view("/index/detail",[
-            'readcate'=>$readcate,
-            'readFind'=>$readFind
+            'info'=>$info,
+            'labelName'=>$labelName,
+            "cateInfo"=>$cateInfo
         ]);
     }
     //原书库
@@ -61,20 +76,4 @@ class IndexController extends Controller
         $arr["level1"]=$cateInfo['cate_name'];
         return $arr;
     }
-    public function index1()
-    {       
-        //获取分类导航数据
-        $cateInfo = CategoryModel::where(['parend_id'=>0,"nav_is_show"=>1])->limit(15)->get();
-        //首页轮播图
-        $homeInfo = ReadModel::where(['is_show_home'=>1])->orderBy("search_volume","desc")->limit(6)->get();
-        //精品推荐
-        $jpInfo = ReadModel::join("author","read.author_id","=","author.author_id")->where(['is_jingpin'=>1])->limit(12)->get();
-        return view("/index/index",[
-            'cateInfo'=>$cateInfo,
-            'homeInfo'=>$homeInfo,
-            'jpInfo'=>$jpInfo
-        ]);
-        return view("/index/index/index");
-    }
-      
 }

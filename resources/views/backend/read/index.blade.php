@@ -47,7 +47,7 @@
                                     <th>添加时间</th>
                                     <th>修改时间</th>
                                     <th data-hide="all">分类名称</th>
-                                    <th data-hide="all">作者名称</th>
+                                    <th data-hide="all">作家笔名</th>
                                     <th data-hide="all">作品标签</th>
                                     <!-- <th data-hide="all">首页轮播图</th> -->
                                     <!-- <th data-hide="all">是否首页轮播图</th> -->
@@ -65,7 +65,7 @@
                                     <td>{{$value['created_at']}}</td>
                                     <td>{{$value['updated_at']}}</td>
                                     <td>{{$value['cate_name']}}</td>
-                                    <td>{{$value['author_name']}}</td>
+                                    <td>{{$value['author_nickname']}}</td>
                                     <td>{{$value['label_name']}}</td>
                                     <!-- <td><img src="{{$value['home_img']}}" alt="{{$value['read_name']}}"></td> -->
                                     <!-- <td>@if($value['is_show_home']==1)是@else否@endif</td> -->

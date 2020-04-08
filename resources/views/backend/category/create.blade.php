@@ -98,10 +98,8 @@
     <!-- 全局js -->
     <script src="/backend/js/jquery.min.js?v=2.1.4"></script>
     <script src="/backend/js/bootstrap.min.js?v=3.3.6"></script>
-
     <!-- 自定义js -->
     <script src="/backend/js/content.js?v=1.0.0"></script>
-
     <!-- iCheck -->
     <script src="/backend/js/plugins/iCheck/icheck.min.js"></script>
     <script>
@@ -128,14 +126,8 @@
                         return false;
                     }
                 }
-
             })
         });
     </script>
-
-    
-    
-
 </body>
-
 </html>

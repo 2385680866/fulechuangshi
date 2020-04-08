@@ -23,7 +23,7 @@ class CategoryController extends Controller
         $cate_id = explode(",",$cate_id);
         //根据所有子类id 是否展示轮播图 查询5条数据
         $readSlide = ReadModel::where(['is_show'=>1])->whereIn('cate_id',$cate_id)->limit(5)->get();
-
+     
         $info= CategoryModel::where(['cate_id'=>$id])->first();
         return view("/index/cate",[
             'info'=>$info,
