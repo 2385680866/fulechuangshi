@@ -1,0 +1,478 @@
+@charset "utf-8";.redBtn{color:#FFF;text-align:center;font:14px/42px '微软雅黑';background:#CC0001;border-radius:5px;height:42px}.personal_logo{margin-bottom:5px}.logo3{float:left;text-indent:-9999px;width:131px;height:71px;margin-top:20px;margin-left:20px;background:url(../images/p_logo.jpg) no-repeat}.personal_topnav{margin-top:28px;float:right;width:565px;height:40px;background-position:0 -962px;position:relative;*z-index:3}.nav_newmsg{position:absolute;left:195px;width:30px;height:11px;background:url(../images/new.gif) no-repeat;display:none}.personal_topnav
+h1{float:left}.personal_topnav h1
+a{font-weight:400;text-align:center;display:block}.my_home,.my_medal,.my_account{text-indent:-9999px;width:86px}a.p_msg{width:50px;text-indent:-9999px}a.p_nav_tit{width:42px;margin:8px
+0 0 5px;font-size:12px;line-height:23px;text-indent:-10px;border-top:1px solid #E2E2E2;border-left:1px solid #E2E2E2;border-bottom:1px solid #E2E2E2}.p_navtit_hover{border:1px
+solid #ccc;background:#fff url(../images/up_gray.gif) no-repeat 90% 50%}.nav_tit_sub{display:none;position:absolute;width:42px;border:1px
+solid #ccc;border-top:none;background:#fff;top:32px;left:227px;z-index:40}.nav_tit_sub
+a{display:block;height:24px;line-height:24px;text-indent:4px}.nav_tit_sub a:hover{background:#ccc}.p_searchinput{float:left;width:170px;height:19px;line-height:22px;margin:10px
+0 0 30px;background:none}.personal_wrap{width:1000px;position:relative;z-index:1;border-top:1px solid #eaeaea;border-bottom:1px solid #eaeaea;border-right:1px solid #eaeaea;overflow:hidden;*zoom:1;padding-bottom:40px;background:#fff}.personal_left{float:left;width:160px;background:#F3F3F3;padding-bottom:2000px;margin-bottom:-2000px;border-left:1px solid #eaeaea}.personal_right{float:right;padding-top:25px;width:210px;padding-bottom:1000px;margin-bottom:-1000px;background:#FDF8F2}.rec_your
+h1{text-indent:43px;font:700 15px/30px "Microsoft Yahei";margin-bottom:20px}.rec_your_list{padding:10px
+0 0 27px}.rec_your_list
+li{width:155px;text-align:center;margin-bottom:20px}.rec_your_list li
+img{padding:1px;border:1px
+solid #f99;display:block;margin:0
+auto 10px}.rec_your_list
+h3{line-height:1;font-size:12px}.personal_main{float:left;padding:25px
+0 0 30px;_padding:25px
+0 0 25px;background:#fff;padding-bottom:1000px;margin-bottom:-1000px;width:599px;_width:550px}.personalbox{z-index:3;width:160px;position:relative}.head_img{display:block}.personal_infor{padding:25px
+0 0 11px}.personal_basic{padding:25px
+0 20px}.p_extend{z-index:10;width:220px;position:absolute;top:0;background:#f5f5f5;box-shadow:2px 2px 10px 0 #ccc;border:1px
+solid #ccc}.detailed_info{clear:both;width:196px;margin-left:5px;border-top:1px dotted #ccc}.detailed_info
+p{border-bottom:1px dotted #ccc}.attention{margin-right:5px}.user_fans{margin:0
+10px 0 20px}.users_exp{left:76px;top:190px;width:130px}.barline
+div.charts.bargreen{background-position:0 0;border:1px
+solid #999}.u_exp_history{margin-left:60px}.up_btn{margin-left:-13px;height:30px;display:block;background:url(../images/up_btn.gif) no-repeat center}.personal_infor
+img{}.img_border{float:left;border:1px
+solid #ccc;padding:1px}.img_border_big{width:100px;padding:1px;margin:0
+auto 5px;border:1px
+solid #ccc}.img_border_big
+img{display:block}.infor_box{float:left;margin-left:8px;line-height:1.2}.infor_wrap{text-align:center;line-height:1.8}.infor_box
+p{margin-bottom:15px}.down_btn{z-index:2;display:block;text-indent:-9999px;clear:both;cursor:pointer;width:140px;position:absolute;left:0;top:190px;height:20px;background-position:-392px -70px}.personal_toolbar{padding:35px
+0 0 0}.tool_newmsg{width:30px;height:11px;position:absolute;top:11px;right:5px;background:url(../images/new.gif) no-repeat;display:none}.personal_toolbar
+h1{text-indent:20px;font:15px/32px "Microsoft Yahei";text-align:center;height:32px;position:relative}h1.p_current{background-color:#eaeaea}.account_ico{background:url(../images/account.gif) 22% no-repeat}.writer_ico{background:url(../images/zuojia.gif) 22% no-repeat}.V_ico{background:url(../images/v.gif) 22% no-repeat}.my_shelf{background:url(../images/bookshelf.gif) 22% no-repeat}.shelf_list{background:url(../images/booklist.gif) 22% no-repeat}.my_shuping{background:url(../images/shuping.gif) 22% no-repeat}#Sign_in{border-top:1px dotted #ccc;padding:20px
+0 0 35px;margin:20px
+auto}#Sign_in
+img{display:block;cursor:pointer}.pService{width:92px;height:35px;display:block;margin-left:35px;background:url(../images/service.png) no-repeat}.toolbar_rec{padding:20px
+0 0 0}.toolbar_rec li
+img{display:block;margin:0
+auto 5px}.toolbar_rec
+li{line-height:1.8;text-align:center;margin-bottom:20px}.main_h1tab{position:relative;height:30px;background:url(../images/eaeaea_bottom.png) no-repeat left bottom}.new_msg,.new_sys{width:30px;height:11px;position:absolute;top:-12px;background:url(../images/new.gif) no-repeat;display:none}.new_msg{left:92px}.new_sys{left:488px}.main_long_bottom{width:800px;background:url(../images/eaeaea_bottom2.png) no-repeat left bottom}.main_h1tab
+h1{padding:0
+10px;color:#666;font:15px/15px "Microsoft Yahei"}.main_h1tab
+span{text-align:center;float:left;width:110px;height:28px;cursor:pointer}span.f_work_story{width:120px}.main_h1tab
+b{float:left;font-weight:400;padding:0
+8px}.recharge{background:#FAFAFA;width:700px;border:1px
+solid #DBDBDB;padding:10px
+20px;margin-bottom:40px}.recharge
+h3{font-size:12px;height:25px;line-height:25px}.recharge
+p{height:25px;line-height:25px}.account_balance .backre
+h3{float:left;width:104px;height:38px;margin-right:10px;cursor:pointer;position:relative}.backre{clear:both}#pay_tip{width:110px;position:absolute;left:-7px;top:-28px;color:#900;font:12px/1 '宋体';border:1px
+solid #8e8e8e;padding:4px;border-radius:5px;box-shadow:0 0 2px 0 #8e8e8e;background:#fafafa}#sanjiao{width:12px;height:6px;position:absolute;left:47px;top:-7px;background:url(../images/pointy_down.gif) no-repeat}.cur_1{background:url(../images/zhifu_1.jpg) no-repeat}.cur_2{background:url(../images/zhifu_2.jpg) no-repeat}.cur_3{background:url(../images/zhifu_3.jpg) no-repeat}.cur_4{background:url(../images/zhifu_4.jpg) no-repeat}.cur_5{background:url(../images/zhifu_5.jpg) no-repeat}.cur_6{background:url(../images/zhifu_6.jpg) no-repeat}.cur{background:url(../images/zhifu_01.jpg) no-repeat}.acc_bor{border-top:1px solid #E3E3E3}.account{overflow:hidden;clear:both;height:35px;line-height:35px;border-bottom:1px solid #E3E3E3}.account
+h2{border-right:1px solid #E3E3E3;font-size:12px;background:url(../images/chongbg.jpg) no-repeat;float:left;width:112px;text-align:center;margin-right:25px}.account
+p{float:left;width:600px;line-height:35px}.account1{clear:both;height:98px;border-bottom:1px solid #E3E3E3;overflow:hidden}.account1
+h2{border-right:1px solid #E3E3E3;font-size:12px;background:url(../images/chongbg1.jpg) no-repeat;float:left;width:111px;height:98px;line-height:98px;text-align:center;margin-right:25px}.account1
+span{padding-right:15px;width:70px;float:left}#UMPAYRechargeContent .account1
+span{padding-right:15px;width:270px;float:left}.account1
+p{margin-top:20px}.option{width:740px;overflow:hidden}.option{border:1px
+solid #ccc;padding-top:8px}.rechargeAmountInput{width:50px;vertical-align:middle;height:23px;line-height:25px;border:1px
+solid #D0D0D0;border-top:2px solid #959595;margin-right:5px;margin-left:15px;text-align:center}.UMPAYmobileInput{width:100px;vertical-align:middle;height:23px;line-height:25px;border:1px
+solid #D0D0D0;border-top:2px solid #959595;margin-right:5px}.pad_pad{padding-left:130px}.jine2{vertical-align:middle;margin:-2px 0 1px 0}.nexStep{padding-right:50px;padding-top:30px;text-align:center}.nexStep
+p{height:40px;line-height:40px}.nexStep
+img{cursor:pointer}.recharList{text-align:center}.recharList
+p.huangC{font-size:14px;color:#DB624D;font-weight:700;text-align:left;padding:0
+0 10px 0;width:650px;margin:0
+auto 20px;border-bottom:1px solid #ccc}.quick_text{color:#900;margin:0
+0 0 5px;text-decoration:underline}.bankList{overflow:hidden;width:660px;padding:0
+0 20px 50px}.borde_ccc{border:#ccc 1px solid;cursor:pointer;width:200px;margin-right:15px;margin-bottom:10px;display:block;float:left;overflow:hidden}.borde_ccc:hover{border:#39F 1px solid}.borde_cc{border:#39F 1px solid}.borde_cccd{border:#fff 1px solid;cursor:pointer;width:200px;margin-right:15px;margin-bottom:10px;display:block;float:left;overflow:hidden}.borde_cccd
+.nong{_margin-top:13px}.nong{float:left;width:15px;height:15px;line-height:33px;margin:18px
+10px 0 10px;vertical-align:middle}.bankList
+span{float:left;height:32px;line-height:32px;margin:10px
+10px 10px 0;width:144px}#sexYin{border:1px
+solid #B9B9B9;color:#B1B1B1;height:33px;line-height:33px;width:154px}#form1 span
+#change_user_bank_TENPAY{width:144px;height:23px}#form1 span
+#boBg{border:0;height:23px;line-height:23px;width:134px}#sub{background:url("../images/xia.png") no-repeat scroll 0 0 transparent;border:0
+none;cursor:pointer;height:32px;width:96px}#check{margin-right:5px;vertical-align:middle}.main_current{border-bottom:2px solid #666;font-weight:700}.account #formm
+.jine{margin:-2px 0 1px 45px;vertical-align:middle}.mt_warp_list{padding:10px
+0 0 10px}.mt_warp_list
+li{border-bottom:1px dotted #CCC;color:#666;line-height:1.8;padding:12px
+0 12px 10px;width:560px}.sdimg{margin-top:4px;width:auto}.sdimg
+img{border:1px
+solid #FAFAFA;display:block}.shudan_box,.friend_box{float:left;line-height:1.8;margin-left:10px}.mt_warp_list li
+span{float:right}.mt_warp_list li p
+a{}.mt_warp_list li p a:hover{color:#900}.user_like{overflow:auto;padding:50px
+0 0 10px}.user_like
+h1{background:url("../images/eaeaea_bottom.png") no-repeat scroll left bottom transparent;font:700 16px/50px "Microsoft Yahei";text-indent:10px}.user_like_list{padding:30px
+0 0 13px}.user_like_list
+li{float:left;margin-right:25px;text-align:center;width:155px}.user_like_list li
+h3{font:700 12px/1.5 "宋体";margin-left:-3px;margin-top:8px}.user_like_list
+img{border:1px
+solid #F99;display:block;margin-left:14px;padding:1px}.user_like_list li
+p{color:#666}.personal_right a:hover{color:#900}.p_prize{position:relative;width:196px;height:90px;background-position:-604px -781px;margin-left:8px}.accept_prize{text-indent:-9999px;position:absolute;top:37px;width:60px;height:50px;left:65px}.accept_after{display:none;text-indent:-9999px;z-index:2;top:32px;left:65px;position:absolute;width:63px;height:56px;background:url(../images/prize.gif) no-repeat}.p_prize
+p{color:#060;position:absolute}.prize_week{top:37px;left:30px}.prize_calendar{top:55px;left:26px}.prize_date{top:31px;right:31px}.prize_days{top:46px;right:22px}.mine_medal,.privilege{padding-top:5px}.f_medal{padding:0;margin-top:-24px}.mine_medal h1, .interested_person
+h1{text-indent:30px;font:700 16px/60px "Microsoft Yahei";background:url(../images/person_line.png) bottom no-repeat}.mine_medal h1 a, .interested_person h1
+a{color:#060;font:400 12px/65px "宋体";float:right;margin-right:20px}.min_medal_list{width:185px;padding:15px
+0 0 15px}.min_medal_list
+li{float:left;width:32px;height:32px;margin:0
+5px 10px 0}.privilege_tit{position:relative;height:65px;color:#666}.privilege_tit
+h1{text-align:center;font:700 16px/60px "Microsoft Yahei";position:absolute;top:5px;cursor:pointer;width:91px;background:url(../images/person_line_normal.png) no-repeat bottom}.my_reward{left:10px}.privilege_tit
+span{position:absolute;left:98px;top:20px}.my_privilege{left:101px}h1.priv_cur{background:url(../images/person_line_cur.png) no-repeat bottom}.privilege_box{padding:10px
+0 0 20px}.reward_total{padding:5px
+0 5px 0;margin-left:-10px}.reward_total
+li{text-indent:10px;line-height:24px;width:90px;float:left;background:#f3f3f3;border:1px
+solid #eaeaea;margin:0
+6px 5px 0}li.reward_li_last{width:188px}.reward_help{width:188px;margin-left:-10px;color:#060;text-align:right;display:block;border-top:1px dotted #ccc}.my_privilege_tab{padding-top:5px;display:none}.privilege_total{margin-left:-10px}.privilege_total
+li{text-indent:10px;width:150px;line-height:26px;background:#f3f3f3;margin-bottom:5px;border:1px
+solid #eaeaea}.interested_person
+h1{text-indent:18px}.f_recommend{padding:20px
+0 0 18px}.f_recommend
+img{float:left;padding:1px;border:1px
+solid #ccc}.friend_info{width:120px;float:left;line-height:1.2;margin-left:10px}.f_recommend
+li{clear:both;padding-bottom:15px}.friend_info
+h2{margin-bottom:7px;font-size:12px}.friend_info
+em{font-style:normal;color:#ff3400}.add_friend{margin-bottom:7px;text-indent:16px;background:url(../images/add_green.gif) left no-repeat}.friend_info
+span{color:#999}.f_serach_interes{margin-top:-15px}.serach_friend{position:absolute;left:350px;top:-4px}.friend_btn{position:absolute;top:-4px;left:480px}.friend_name{font:14px/1.8 "宋体"}.friend_box{margin:4px
+150px 0 10px}.friend_box
+p{margin-bottom:7px}.friend_tag
+a{margin:0
+10px}.img_sex{margin:0
+10px -5px 10px}.f_passport,.vip_ico{margin:0
+10px -2px 10px}.friend_ctrl{margin:7px
+0 0 0;float:left}.together{display:block;margin-bottom:15px}.add_f,.del_f{margin-right:10px}.min_msg{margin-bottom:-2px}.f_fans{display:none}.fri_pagectrl{width:600px;border:none}.fri_pagectrl_in{margin-left:200px}.f_serach_result{padding:10px
+0 0 10px}.f_serach_result
+h2{width:572px;text-indent:10px;font:700 15px/40px "Microsoft Yahei";border-bottom:1px dotted #ccc}.f_serach_result
+span{font:12px/40px "宋体";float:right;margin-right:30px}.rank_hd{height:53px;padding-left:20px}.rank_hd
+h1{font:700 20px/53px "Microsoft Yahei"}.rank_hd h1
+span{margin-left:45px;font:400 14px/53px "Microsoft Yahei"}.main_noright{width:780px;padding-bottom:2000px;margin-bottom:-2000px}.password_modify,.friend_shelf,.lately_read,.VIP_zone,.Medal_zone,.year_member_div,.CS_cdkey,.myRelpy{display:none}.basic_info,.photo_manage,.CS_cdkey{padding:25px
+0 0 40px}.basic_info ul li
+img{margin-bottom:-3px}.main_noright
+li{position:relative;line-height:1;margin-bottom:40px;*zoom:1}.en_redbtn,.dis_redbtn{position:absolute;width:59px;height:24px;line-height:24px;color:#FFF;right:150px;text-align:center}.en_redbtn{background:url(../images/cnred.jpg) no-repeat}.dis_redbtn{background:url(../images/cngray.jpg) no-repeat}.en2,.di2{top:-96px}.dis_renbtn{background:url(../images/cngray.jpg) no-repeat}.main_noright li
+span{font-size:14px;margin-right:10px}.basic_info
+a{margin:0
+10px}.basic_info a:hover{text-decoration:underline}#pw_check{display:none}#QQbindform{display:inline}#QQbind_check{vertical-align:middle;height:25px;width:80px;margin-left:10px;cursor:pointer;color:#fff;font:15px/25px '微软雅黑';background:url(../images/sprite.png) -314px -361px no-repeat}.person_barline{left:140px;top:2px}.Member_Level{position:absolute;left:200px;top:2px}.now_rank{margin-left:319px}.basic_info ul li
+em{font-size:12px}#year_label{vertical-align:middle;margin-right:0}#year_member{line-height:28px;color:#fff;width:255px;height:28px;display:inline-block;text-indent:8px;vertical-align:middle;background:url(../images/sprite.png) -251px -1029px no-repeat}#surplus{vertical-align:middle;color:#666}#year_renew{vertical-align:middle}.now_rank2{margin-left:326px}.score_tip{position:absolute;top:40px;color:#999;left:80px}.time_remaining{margin-left:225px}.LastLoginTime{position:absolute;left:415px}.time_remaining a, .LastLoginTime
+a{font-size:12px}.area_line{text-indent:-9999px;width:300px;height:30px}.personal_infodiv{padding:25px
+0 0 40px}.updategrade,.updategrade_dis{position:absolute;top:-5px;left:390px;border:#999 1px solid;padding:3px
+8px;cursor:pointer;border:#c3c3c3 1px solid;background:#ececec;height:28px;line-height:20px}.updategrade{border:#999 1px solid}.updategrade_dis{color:#a8a8a8}.Certification_div{padding:25px
+0 0 100px}.Certification_div
+p{margin-left:-80px;color:#900}.modify_head{vertical-align:middle}.click_modify{position:absolute;top:120px;left:110px}.click_modify:hover{text-decoration:underline}.longinput3{text-indent:5px;width:500px;height:25px;line-height:25px;_background:#fff;_border:1px
+solid #ccc;background-position:0 -1003px;vertical-align:middle}.personal_infodiv
+label{margin-right:25px;font-size:14px}#sex_man,#sex_woman{vertical-align:middle;margin:-2px 5px 1px 0}.personal_infodiv ul li
+select{margin-right:10px}.p_save{float:left;margin-right:30px}.p_savebtn{padding-left:85px}.give_up{text-align:center;font:16px/32px "Microsoft Yahei";float:left;width:96px;height:32px;background-position:-481px -288px}.hobby{padding:25px
+0 40px 20px}.hobby_h1{height:50px;width:750px;border-bottom:1px dotted #ccc}.p_tag_box{background:url(../images/shu-line.png) no-repeat 375px 20%;border-bottom:1px dotted #ccc;height:250px}.per_tag_box{background:url(../images/shu-line.png) no-repeat 375px 20%}.p_tag_box h1, .per_tag_box
+h1{font:14px/48px "宋体"}.input_hobby{float:left}.added_hobby_tag{border:none;padding-left:0;margin-bottom:5px}.add_btn{cursor:pointer;text-align:center;width:68px;height:22px;line-height:22px;vertical-align:middle;background-position:-730px 0}.input_hobby
+p{margin:15px
+0 0 0;*margin:20px
+0 0 -5px}.select_hobby{width:350px;padding-left:10px;float:left}.select_hobby h1
+a{font:12px/50px "宋体";float:right}.select_tag{width:350px}.select_tag
+dd{float:left;text-indent:5px;width:58px;height:20px;line-height:22px;background:#f5f5f5;border:1px
+solid #ccc;margin:0
+10px 10px 0}.select_tag dd
+a{display:block}.preferences{padding:20px
+0 0 20px}.preferences
+h1{font:700 15px/50px "Microsoft Yahei"}.preferences
+p{font-size:14px;margin-bottom:10px}.preferences p
+input{vertical-align:middle;margin:-2px 5px 1px 0}.preferences p
+label{font-size:12px;margin-right:20px}.same_share{margin:10px
+0 50px 0}.share_box{float:left;margin-right:30px;position:relative}.share_box
+span{overflow:hidden;position:absolute;color:#fff;background:#000;opacity:0.5;text-align:center;filter:alpha(opacity=50);left:0;width:140px}.share_Unbound{height:74px;line-height:120px}.share_bound{line-height:25px;height:25px;top:48px}.share_box
+em{text-align:center;position:absolute;top:75px;left:45px}.share_box a:hover{color:#900;text-decoration:underline}.skin_list
+dd{float:left;margin-right:15px}.skin_save{width:230px;margin:0
+auto}.password_modify{padding:40px
+0 0 20px}.password_modify
+p{margin-bottom:10px}.password_modify span, .p_sendmaildiv
+span{font-size:14px}.password_modify
+em{color:#999;font-size:12px;margin-left:10px}.code_input{width:100px;height:25px;line-height:25px;background-position:-123px -387px;_background:#fff;_border:1px
+solid #ccc;vertical-align:middle;text-indent:5px}.password_modify
+img{vertical-align:middle;margin:0
+10px}.pass_save{padding-left:70px}.p_inboxdiv,.p_outnboxdiv,.p_sendmaildiv,.p_sysmsg_div{padding:25px
+0 0 0}.p_inboxdiv em, .p_outnboxdiv em, .p_sysmsg_div
+em{margin-right:30px}.p_outnboxdiv i, .p_sysmsg_div
+i{font-size:12px;margin-right:30px}.answer_box{display:none;position:relative;border-top:1px solid #eaeaea;padding:25px
+20px 20px;height:76px}.answer_box
+img{position:absolute;top:15px;padding:1px;border:1px
+solid #ccc}.answer_box
+textarea{position:absolute;width:550px;height:76px;top:15px;left:70px;overflow:hidden}.answer_box
+a{text-align:center;line-height:26px;position:absolute;background-position:-421px -401px;width:60px;height:26px;top:15px}.answer_btn{right:75px}.answer_cencel{right:10px}.msg_tip{padding:10px
+0 0 9px;color:#900}.p_outnboxdiv,.p_sendmaildiv,.p_sysmsg_div,.ac_income_div,.mine_booklist,.mine_collect,.recommed_div,.reward_div,.reward_remark_div,.f_work_assess{display:none}.p_sendmaildiv{padding:30px
+0 0 29px}.p_sendmaildiv
+input{margin:0
+0 0 5px}.p_sendmaildiv
+textarea{vertical-align:top;overflow:hidden;margin-left:5px;width:600px;height:150px;border:none;background:url(../images/p_textarea.png) no-repeat;_background:#fff;_border:1px
+solid #ccc}.p_sendmaildiv
+em{color:#999;margin:0
+0 0 74px}.confirm_send{width:150px;margin:20px
+auto}.main_long_bottom
+em{position:absolute;top:-5px;right:40px}.main_long_bottom
+i{position:absolute;top:-5px;right:130px}.my_bookshelf,.friend_shelf{padding:15px
+0 0 20px;width:750px}.my_bookshelf p
+select{margin-bottom:-3px}.sortord{margin:0
+10px -3px 245px}.shelf_tab{text-align:center;margin-top:10px}.shelf_tab a, .shelf_tab
+span{vertical-align:middle}.shelf_tab
+.gray2{margin-left:5px}.shelf_tab
+span.org{color:#F90;font:700 italic 14px/1.8 Comic Sans MS}.shuping_tab
+td{height:43px;border-bottom:1px solid #EAEAEA}.spTit,.spBkname,.reTit,.reBkname{display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.spTit{width:280px;display:inline-block;vertical-align:middle}.reBkname{width:200px}.spBkname,.reTit{width:170px}.shelf_tab a:hover{color:#ED0000}.shelf_tab
+th{color:#666}.shelf_tab
+td{}.shelf_tab
+input{vertical-align:middle;margin:-2px 0 1px 0}.shelf_tab a
+img{vertical-align:middle;margin:-3px 0 0}.page_left{margin-top:-3px;*margin-top:0;padding-left:9px}.friend_shelf p
+span{padding-left:10px;font:15px/30px "Microsoft Yahei";margin-right:140px}.friend_shelf{position:relative}.select_friend{position:absolute;top:18px;left:110px;_top:15px;_left:90px;width:120px;height:25px;background-position:-379px -178px;cursor:pointer}.sf_hover{background-position:-379px -204px}.select_friendlist{display:none;position:absolute;top:43px;width:412px;height:190px;padding:8px
+20px 0 10px;box-shadow:0 0 5px 3px #ccc inset;left:110px;_left:90px;overflow-y:scroll;background:#eaeaea;border:1px
+solid #BCBCBC;z-index:15}.select_friendlist
+li{float:left;width:70px;height:80px;border:1px
+solid #ccc;background:#fff;margin:0
+7px 10px 0}.select_friendlist li:hover{border:1px
+solid #75D0D0;background:#E6F7F7}.select_friendlist
+img{display:block;margin:5px
+auto 0}.select_friendlist
+p{text-align:center;margin-top:5px}.lately_read{padding:10px
+0 0 20px}.confirm_assess{width:150px;margin:50px
+auto 0}.account_div{padding:20px
+0 0 20px}.member_state{background:#FAFAFA;width:600px;border:1px
+solid #DBDBDB;padding:0
+70px;height:40px;margin-bottom:30px}.member_state
+img{vertical-align:middle;margin-right:10px}.member_state
+p{_margin-top:8px;line-height:40px}.open_member{margin-left:20px}.member_state
+span{margin-right:20px}.account_tab{border-left:1px solid #eaeaea;border-top:1px solid #eaeaea;border-right:2px solid #ccc;border-bottom:2px solid #ccc;text-align:center}.account_tab
+th{font-size:14px;height:35px}.account_tab
+td{height:35px;border:1px
+solid #eaeaea}.account_tabright{text-align:left;text-indent:15px}.account_tab
+img{vertical-align:middle;margin-right:10px}.payer_ico,.img_confirm{margin-left:10px}.account_balance{margin-bottom:30px}td.td_draw{height:70px}.pay_div,.expense_div,.month_ticket_div,.recommed_div,.reward_div,.reward_remark_div{padding:15px
+0 0 20px}.gold_div{width:752px;margin:20px
+0 0;border-bottom:2px solid #ccc}.pay_gold{text-align:center;width:100px;height:27px;float:left;margin-right:5px;cursor:pointer;border-bottom:none;background:url(../images/tab_normal100.png) no-repeat}.paycur{font-weight:700;background:url(../images/tab_normal_cur100.png) no-repeat}.pay_div p
+img{vertical-align:middle;margin:0
+0 0 10px}.pay_div select, .expense_div select, .month_ticket_div select, .recommed_div select, .reward_div select, .reward_remark_div
+select{float:right;margin-right:50px}.expense_tab,.pay_table{width:750px;margin:10px
+0 20px -10px;border:1px
+solid #eaeaea}.pay_tab{text-align:center;font-size:12px;border-left:1px solid #eaeaea;border-right:1px solid #eaeaea;clear:both}.account_page{border:none}.pay_tab thead
+th{color:#666;height:22px;line-height:22px;border:none}.pay_tab tfoot
+td{color:#666}.pay_tab tbody
+td{color:#666;border-top:1px solid #eaeaea;border-bottom:1px solid #eaeaea}.ac_income_div,.auto_div{padding:15px
+0 0 0}.ac_income_hd{background:#F3F3F3;padding-top:15px;height:65px;width:730px;padding-left:30px}.ac_income_hd
+p{line-height:1;margin:0
+0 15px 0}.confirm_draw{vertical-align:middle;background-position:-730px 0;width:68px;height:22px;line-height:22px;cursor:pointer;margin-left:10px}.complaint_info{line-height:2;padding-left:20px}.ac_income_tab{margin-top:25px}.ac_income_tab
+p{margin-bottom:10px}.ac_income_tab
+select{margin:0
+0 -3px 0}.ac_income_table{width:760px;border:1px
+solid #eaeaea}.auto_table
+td{color:#666}.auto_table
+a{text-decoration:none;color:#999}.auto_table a:hover{color:#900}.auto_table .gold_div
+a{color:#333}.auto_div
+h1{padding-left:20px;margin-bottom:5px}.auto_div h1
+a{float:right;margin-right:40px}.expenseTabid{float:right;padding-right:30px}.expenseTabid
+a{margin:0
+10px}.expense_bread
+a{float:right;padding-right:30px}.expense_bread
+span{font-size:14px}.tdi{padding-left:20px}.apply_writer
+h1{width:200px;margin:0
+auto;text-indent:45px;font:700 20px/40px "Microsoft Yahei";background:url(../images/writer_ico.gif) no-repeat left 55%}.apply_form{margin-top:30px;width:770px;border-top:1px dotted #ccc;padding:30px
+0 0 20px}.apply_tit{padding:0
+0 30px 20px}.apply_tit
+span{font-size:18px;margin-right:20px}.write_basic_info{border-bottom:1px dotted #ccc;padding-bottom:20px;margin-bottom:30px}.write_basic_info span, .write_real_info
+span{text-align:justify;font-size:14px;margin-right:5px;vertical-align:middle}.write_basic_info dd, .write_real_info
+dd{background:url(../images/mustbe.gif) left no-repeat;padding-left:20px;margin-bottom:15px}.file_input{width:205px}.write_basic_info dd em, .write_real_info
+dd{margin-left:10px}dd.nobg{background:none}.write_real_info{margin-left:-10px}.write_real_info
+h2{text-indent:30px;font:500 20px/40px "Microsoft Yahei";margin-bottom:20px}.write_real_info h2
+i{font:400 12px/40px "宋体";margin-left:10px}.write_real_info
+dd{line-height:1;background:none;margin-bottom:25px}dd.must_write{background:url(../images/mustbe.gif) left no-repeat;padding-left:20px}.write_real_info
+em{margin-left:5px}.write_real_info
+label{margin-right:30px;font-size:14px;vertical-align:middle}.write_real_info
+select{vertical-align:middle;margin-right:15px}dd.Creat_treaty,dd.treaty_btn{padding:10px
+0 0 95px}.Creat_treaty
+input{vertical-align:middle;margin:-2px 3px 1px 0}.Creat_treaty
+label{font-size:12px;margin:0;vertical-align:top}.member_zone
+.tablebg{color:#900;padding-top:25px;padding-bottom:5px;font-size:18px;text-align:center;text-indent:-5em;font-weight:600}.member{border:1px
+solid #eaeaea;text-align:center;font-size:12px;border-left:1px solid #eaeaea;border-right:1px solid #eaeaea}.member thead
+th{border-right:1px solid #DEDEDE;color:#666;height:50px;line-height:50px;font-size:13px}.VIP_zone thead
+th{font-size:14px;border-bottom:1px solid #DEDEDE}.member
+td{font-weight:100;border-right:1px solid #eaeaea}.member thead
+th.one{border-bottom:1px solid #DEDEDE;font-weight:bold}tbody td
+img{margin-right:8px;vertical-align:middle}.shou{text-align:left;padding-left:40px}.VIP_zone
+.tablebg{color:#900;padding-bottom:5px;text-align:center;text-indent:-3em;font:600 18px/2.5 "Microsoft Yahei"}.VIP_zone
+td{font-size:13px;font-weight:100;border-bottom:1px solid #eaeaea}.redCla{color:#900;padding-top:5px}.VIP_zone tfoot
+td{border:0;height:40px;width:400px;padding:10px
+0;text-align:center}td.imgTd{padding-left:50px}td.imgTd
+p{margin-left:20px;background:url(../images/ok.gif) left center no-repeat;width:170px;float:left;padding-left:20px}.member_zone,.VIP_zone,.year_member_div{position:relative;padding:20px
+0 0}.Medal_zone{padding:20px
+0 0 20px}.member_barline{position:absolute;width:580px;top:59px;left:55px;_left:35px}.member_zone
+i{position:absolute;top:58px;width:10px;height:14px;left:645px;_left:625px;background-position:0 -218px}.member_zone
+em{color:#999;position:absolute;top:50px;left:660px;_left:640px}.exp_state{height:70px;border-bottom:1px dotted #ccc;margin-bottom:5px;width:710px}.member_zone
+h1{font:15px/30px "Microsoft Yahei";margin-bottom:10px}.quest_state{border-top:1px solid #eaeaea;border-left:1px solid #eaeaea;border-right:2px solid #ccc;border-bottom:2px solid #ccc;width:600px;height:350px;margin-left:-10px;position:relative}.quest_state
+h2{font:12px/33px "宋体";text-indent:30px;color:#666;background:#F3F3F3}.quest_state
+ul{padding:25px
+0 0 33px}.quest_state
+li{position:relative;width:182px;height:64px;margin:0
+30px 15px 0;float:left;border-top:1px solid #eaeaea;border-left:1px solid #eaeaea;border-right:2px solid #ccc;border-bottom:2px solid #ccc;padding:10px
+0 0 65px}.quest_state li
+img{position:absolute;top:20px;left:30px}.quest_state li
+p{color:#999}.quest_state li
+h3{color:#7DA97D;font:16px/30px "Microsoft Yahei"}.quest_state_right{position:absolute;right:-167px;top:-1px;width:150px;height:350px;border-top:1px solid #eaeaea;border-left:1px solid #eaeaea;border-right:2px solid #ccc;border-bottom:2px solid #ccc}.member_zone p
+select{float:right;margin-right:50px}.grow_up{text-align:center;margin:10px
+0 0}.member_page{margin:10px
+0 0 -10px;border-top:none}a.back_vip{border:none}a.back_vip:hover{color:#900;background:none}.vip_level{position:relative;height:110px}.vip_level
+img{position:absolute}.vip_head{border:1px
+solid #ccc;padding:1px}.vip_level
+h1{font:700 12px/1 "宋体";position:absolute;top:5px;left:60px}.vip_img1{left:62px;top:37px}b.member_up{top:39px;left:85px}.yearimg{top:37px;left:100px}.vip_s_bar{width:550px;top:39px;left:130px;z-index:1}.VIP_state{z-index:2;top:25px;left:132px}.cur_exp{text-align:center;position:absolute;top:65px;width:50px;height:21px;line-height:27px;left:170px;background:url(../images/cur_exp.gif) no-repeat}.VIP_zone h4
+a{display:block;text-indent:-9999px;width:255px;height:28px;background-position:-251px -1029px;margin-bottom:40px;overflow:hidden}.VIP_zone
+h2{margin-left:10px;width:732px;border-top:1px dotted #ccc;font:15px/40px "Microsoft Yahei"}.vip_zonetab,.year_zone{margin:10px
+0 30px 0;color:#666;border-top:1px solid #eaeaea;border-left:1px solid #eaeaea;border-right:2px solid #ccc;border-bottom:2px solid #ccc;text-align:center}.vip_zonetab th, .vip_zonetab td, .year_zone
+td{border-right:1px solid #eaeaea}.vip_zonetab
+td{height:60px;line-height:1.8}.year_zone
+td{text-align:left;text-indent:20px;height:30px}.pay_year_member
+.red2{margin-left:500px}.pay_year_member{*zoom:1}.pay_year_member
+p{margin-bottom:20px}.pay_year_bg
+ul{background:#F2F2F2;width:530px;padding:18px
+0 16px 100px;_padding:40px
+0 0 100px;margin-left:15px}.pay_year_bg li
+span{font:12px/2.5 '宋体'}.pay_year_bg
+li{line-height:40px;margin-bottom:0}.pay_year_bg li
+input{vertical-align:middle;margin:-1px 5px 2px 0}.pay_year_bg li
+label{margin-right:20px}.pay_year_bg li
+em{margin:0
+30px 0 8px}.pay_year_bg li
+.confirm_pay{margin:10px
+0 0 76px;cursor:pointer}.Medal_tab{padding-bottom:10px}.Medal_tab
+p{font-size:14px;float:left;cursor:pointer}.Medal_tab
+span{float:left;color:#999;margin:2px
+14px 0}.medal_zone_list{margin-left:-27px;height:829px;background:url(../images/medal_bg.png) no-repeat}.medal_zone_list
+ul{padding:50px
+0 0 40px}.medal_zone_list
+li{float:left;margin:0
+30px 20px 0;overflow:hidden;*zoom:1;height:150px}.medal_wrap{float:left;width:110px;margin-right:10px;border:1px
+solid #ccc;border-radius:5px 5px 5px 5px}.medal_wrap
+img{display:block;margin:5px
+auto}.medal_wrap
+p{text-align:center;color:#004A8D;line-height:2.5}.medal_info{width:200px}.medal_info{float:left;line-height:2.5}.medal_info
+h4{font:700 12px/24px "宋体";cursor:pointer}.medal_info
+em{color:#999}.medal_info p, .medal_popup_info
+p{line-height:2}.medal_info input, .medal_popup_info
+input{display:block;width:61px;height:22px;color:#fff;line-height:22px;cursor:pointer;background:url(../images/sprite.png) no-repeat -729px -96px}.CS_cdkey
+h3{text-align:center;margin-bottom:50px;padding-top:20px}.activate{padding-left:240px}.activate
+p{margin-bottom:14px}.activate
+img{vertical-align:middle;cursor:pointer}.cdkey_confirm{padding:20px
+0 0 90px}.CdkeyInfo{padding-left:74px;line-height:1.8}.cdkey_table{width:600px;padding-top:30px;margin:0
+auto}.CdkeyTable
+p{padding:0
+10px;text-overflow:ellipsis;width:280px;white-space:nowrap;overflow:hidden}.writeZoneTit{background:url(../images/eaeaea_bottom2.png) left bottom no-repeat;height:37px}.writeZoneTit h3, .writeZoneTit
+h4{font:700 15px/28px '微软雅黑';height:35px}.writeZoneTit
+h3{margin-left:15px;width:200px;border-bottom:2px solid #666}.writeZoneTit
+h5{margin-left:15px;width:200px;border-bottom:2px solid #666}.writeZoneTit
+h6{margin-left:15px;width:60px;border-bottom:2px solid #666}.applyWrap{padding:20px
+0 20px 15px}.applyWrap
+img{margin-right:52px}.writeZoneTit
+h4{float:left;margin-right:20px;padding:0
+10px;cursor:pointer;text-align:left;color:#999;font-weight:400}.writeZoneTit
+h4.hcur{color:#333;font-weight:700;border-bottom:2px solid #666}#authorTextWrap{padding-top:26px}.authorTextBox{padding:10px
+0 0 30px;line-height:2;width:720px;height:336px}.applyAuthorWrap{position:relative;height:280px}.boyAuthor,.grilAuthor{position:absolute;top:36px;height:124px;padding:10px
+0}.boyAuthor{width:267px;left:126px;border-right:1px solid #CCC}.grilAuthor{left:460px}.applyAuthorWrap
+dd{font:14px/1.8 '宋体'}.applyAuthorWrap dd
+input{vertical-align:middle;margin:-2px 3px 1px 0}.applyAuthorWrap
+dd.mb25{margin-bottom:25px}.applyAuthorWrap dd
+cite{background-image:url(../images/authorsex.png);height:21px;width:77px;display:inline-block;vertical-align:text-bottom;margin-left:3px}.applyAuthorWrap dd
+cite.imboy{background-position:0 0}.applyAuthorWrap dd
+cite.imgirl{background-position:0 -21px}.applyAuthorWrap dd
+span{color:#999;font-size:12px}.applyAuthorWrap
+.stepNext{position:absolute;width:143px;bottom:20px;left:326px}.applyAuthorWrap dd
+label{cursor:pointer}.applyAuthorWrap dd
+label.f12{font-size:12px}.applyAuthorWrap dd label
+em{font-size:14px}.notYetCreate{position:absolute;top:35%;left:35%;font-size:14px}.writeZoneTit
+.addRedBtn{float:right;margin-right:50px}.addRedBtn{display:inline-block;width:100px;text-align:center;color:#FFF;text-indent:20px;height:30px;font:14px/30px '宋体';background:#CC0001 url(../images/addred.jpg) 10% 50% no-repeat;border-radius:5px}.storyListWrap{padding:35px
+0 20px 26px}.storyListWrap
+li{overflow:hidden;*zoom:1}.storyListWrap li
+img{float:left;border:1px
+solid #CCC;padding:1px;margin-bottom:8px}.modifyInfo{clear:left;float:left;width:122px;text-align:center;background:#097C26;color:#FFF;width:86px;height:20px;line-height:20px;margin-left:18px;border-radius:5px}.productionInfo{margin-left:148px}.storyListWrap
+li{border-bottom:1px dotted #CCC;padding-bottom:10px;margin-bottom:25px}.productionInfo h3
+em{float:right;color:#CB0101}.productionInfo
+h3{font:12px/2.5 '宋体';margin-bottom:10px;overflow:hidden;width:90%}.productionInfo
+p{line-height:1.8}.preductionBtn{overflow:hidden;*zoom:1;position:absolute;bottom:40px}.preductionBtn
+a{float:left;margin-right:30px}.preductionBtn
+.grayBtn{background:#999;display:inline-block;width:100px;text-align:center;color:#FFF;height:30px;font:14px/30px '宋体';border-radius:5px}.writeZoneList{padding:16px
+0 0 30px}.AuthorsNews
+li{width:754px;margin:0}.AuthorsNews li
+h3{font:14px/38px '宋体';padding-left:20px;background:url(../images/gray_right.gif) no-repeat left;border-bottom:1px dotted #ccc;cursor:pointer}.AuthorsNews li h3
+span{float:right;padding-right:20px}.list-item{border:1px
+solid #CCC;position:relative;margin-top:15px;padding:14px;line-height:1.8;*zoom:1}.list-item.none{display:none}.upt{border-left:5px solid white;border-bottom:5px solid #333;border-right:5px solid white;display:inline-block;position:absolute;top:-11px;*top:-33px;left:70px}a.news_close{position:absolute;top:10px;right:10px;width:10px;height:10px;background:url(../images/sprite.png) no-repeat -96px -85px}.joinBox{padding:40px
+0}.joinBox
+p{margin:0
+auto;width:241px}.joinBox
+.joinBtn{width:241px;height:51px;display:block;margin:0
+auto 5px;border-radius:10px;text-align:center;color:#FFF;font:18px/51px "Microsoft YaHei";background:#DC0000;background-image:-moz-linear-gradient( 90deg, rgb(180,0,0) 0%, rgb(237,0,0) 100%);background-image:-webkit-linear-gradient( 90deg, rgb(180,0,0) 0%, rgb(237,0,0) 100%);background-image:-ms-linear-gradient( 90deg, rgb(180,0,0) 0%, rgb(237,0,0) 100%)}.writeZoneTab{background:#F5F5F5;padding-left:18px;border-bottom:2px solid #E6E1E1}.writeZoneTab
+h4{float:left;text-align:center;position:relative;padding:0
+20px;cursor:pointer;font:14px/30px "Microsoft YaHei";height:30px}.writeZoneTab h4
+cite{background:url(../images/hot.png) no-repeat;width:30px;height:17px;position:absolute;top:-7px}.writeZoneTab
+h4.hcur{background:#FFF;line-height:26px;top:2px}.writeZoneTab h4.hcur
+cite{top:-9px}.qrList{padding:20px
+0 0;margin-bottom:20px}.qrList
+img{margin:7px
+36px 0 0}.qrTextInfo{width:550px}.qrTextInfo
+p{font-size:16px}.qrTextInfo
+p.gray2{color:#888;font-size:14px;border-top:1px solid #F2F2F2;margin-top:10px;padding-top:10px}.creat_booklist,.addnewbook{text-align:center;line-height:22px;position:absolute;top:-3px;background-position:-730px 0;width:68px;height:22px}.creat_booklist{right:160px}.addnewbook{right:80px}.hot_booklist
+li{width:710px;position:relative;margin:0
+0 10px 0}.booklist_time{position:absolute;top:17px;right:10px;text-align:center;line-height:2}.mine_booklist,.mine_collect{padding:20px
+0 0 0}.booklist_table{width:750px}.booklist_table
+th{height:23px;line-height:23px;text-indent:10px}.booklist_table
+td{line-height:2;padding:10px
+0 10px 10px;border-bottom:1px dotted #ccc}.booklist_table
+img{margin:0
+2px -3px 0}.best_booklist{background:url(../images/booklist_bg.png) no-repeat;width:750px;height:860px;padding:30px
+0 0 30px}.best_booklist h2 a, .best_booklist h2
+span{font:400 12px/12px "宋体"}.best_booklist h2
+em{margin-right:10px}.best_booklist
+p{line-height:1.8;color:#666}.book_jianjie{width:700px}.booklist_tool{margin:20px
+0}.booklist_tool
+div{float:left;width:60px;padding-left:30px;height:30px;margin-right:20px;border-top:1px solid #ccc;border-left:1px solid #ccc;border-right:2px solid #ccc;border-bottom:2px solid #ccc;border-radius:5px;background-color:#fff}.booklist_tool div
+a{display:block;width:60px;height:30px}.favorite_btn{background:url(../images/shoucang.gif) no-repeat 8% 50%}.like_btn{background:url(../images/hreat.gif) no-repeat 8% 50%}.best_booklist
+h3{font-weight:400;width:690px;border-bottom:1px dotted #ccc}.best_booklist h3
+span{float:right;font-size:12px}.bestbook_list{padding:20px
+0 0 0}.bestbook_list
+dd{margin-bottom:20px}.best_booklist h3
+a{font-size:12px}.bestbook_list dd
+img{float:left;border:1px
+solid #FD9797;padding:1px;margin-right:15px}.bestbook_info{float:left;width:560px}.bestbook_info h4
+a{font:12px/30px "宋体";margin-left:5px}.friend_home_info{padding:30px
+0 0 0;text-align:center}.f_headphoto{text-align:left;display:block;margin:0
+auto;padding:1px;border:1px
+solid #ccc;margin-bottom:3px}.friend_home_info
+p{line-height:1;margin-bottom:8px}.sex_img{margin:0
+0 -5px 3px}.f_level{margin:0
+0 0 -5px;padding-bottom:10px}.f_level
+img{margin-left:5px}.send_letter,.add_f_btn{width:80px;height:17px;line-height:17px;text-indent:17px}.send_letter{background:url(../images/min_msg.gif) left no-repeat}.add_f_btn{background:url(../images/add_green.gif) 6% 50% no-repeat}.fri_ctrl{padding-left:7px}.fri_ctrl
+a{float:left}p.reg_timer{margin:10px
+0}.f_fans_div{width:138px;height:86px;margin:15px
+auto;border-top:1px dotted #ccc;border-bottom:1px dotted #ccc;position:relative;background:url(../images/fans_bgline.gif) no-repeat 50%}.f_fans_div
+i{font:700 16px/16px "Microsoft Yahei";position:absolute}.f_fans_div
+em{position:absolute}.ta_guanzhu{top:23px;left:18px}.gz{top:40px;left:26px}.ta_fans{top:23px;left:85px}.fs{top:40px;right:22px}.privte_tag{padding:10px
+0 0 10px}.privte_tag
+p{line-height:1.5;text-align:left}.privte_tag
+a{color:#360;float:left;margin:0
+8px 5px 0;white-space:nowrap}.privte_tag a:hover{color:#900;text-decoration:underline}.mybook_list{padding:20px
+0 0 20px}.f_bestbook{line-height:1;width:390px}.f_bestbook
+h4{margin-bottom:8px}.f_bestbook
+p{line-height:1.8}.online_read,.f_add{float:left;width:70px;height:21px;text-align:center;color:#fff;line-height:21px;cursor:pointer;margin:5px
+15px 0 0}.online_read{background-position:-729px -23px}.f_add{background-position:-729px -44px}.fr_dl
+dd{padding-bottom:23px;border-bottom:1px dotted #ccc}.f_work_div{padding:10px
+0 0 0}.f_sp_tab th, .f_sp_tab
+td{text-align:left;text-indent:20px}.f_sp_tab
+th{height:23px;line-height:23px}.f_sp_tab
+td{height:68px}.f_sp_tab td
+img{margin-top:-5px;*margin-top:0;margin-right:5px}.f_sp_tab
+p{line-height:1.5;margin-bottom:3px}.f_pagectrl{width:500px}.fri_right{margin-left:140px}#cuxiao{padding:20px
+0 0 80px}#cuxiao
+p{margin-bottom:16px}#cuxiao p, #cuxiao p a, .cuxiao_p, .cuxiao_p
+a{color:#F33}#cuxiao p a, .cuxiao_p
+a{text-decoration:underline;margin-left:0}#changpowtext{color:#900;margin-left:-10px}.jscrop
+input{position:absolute;cursor:pointer;background:none;color:#900;top:130px;font-size:14px}#uploadwrap{width:400px;padding:10px;border:1px
+solid #ccc}#bPic{width:300px}#upsave{left:490px}#upcancel{left:540px}.jscrop{margin-bottom:15px}li.uphpWrap{margin-bottom:0}.upload_tip{padding-top:10px}.jscrop
+p{font-size:14px;position:absolute;top:0;left:502px}.jcrop-handle{font-size:1px;width:7px !important;height:7px !important;border:1px
+#eee solid;background-color:#333;*width:9px;*height:9px}.jcrop-tracker{width:100%;height:100%}.jcrop-handle{border-color:black;background-color:#C7BB00;-moz-border-radius:3px;-webkit-border-radius:3px}.crop_preview{position:absolute;left:480px;top:22px;width:100px;height:100px;overflow:hidden}#uploadBtn{width:60px;height:26px;cursor:pointer;background:url(../images/sprite.png) no-repeat -421px -401px}.U_member_state{position:relative;height:63px;background:#F3F3F3;line-height:63px;padding-left:20px;margin-bottom:20px}.U_member_state
+input{float:left;margin:15px
+0 0 20px;width:136px;height:32px;font:16px/32px '微软雅黑';cursor:pointer;color:#FFF;background:url(../images/sprite.png) -270px -288px no-repeat}.U_member_state
+span{float:left;margin-right:20px}.U_member_privilege h6.nftop, .U_member_privilege
+h6.nfbt{width:755px;height:25px}h6.nftop{background:url(../images/nftop.jpg) no-repeat}h6.nfbt{clear:both;background:url(../images/nfbt.jpg) no-repeat}.nfInfoList{padding:35px
+0 0}.nfInfoList
+li{float:left;width:158px;height:145px;position:relative;border-bottom:3px solid #F3F3F3;margin-right:40px}.nfInfoList
+li.last{margin-right:0}.nfInfoList li.last
+img{top:-30px}.nfInfoList li:hover{border-bottom:3px solid #FF8901}.nfInfoList li
+img{top:0;position:absolute;z-index:10;_z-index:-1}.tqinfo{width:158px;height:58px;position:absolute;bottom:0;background:#F3F3F3}.tqinfo
+h5{font:700 14px/1 '微软雅黑';padding:5px
+0 0 10px}.tqinfo
+p{line-height:1.4;padding:5px
+0 0 10px}.upgrade_ymember{display:block;margin:20px
+0 0 -10px}.reviewSendTime{position:absolute;top:-3px;right:50px}.newReply{width:75px;height:24px;line-height:24px;background:url(../images/newreply.png) no-repeat;margin:0
+auto}.newReply
+a{color:#ED0000}.newReply a:hover{color:#360}.finalRelpy{color:#999;line-height:1.5}.fl{float:left}.fr{float:right}.cloudW{width:600px;height:500px;overflow:hidden}.flb
+.nums{font-size:12px;padding-left:10px;color:#444}.cloud-bookshelf{padding:0;width:600px}.cloud-bookshelf
+input{vertical-align:middle;margin:-2px 0 1px 0}.cloud-bookshelf{text-align:center;margin-top:10px}.cloudW .table-box{height:450px;overflow-x:hidden;overflow-y:auto}.cloud-bookshelf a, .cloud-bookshelf
+span{vertical-align:middle}.cloud-bookshelf
+.gray2{margin-left:5px}.cloud-bookshelf
+span.org{color:#F90;font:700 italic 14px/1.8 Comic Sans MS}.cloud-bookshelf a:hover{color:#ED0000}.cloud-bookshelf
+th{color:#666}.cloud-bookshelf
+td{}.cloud-bookshelf
+input{vertical-align:middle;margin:-2px 0 1px 0}.cloud-bookshelf a
+img{vertical-align:middle;margin:-3px 0 0}.page_clode_auto{width:auto;padding-top:15px}.page_clode_auto
+.page_left{padding-left:4px;margin:0}.page_clode_auto .page_right
+.pn{vertical-align:middle;overflow:hidden;margin-right:3px;padding:0;height:33px;border:1px
+solid #999;background:#E5E5E5 url(../images/pn.png) repeat-x 0 0;cursor:pointer;-moz-box-shadow:0 1px 0 #E5E5E5;-webkit-box-shadow:0 1px 0 #E5E5E5;box-shadow:0 1px 0 #E5E5E5}.page_clode_auto .page_right .pnc,
+.page_clode_auto .page_right
+a.pnc{display:inline-block;width:100px;line-height:33px;text-align:center;border-color:#235994;background-color:#06C;background-position:0 -48px;color:#FFF !important}.page_clode_auto .page_right .pnc
+img{margin-right:5px}.warning-tips{padding-top:5px}.btn-import{position:absolute;top:-5px;right:30px;display:inline-block;width:87px;line-height:24px;text-align:center;border-color:#235994;background-color:#06C;background-position:0 -48px;color:#444 !important;border:1px
+solid #ddd;background:#E5E5E5 url(../images/pn.png) repeat-x 0 0;font-family:"Microsoft Yahei";border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px}

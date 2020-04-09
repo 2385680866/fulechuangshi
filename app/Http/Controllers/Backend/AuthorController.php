@@ -136,4 +136,19 @@ class AuthorController extends Controller
             return 0;
         }
     }
+    //唯一性验证
+    public function status(Request $request)
+    {
+        $author_name=$request->author_name;
+
+        $authorInfo = AuthorModel::where(['author_name'=>$author_name])->update(['status'=>1]);
+        $usersInfo = UsersModel::where(['username'=>$author_name])->update(['status'=>1]);
+        if($authorInfo && $usersInfo){
+            return 1;
+        }else{
+            AuthorModel::where(['author_name'=>$author_name])->update(['status'=>0]);
+            UsersModel::where(['username'=>$author_name])->update(['status'=>0]);
+            return 2;
+        }
+    }
 }

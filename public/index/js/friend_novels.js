@@ -1,0 +1,11 @@
+;(function($){var _util=CS.util,_dialog=CS.dialog;var _params={};function init(addToBookshelfAjaxUrl,addToBookshelfByBatchAjaxUrl,updateUserBookTagAjaxUrl,setAutoBuyAjaxUrl){_params.addToBookshelfAjaxUrl=addToBookshelfAjaxUrl||'';_params.addToBookshelfByBatchAjaxUrl=addToBookshelfByBatchAjaxUrl||'';_params.updateUserBookTagAjaxUrl=updateUserBookTagAjaxUrl||'';_params.setAutoBuyAjaxUrl=setAutoBuyAjaxUrl||'';}
+function addToBookshelf(bid,opts){opts=$.extend({'successCallback':function(json){if(!json){return;}
+if(json.status){if(json.info){if(json.code===0){_dialog.confirm(json.info,function(){if($('#openAutoTake').prop('checked')){_setAutoBuy(bid);}});}else{_dialog.alert(json.info);}}}else{_dialog.alert(json.info||'操作失败，请稍候再试');}}},opts||{});_util.request({url:_params.addToBookshelfAjaxUrl,data:{'bid':bid},type:'post',dataType:"json",success:function(json){opts.successCallback(json);}});}
+function addToBookshelfByBatch(bids,bookshelfId,opts){bookshelfId=bookshelfId||'';opts=$.extend({'successCallback':function(json){_dialog.alert(json.info);}},opts||{});_util.request({url:_params.addToBookshelfByBatchAjaxUrl,data:{'bids':bids,'faultTagid':bookshelfId},type:'POST',dataType:"json",success:function(json){opts.successCallback(json);}});}
+function updateUserBookTag(bid,bookshelfId,successCallback){}
+function _setAutoBuy(bid){if(!bid){return;}
+_util.request({url:_params.setAutoBuyAjaxUrl,data:{'bid':bid},type:'POST',dataType:"json",success:function(json){if(!json){return;}
+if(json.info){_dialog.alert(json.info);}},error:function(){_dialog.alert('操作失败，请稍候再试');}});}
+_util.initNameSpace('CS');CS.bookshelf={'init':init,'addToBookshelf':addToBookshelf,'addToBookshelfByBatch':addToBookshelfByBatch,'updateUserBookTag':updateUserBookTag};})(jQuery);;(function($){var _util=CS.util,_bookshelf=CS.bookshelf;var _params={};function init(){_bindEvent();}
+function _bindEvent(){var $myBookList=$('#myBookList');$myBookList.find('.f_add').on('click',function(){var bid=$(this).attr('bid');_bookshelf.addToBookshelf(bid);return false;});}
+_util.initNameSpace("CS.page.friend");CS.page.friend.novels={"init":init};})(jQuery);

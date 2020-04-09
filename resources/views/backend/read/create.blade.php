@@ -24,14 +24,11 @@
                         <form method="post" class="form-horizontal" action="{{url('/read/store')}}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <label class="col-sm-2 control-label">阅读名称</label>
+                                <label class="col-sm-2 control-label">小说名称</label>
                                 <div class="col-sm-10">
-                                    <div class="input-group m-b"><span class="input-group-addon">@</span>
-                                        <input type="text" name="read_name" placeholder="阅读名称" class="form-control">
-                                    </div>
+                                    <input type="text" class="form-control" name="read_name" placeholder="小说名称">
                                 </div>
                             </div>
-                            <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">分类名称</label>
                                 <div class="col-sm-10">
@@ -46,7 +43,6 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">作者</label>
                                 <div class="col-sm-10">
@@ -57,37 +53,6 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="hr-line-dashed"></div>
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label">首页轮播图</label>
-                                <div class="col-sm-10">
-                                    <div class="radio i-checks">
-                                        <label><input type="radio" value="1" name="is_show_home" checked=""> <i></i>是</label>
-                                    </div>
-                                    <div class="radio i-checks">
-                                        <label><input type="radio" value="0" name="is_show_home"> <i></i>否</label>
-                                    </div>
-                                    <div class="radio i-checks" style="padding-left:20px;">
-                                        <input type="file" name="home_img">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="hr-line-dashed"></div>
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label">轮播图</label>
-                                <div class="col-sm-10">
-                                    <div class="radio i-checks">
-                                        <label><input type="radio" value="1" name="is_show"> <i></i>是</label>
-                                    </div>
-                                    <div class="radio i-checks">
-                                        <label><input type="radio" value="0" name="is_show" checked=""> <i></i>否</label>
-                                    </div>
-                                    <div class="radio i-checks" style="padding-left:20px;">
-                                        <input type="file" name="read_img">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">是否精品</label>
                                 <div class="col-sm-10">
@@ -101,6 +66,34 @@
                             </div>
                             <div class="hr-line-dashed"></div>
                             <div class="form-group">
+                                <label class="col-sm-2 control-label">首页轮播图</label>
+                                <div class="col-sm-10">
+                                    <div class="radio i-checks">
+                                        <label><input type="radio" value="1" name="is_show_home"> <i></i>是</label>
+                                    </div>
+                                    <div class="radio i-checks">
+                                        <label><input type="radio" value="0" name="is_show_home" checked=""> <i></i>否</label>
+                                    </div>
+                                    <div class="radio i-checks" style="padding-left:20px;">
+                                        <input type="file" name="home_img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">封面图片</label>
+                                <div class="col-sm-10">
+                                    <div class="radio i-checks">
+                                        <label><input type="radio" value="1" name="is_show"> <i></i>是</label>
+                                    </div>
+                                    <div class="radio i-checks">
+                                        <label><input type="radio" value="0" name="is_show" checked=""> <i></i>否</label>
+                                    </div>
+                                    <div class="radio i-checks" style="padding-left:20px;">
+                                        <input type="file" name="read_img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <label class="col-sm-2 control-label">作品标签</label>
                                 <div class="col-sm-10">
                                     @foreach($labelInfo as $key=>$value)
@@ -111,18 +104,18 @@
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
+
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">阅读介绍</label>
                                 <div class="col-sm-10">
-                                    <textarea name="read_desc" data-provide="markdown" rows="5"></textarea>
+                                    <textarea name="read_desc" data-provide="markdown" rows="2" style="width:678px;"></textarea>
                                 </div>
                             </div>
-                      
                             <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">阅读内容</label>
                                 <div class="col-sm-10">
-                                    <textarea name="read_content" data-provide="markdown" rows="5"></textarea>
+                                    <textarea name="read_content" data-provide="markdown" rows="2" style="width:678px;"></textarea>
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
@@ -143,6 +136,14 @@
     <script src="/backend/js/bootstrap.min.js?v=3.3.6"></script>
     <!-- 自定义js -->
     <script src="/backend/js/content.js?v=1.0.0"></script>
+
+    <!-- simditor -->
+    <script type="text/javascript" src="/backend/js/plugins/markdown/markdown.js"></script>
+    <script type="text/javascript" src="/backend/js/plugins/markdown/to-markdown.js"></script>
+    <script type="text/javascript" src="/backend/js/plugins/markdown/bootstrap-markdown.js"></script>
+    <script type="text/javascript" src="/backend/js/plugins/markdown/bootstrap-markdown.zh.js"></script>
+
+
     <!-- iCheck -->
     <script src="/backend/js/plugins/iCheck/icheck.min.js"></script>
     <script>

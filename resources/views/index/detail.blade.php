@@ -56,9 +56,9 @@
             <a href="http://chuangshi.qq.com" title="首页">首页</a>&nbsp;<a class="red" href="http://chuangshi.qq.com/bk/" title="书库">书库</a>&nbsp;<a rel="nofollow" href="http://chuangshi.qq.com/search/" title="搜书">搜书</a>&nbsp;<a href="http://chuangshi.qq.com/bang/" title="排行榜">排行榜</a>
             @foreach($cateInfo as $key=>$value)
                 @if($key%2==0)
-                <a class="red dotted" href="{{url('/index/cate')}}/{{$value['cate_id']}}" title="{{$value['cate_name']}}">{{$value['cate_name']}}</a>
+                <a class="red dotted" href="{{url('/cate')}}/{{$value['cate_id']}}" title="{{$value['cate_name']}}">{{$value['cate_name']}}</a>
                 @else
-                · <a class="red" href="{{url('/index/cate')}}/{{$value['cate_id']}}" title="{{$value['cate_name']}}">{{$value['cate_name']}}</a>
+                · <a class="red" href="{{url('/cate')}}/{{$value['cate_id']}}" title="{{$value['cate_name']}}">{{$value['cate_name']}}</a>
                 @endif
             @endforeach
             &nbsp;<a rel="nofollow" href="{{url('/author')}}" title="作家专区">作家专区</a>&nbsp;

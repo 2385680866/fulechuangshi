@@ -24,7 +24,7 @@
                         <form method="post" class="form-horizontal" action="{{url('/author/update')}}/{{$info['author_id']}}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <label class="col-sm-2 control-label">作家账号</label>
+                                <label class="col-sm-2 control-label">作家手机号</label>
                                 <div class="col-sm-10">
                                     <div class="input-group m-b"><span class="input-group-addon">@</span>
                                         <input type="text" name="author_name" value="{{$info['author_name']}}" placeholder="作者名称" class="form-control">

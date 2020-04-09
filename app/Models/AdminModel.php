@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class AdminModel extends Model
 {
      //主键id
-     public $primaryKey='user_id';
+     public $primaryKey='admin_id';
 
      //绑定表名
-     protected $table='user';
+     protected $table='admin';
      //关闭时间戳
      // public $timestamps=false;
  
